@@ -288,6 +288,13 @@
   </url>
   
   <url>
+    <loc>http://example.com/tags/JVM/</loc>
+    <lastmod>2022-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/tags/Java%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2022-05-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -303,13 +310,6 @@
   
   <url>
     <loc>http://example.com/tags/SQL/</loc>
-    <lastmod>2022-05-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/JVM/</loc>
     <lastmod>2022-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -344,14 +344,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/Redis/</loc>
+    <loc>http://example.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
     <lastmod>2022-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
+    <loc>http://example.com/tags/Redis/</loc>
     <lastmod>2022-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -402,6 +402,13 @@
   </url>
   
   <url>
+    <loc>http://example.com/categories/JVM/</loc>
+    <lastmod>2022-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/categories/Java%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2022-05-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -417,13 +424,6 @@
   
   <url>
     <loc>http://example.com/categories/SQL/</loc>
-    <lastmod>2022-05-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/categories/JVM/</loc>
     <lastmod>2022-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
