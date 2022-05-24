@@ -288,13 +288,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/JVM/</loc>
-    <lastmod>2022-05-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/tags/Java%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2022-05-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -316,6 +309,20 @@
   </url>
   
   <url>
+    <loc>http://example.com/tags/JVM/</loc>
+    <lastmod>2022-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/</loc>
+    <lastmod>2022-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/tags/Spring-Framework/</loc>
     <lastmod>2022-05-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -324,13 +331,6 @@
   
   <url>
     <loc>http://example.com/tags/%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/</loc>
-    <lastmod>2022-05-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/</loc>
     <lastmod>2022-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -402,13 +402,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/JVM/</loc>
-    <lastmod>2022-05-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/categories/Java%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2022-05-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -430,6 +423,20 @@
   </url>
   
   <url>
+    <loc>http://example.com/categories/JVM/</loc>
+    <lastmod>2022-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/</loc>
+    <lastmod>2022-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/categories/Spring-Framework/</loc>
     <lastmod>2022-05-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -438,13 +445,6 @@
   
   <url>
     <loc>http://example.com/categories/SpringBoot/</loc>
-    <lastmod>2022-05-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/categories/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/</loc>
     <lastmod>2022-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
