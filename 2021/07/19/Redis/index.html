@@ -7,7 +7,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/a984er65vzf98.jpg">
 <meta property="article:published_time" content="2021-07-19T11:33:52.000Z">
-<meta property="article:modified_time" content="2022-07-05T07:14:22.200Z">
+<meta property="article:modified_time" content="2022-07-05T07:20:59.437Z">
 <meta property="article:author" content="初学者">
 <meta property="article:tag" content="Redis">
 <meta name="twitter:card" content="summary">
@@ -53,7 +53,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2022-07-05 15:14:22'
+  postUpdate: '2022-07-05 15:20:59'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -143,7 +143,7 @@
     }
     detectApple()
     })(window)</script><meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml">
-</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/fvgbhgsbadfnhmngbdsnhdmnfgbd.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">17</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/a984er65vzf98.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Blog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Redis</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-07-19T11:33:52.000Z" title="发表于 2021-07-19 19:33:52">2021-07-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-07-05T07:14:22.200Z" title="更新于 2022-07-05 15:14:22">2022-07-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/SQL/">SQL</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Redis"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><span id="more"></span>
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/fvgbhgsbadfnhmngbdsnhdmnfgbd.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">17</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/a984er65vzf98.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Blog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Redis</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-07-19T11:33:52.000Z" title="发表于 2021-07-19 19:33:52">2021-07-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-07-05T07:20:59.437Z" title="更新于 2022-07-05 15:20:59">2022-07-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/SQL/">SQL</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Redis"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><span id="more"></span>
 
 <blockquote>
 <p>​	<strong><code>Redis(Remote Dictionary Server)</code> ：</strong>是一个使用 <strong><code>C</code> 语言</strong>编写的，开源的（<code>BSD</code>许可）<strong>高性能非关系型</strong>（<code>NoSQL</code>）的<strong>键值对</strong>数据库。</p>
@@ -194,7 +194,6 @@
 </ul>
 </blockquote>
 <blockquote>
-<p>​		ziplist编码的有序集合使用紧挨在一起的压缩列表节点来保存，第一个节点保存member，第二个节点保存score。ziplist内的集合元素按score从小到大排序，score较小的排在表头位置。</p>
 <p>​		ziplist是由一系列特殊编码的连续内存块组成的顺序存储结构，类似于数组，ziplist在内存中是连续存储的，但是不同于数组，为了节省内存 ziplist的每个元素所占的内存大小可以不同，每个节点可以用来存储一个整数或者一个字符串。</p>
 <p>​		ziplist类似于双向链表，但是它不存储上一个节点和下一个节点的指针，而是存储上一个节点长度和当前节点长度，通过牺牲部分读写性能，来换取高效的内存空间利用率，节约内存。</p>
 <p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/dcfvdsfvdsfvdvervsadcsdvcdsvdcs70201254.png"></p>
@@ -208,8 +207,8 @@
 <li>encoding：记录<strong>当前节点</strong>的value成员的<strong>数据类型以及长度。</strong></li>
 <li>entry-data：根据encoding来保存<strong>字节数组或整数</strong>。</li>
 </ul>
-<p>​		skiplist编码的有序集合底层是一个命名为zset的结构体，而一个zset结构同时包含一个字典和一个跳跃表。跳跃表按score从小到大保存所有集合元素。而字典则保存着从member到score的映射，这样就可以用O(1)的复杂度来查找member对应的score值。虽然同时使用两种结构，但它们会通过指针来共享相同元素的member和score，因此不会浪费额外的内存。</p>
-<p>​		压缩列表ziplist结构本身就是一个连续的内存块，由表头、若干个entry节点和压缩列表尾部标识符zlend组成，通过一系列编码规则，提高内存的利用率，使用于存储整数和短字符串。<br>​		压缩列表ziplist结构的缺点是：每次插入或删除一个元素时，都需要进行频繁的进行内存的扩展或减小，然后进行数据”搬移”，甚至可能引发连锁更新，造成严重效率的损失。</p>
+<p>​		压缩列表ziplist结构本身就是一个连续的内存块，由表头、若干个entry节点和压缩列表尾部标识符zlend组成，通过一系列编码规则，提高内存的利用率，使用于存储整数和短字符串。</p>
+<p>​		压缩列表ziplist结构的缺点是：每次插入或删除一个元素时，都需要进行频繁的进行内存的扩展或减小，然后进行数据”搬移”，甚至可能引发连锁更新，造成严重效率的损失。</p>
 </blockquote>
 <h5 id="skiplist介绍"><a href="#skiplist介绍" class="headerlink" title="skiplist介绍"></a>skiplist介绍</h5><h6 id="跳表具有如下性质"><a href="#跳表具有如下性质" class="headerlink" title="跳表具有如下性质"></a>跳表具有如下性质</h6><blockquote>
 <p><strong>(1) 由很多层结构组成</strong></p>
@@ -221,30 +220,31 @@
 <p>(skiplist介绍来源于<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_38008100/article/details/94629753?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164491716916780271587899%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=164491716916780271587899&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-3-94629753.pc_search_result_cache&amp;utm_term=zset&amp;spm=1018.2226.3001.4187">https://blog.csdn.net/weixin_38008100/article/details/94629753?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164491716916780271587899%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=164491716916780271587899&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-3-94629753.pc_search_result_cache&amp;utm_term=zset&amp;spm=1018.2226.3001.4187</a>)</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> keyType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">char</span> valueType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> <span class="title class_">node</span></span><br><span class="line">&#123;</span><br><span class="line">    keyType key;	<span class="comment">// 即“键”，起到索引作用</span></span><br><span class="line">    valueType value;	<span class="comment">// 即“值”，用于存储数据</span></span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">node</span>* next[<span class="number">1</span>];	<span class="comment">// 后继指针数组，柔性数组</span></span><br><span class="line">&#125; Node;</span><br></pre></td></tr></table></figure>
 
-<p>​	跳表(skip List)是一种随机化的数据结构，基于并联的链表，实现简单，插入、删除、查找的复杂度均为O(logN)。简单说来跳表也是链表的一种，只不过它在链表的基础上增加了跳跃功能，正是这个跳跃的功能，使得在查找元素时，跳表能够提供O(logN)的时间复杂度。</p>
-<p>​	先来看一个有序链表，如下图（最左侧的灰色节点表示一个空的头结点）<br><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img9/jnibhugvycftdxredtcyvub.png"></p>
-<p>​	在这样一个链表中，如果我们要查找某个数据，那么需要从头开始逐个进行比较，直到找到包含数据的那个节点，或者找到第一个比给定数据大的节点为止（没找到）。也就是说，时间复杂度为O(n)。同样，当我们要插入新数据的时候，也要经历同样的查找过程，从而确定插入位置。</p>
-<p>​	假如我们每相邻两个节点增加一个指针，让指针指向下下个节点，如下图：</p>
+<p>​		跳表(skip List)是一种随机化的数据结构，基于并联的链表，实现简单，插入、删除、查找的复杂度均为O(logN)。简单说来跳表也是链表的一种，只不过它在链表的基础上增加了跳跃功能，正是这个跳跃的功能，使得在查找元素时，跳表能够提供O(logN)的时间复杂度。</p>
+<p>​		先来看一个有序链表，如下图（最左侧的灰色节点表示一个空的头结点）</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img9/jnibhugvycftdxredtcyvub.png"></p>
+<p>​		在这样一个链表中，如果我们要查找某个数据，那么需要从头开始逐个进行比较，直到找到包含数据的那个节点，或者找到第一个比给定数据大的节点为止（没找到）。也就是说，时间复杂度为O(n)。同样，当我们要插入新数据的时候，也要经历同样的查找过程，从而确定插入位置。</p>
+<p>​		假如我们每相邻两个节点增加一个指针，让指针指向下下个节点，如下图：</p>
 <p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img9/njhbuvgtycrtxetrcyvybiun.png"></p>
-<p>​	这样所有新增加的指针连成了一个新的链表，但它包含的节点个数只有原来的一半（上图中是7, 19, 26）。现在当我们想查找数据的时候，可以先沿着这个新链表进行查找。当碰到比待查数据大的节点时，再回到原来的链表中进行查找。比如，我们想查找23，查找的路径是沿着下图中标红的指针所指向的方向进行的：</p>
+<p>​		这样所有新增加的指针连成了一个新的链表，但它包含的节点个数只有原来的一半（上图中是7, 19, 26）。现在当我们想查找数据的时候，可以先沿着这个新链表进行查找。当碰到比待查数据大的节点时，再回到原来的链表中进行查找。比如，我们想查找23，查找的路径是沿着下图中标红的指针所指向的方向进行的：</p>
 <p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img9/jnkbhgfcdxtcfygbhjn.png"></p>
 <ul>
 <li>23首先和7比较，再和19比较，比它们都大，继续向后比较。</li>
 <li>但23和26比较的时候，比26要小，因此回到下面的链表（原链表），与22比较。</li>
 <li>23比22要大，沿下面的指针继续向后和26比较。23比26小，说明待查数据23在原链表中不存在，而且它的插入位置应该在22和26之间。</li>
 </ul>
-<p>​	在这个查找过程中，由于新增加的指针，我们不再需要与链表中每个节点逐个进行比较了。需要比较的节点数大概只有原来的一半。</p>
-<p>​	利用同样的方式，我们可以在上层新产生的链表上，继续为每相邻的两个节点增加一个指针，从而产生第三层链表。如下图：</p>
+<p>​		在这个查找过程中，由于新增加的指针，我们不再需要与链表中每个节点逐个进行比较了。需要比较的节点数大概只有原来的一半。</p>
+<p>​		利用同样的方式，我们可以在上层新产生的链表上，继续为每相邻的两个节点增加一个指针，从而产生第三层链表。如下图：</p>
 <p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img9/jnibhugvyfctdfygbhjnom.png"></p>
-<p>​	在这个新的三层链表结构上，如果我们还是查找23，那么沿着最上层链表首先要比较的是19，发现23比19大，接下来我们就知道只需要到19的后面去继续查找，从而一下子跳过了19前面的所有节点。可以想象，当链表足够长的时候，这种多层链表的查找方式能让我们跳过很多下层节点，大大加快查找的速度。</p>
-<p>​	skiplist正是受这种多层链表的想法的启发而设计出来的。实际上，按照上面生成链表的方式，上面每一层链表的节点个数，是下面一层的节点个数的一半，这样查找过程就非常类似于一个二分查找，使得查找的时间复杂度可以降低到O(log n)。但是，这种方法在插入数据的时候有很大的问题。新插入一个节点之后，就会打乱上下相邻两层链表上节点个数严格的2:1的对应关系。如果要维持这种对应关系，就必须把新插入的节点后面的所有节点（也包括新插入的节点）重新进行调整，这会让时间复杂度重新蜕化成O(n)。删除数据也有同样的问题。</p>
-<p>​	skiplist为了避免这一问题，它不要求上下相邻两层链表之间的节点个数有严格的对应关系，而是为每个节点随机出一个层数(level)。比如，一个节点随机出的层数是3，那么就把它链入到第1层到第3层这三层链表中。为了表达清楚，下图展示了如何通过一步步的插入操作从而形成一个skiplist的过程：<br><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img9/jnhbugvfycdtxrtcfybh.png"></p>
-<p>​	从上面skiplist的创建和插入过程可以看出，每一个节点的层数（level）是随机出来的，而且新插入一个节点不会影响其它节点的层数。因此，插入操作只需要修改插入节点前后的指针，而不需要对很多节点都进行调整。这就降低了插入操作的复杂度。实际上，这是skiplist的一个很重要的特性，这让它在插入性能上明显优于平衡树的方案。这在后面我们还会提到。</p>
-<p>​	skiplist，指的就是除了最下面第1层链表之外，它会产生若干层稀疏的链表，这些链表里面的指针故意跳过了一些节点（而且越高层的链表跳过的节点越多）。这就使得我们在查找数据的时候能够先在高层的链表中进行查找，然后逐层降低，最终降到第1层链表来精确地确定数据位置。在这个过程中，我们跳过了一些节点，从而也就加快了查找速度。</p>
+<p>​		在这个新的三层链表结构上，如果我们还是查找23，那么沿着最上层链表首先要比较的是19，发现23比19大，接下来我们就知道只需要到19的后面去继续查找，从而一下子跳过了19前面的所有节点。可以想象，当链表足够长的时候，这种多层链表的查找方式能让我们跳过很多下层节点，大大加快查找的速度。</p>
+<p>​		skiplist正是受这种多层链表的想法的启发而设计出来的。实际上，按照上面生成链表的方式，上面每一层链表的节点个数，是下面一层的节点个数的一半，这样查找过程就非常类似于一个二分查找，使得查找的时间复杂度可以降低到O(log n)。但是，这种方法在插入数据的时候有很大的问题。新插入一个节点之后，就会打乱上下相邻两层链表上节点个数严格的2:1的对应关系。如果要维持这种对应关系，就必须把新插入的节点后面的所有节点（也包括新插入的节点）重新进行调整，这会让时间复杂度重新蜕化成O(n)。删除数据也有同样的问题。</p>
+<p>​		skiplist为了避免这一问题，它不要求上下相邻两层链表之间的节点个数有严格的对应关系，而是为每个节点随机出一个层数(level)。比如，一个节点随机出的层数是3，那么就把它链入到第1层到第3层这三层链表中。为了表达清楚，下图展示了如何通过一步步的插入操作从而形成一个skiplist的过程：<br><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img9/jnhbugvfycdtxrtcfybh.png"></p>
+<p>​		从上面skiplist的创建和插入过程可以看出，每一个节点的层数（level）是随机出来的，而且新插入一个节点不会影响其它节点的层数。因此，插入操作只需要修改插入节点前后的指针，而不需要对很多节点都进行调整。这就降低了插入操作的复杂度。实际上，这是skiplist的一个很重要的特性，这让它在插入性能上明显优于平衡树的方案。这在后面我们还会提到。</p>
+<p>​		skiplist，指的就是除了最下面第1层链表之外，它会产生若干层稀疏的链表，这些链表里面的指针故意跳过了一些节点（而且越高层的链表跳过的节点越多）。这就使得我们在查找数据的时候能够先在高层的链表中进行查找，然后逐层降低，最终降到第1层链表来精确地确定数据位置。在这个过程中，我们跳过了一些节点，从而也就加快了查找速度。</p>
 <p>​	刚刚创建的这个skiplist总共包含4层链表，现在假设我们在它里面依然查找23，下图给出了查找路径：<br><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img9/jnbhugvyctdxcfygbhijn.png"></p>
-<p>​	需要注意的是，前面演示的各个节点的插入过程，实际上在插入之前也要先经历一个类似的查找过程，在确定插入位置后，再完成插入操作。</p>
-<p>​	实际应用中的skiplist每个节点应该包含key和value两部分。前面的描述中我们没有具体区分key和value，但实际上列表中是按照key(score)进行排序的，查找过程也是根据key在比较。</p>
-<p>​	执行插入操作时计算随机数的过程，是一个很关键的过程，它对skiplist的统计特性有着很重要的影响。这并不是一个普通的服从均匀分布的随机数，它的计算过程如下：</p>
+<p>​		需要注意的是，前面演示的各个节点的插入过程，实际上在插入之前也要先经历一个类似的查找过程，在确定插入位置后，再完成插入操作。</p>
+<p>​		实际应用中的skiplist每个节点应该包含key和value两部分。前面的描述中我们没有具体区分key和value，但实际上列表中是按照key(score)进行排序的，查找过程也是根据key在比较。</p>
+<p>​		执行插入操作时计算随机数的过程，是一个很关键的过程，它对skiplist的统计特性有着很重要的影响。这并不是一个普通的服从均匀分布的随机数，它的计算过程如下：</p>
 <ul>
 <li>首先，每个节点肯定都有第1层指针（每个节点都在第1层链表里）。</li>
 <li>如果一个节点有第i层(i&gt;&#x3D;1)指针（即节点已经在第1层到第i层链表中），那么它有第(i+1)层指针的概率为p。</li>
@@ -274,14 +274,14 @@
 </ul>
 </blockquote>
 <h2 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h2><blockquote>
-<p>​	<code>Redis</code> 事务的本质是一组命令的集合。事务支持一次执行多个命令，一个事务中所有命令都会被序列化。在事务执行过程，会按照顺序串行化执行队列中的命令，其他客户端提交的命令请求不会插入到事务执行命令序列中。</p>
+<p>​		<code>Redis</code> 事务的本质是一组命令的集合。事务支持一次执行多个命令，一个事务中所有命令都会被序列化。在事务执行过程，会按照顺序串行化执行队列中的命令，其他客户端提交的命令请求不会插入到事务执行命令序列中。</p>
 <p>　　总结说：<code>redis</code>事务就是一次性、顺序性、排他性的执行一个队列中的一系列命令。　</p>
 </blockquote>
 <h3 id="Redis事务没有隔离级别的概念"><a href="#Redis事务没有隔离级别的概念" class="headerlink" title="Redis事务没有隔离级别的概念"></a>Redis事务没有隔离级别的概念</h3><blockquote>
-<p>​	批量操作在发送 <code>exec</code> 命令前被放入队列缓存，并不会被实际执行，也就不存在事务内的查询要看到事务里的更新，事务外查询不能看到。</p>
+<p>​		批量操作在发送 <code>exec</code> 命令前被放入队列缓存，并不会被实际执行，也就不存在事务内的查询要看到事务里的更新，事务外查询不能看到。</p>
 </blockquote>
 <h3 id="Redis不保证原子性"><a href="#Redis不保证原子性" class="headerlink" title="Redis不保证原子性"></a>Redis不保证原子性</h3><blockquote>
-<p>​	<code>Redis</code>中，单条命令是原子性执行的，但事务不保证原子性，且没有回滚。事务中任意命令执行失败，其余的命令仍会被执行。</p>
+<p>​		<code>Redis</code>中，单条命令是原子性执行的，但事务不保证原子性，且没有回滚。事务中任意命令执行失败，其余的命令仍会被执行。</p>
 </blockquote>
 <h3 id="Redis事务的三个阶段"><a href="#Redis事务的三个阶段" class="headerlink" title="Redis事务的三个阶段"></a>Redis事务的三个阶段</h3><blockquote>
 <ul>
@@ -328,11 +328,11 @@
 </blockquote>
 <p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img3/7u6eyhtsbdfvrgt4325y4.png"></p>
 <blockquote>
-<p>​	一但执行 <code>EXEC</code> 开启事务的执行后，无论事务使用执行成功， <code>WARCH</code> 对变量的监控都将被取消。</p>
-<p>​	故当事务执行失败后，需重新执行<code>WATCH</code>命令对变量进行监控，并开启新的事务进行操作。</p>
+<p>​			一但执行 <code>EXEC</code> 开启事务的执行后，无论事务使用执行成功， <code>WARCH</code> 对变量的监控都将被取消。</p>
+<p>​			故当事务执行失败后，需重新执行<code>WATCH</code>命令对变量进行监控，并开启新的事务进行操作。</p>
 </blockquote>
 <h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><blockquote>
-<p>​	<code>watch</code>指令类似于乐观锁，在事务提交时，如果<code>watch</code>监控的多个<code>KEY</code>中任何<code>KEY</code>的值已经被其他客户端更改，则使用<code>EXEC</code>执行事务时，事务队列将不会被执行，同时返回<code>Nullmulti-bulk</code>应答以通知调用者事务执行失败。</p>
+<p>​		<code>watch</code>指令类似于乐观锁，在事务提交时，如果<code>watch</code>监控的多个<code>KEY</code>中任何<code>KEY</code>的值已经被其他客户端更改，则使用<code>EXEC</code>执行事务时，事务队列将不会被执行，同时返回<code>Nullmulti-bulk</code>应答以通知调用者事务执行失败。</p>
 </blockquote>
 <h2 id="Redis有哪些优缺点？"><a href="#Redis有哪些优缺点？" class="headerlink" title="Redis有哪些优缺点？"></a>Redis有哪些优缺点？</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><blockquote>
 <ul>
