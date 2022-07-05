@@ -279,14 +279,14 @@
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/tags/JVM/</loc>
+    <loc>https://www.wyy-blog.cn/tags/Java%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2022-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/tags/Java%E5%9F%BA%E7%A1%80/</loc>
+    <loc>https://www.wyy-blog.cn/tags/JVM/</loc>
     <lastmod>2022-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -321,6 +321,13 @@
   </url>
   
   <url>
+    <loc>https://www.wyy-blog.cn/tags/Redis/</loc>
+    <lastmod>2022-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.wyy-blog.cn/tags/SpringBoot/</loc>
     <lastmod>2022-07-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -342,21 +349,14 @@
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
-    <lastmod>2022-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.wyy-blog.cn/tags/Redis/</loc>
-    <lastmod>2022-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.wyy-blog.cn/tags/Spring-Framework/</loc>
+    <lastmod>2022-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.wyy-blog.cn/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
     <lastmod>2022-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -414,14 +414,14 @@
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/categories/JVM/</loc>
+    <loc>https://www.wyy-blog.cn/categories/Java%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2022-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/categories/Java%E5%9F%BA%E7%A1%80/</loc>
+    <loc>https://www.wyy-blog.cn/categories/JVM/</loc>
     <lastmod>2022-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -470,14 +470,14 @@
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
+    <loc>https://www.wyy-blog.cn/categories/Spring-Framework/</loc>
     <lastmod>2022-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/categories/Spring-Framework/</loc>
+    <loc>https://www.wyy-blog.cn/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
     <lastmod>2022-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
