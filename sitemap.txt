@@ -29,8 +29,8 @@ https://www.wyy-blog.cn/categories/index.html
 https://www.wyy-blog.cn/tags/index.html
 https://www.wyy-blog.cn/
 https://www.wyy-blog.cn/tags/JWT/
-https://www.wyy-blog.cn/tags/JVM/
 https://www.wyy-blog.cn/tags/Java%E5%9F%BA%E7%A1%80/
+https://www.wyy-blog.cn/tags/JVM/
 https://www.wyy-blog.cn/tags/Linux/
 https://www.wyy-blog.cn/tags/SQL/
 https://www.wyy-blog.cn/tags/MyBatis/
@@ -48,8 +48,8 @@ https://www.wyy-blog.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/
 https://www.wyy-blog.cn/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/
 https://www.wyy-blog.cn/tags/%E7%AE%97%E6%B3%95/
 https://www.wyy-blog.cn/categories/JWT/
-https://www.wyy-blog.cn/categories/JVM/
 https://www.wyy-blog.cn/categories/Java%E5%9F%BA%E7%A1%80/
+https://www.wyy-blog.cn/categories/JVM/
 https://www.wyy-blog.cn/categories/Linux/
 https://www.wyy-blog.cn/categories/SQL/
 https://www.wyy-blog.cn/categories/MyBatis/
