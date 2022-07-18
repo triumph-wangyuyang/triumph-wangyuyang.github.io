@@ -307,14 +307,14 @@
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/</loc>
+    <loc>https://www.wyy-blog.cn/tags/JVM/</loc>
     <lastmod>2022-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/tags/JVM/</loc>
+    <loc>https://www.wyy-blog.cn/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/</loc>
     <lastmod>2022-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -442,14 +442,14 @@
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/categories/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/</loc>
+    <loc>https://www.wyy-blog.cn/categories/JVM/</loc>
     <lastmod>2022-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/categories/JVM/</loc>
+    <loc>https://www.wyy-blog.cn/categories/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/</loc>
     <lastmod>2022-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
