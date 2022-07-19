@@ -272,6 +272,13 @@
 
   
   <url>
+    <loc>https://www.wyy-blog.cn/tags/JVM/</loc>
+    <lastmod>2022-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.wyy-blog.cn/tags/JWT/</loc>
     <lastmod>2022-07-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -286,13 +293,6 @@
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/tags/JVM/</loc>
-    <lastmod>2022-07-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.wyy-blog.cn/tags/Linux/</loc>
     <lastmod>2022-07-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -300,14 +300,14 @@
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/tags/MyBatis/</loc>
+    <loc>https://www.wyy-blog.cn/tags/SQL/</loc>
     <lastmod>2022-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/tags/SQL/</loc>
+    <loc>https://www.wyy-blog.cn/tags/MyBatis/</loc>
     <lastmod>2022-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -407,6 +407,13 @@
 
   
   <url>
+    <loc>https://www.wyy-blog.cn/categories/JVM/</loc>
+    <lastmod>2022-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.wyy-blog.cn/categories/JWT/</loc>
     <lastmod>2022-07-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -421,13 +428,6 @@
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/categories/JVM/</loc>
-    <lastmod>2022-07-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.wyy-blog.cn/categories/Linux/</loc>
     <lastmod>2022-07-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -435,14 +435,14 @@
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/categories/MyBatis/</loc>
+    <loc>https://www.wyy-blog.cn/categories/SQL/</loc>
     <lastmod>2022-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/categories/SQL/</loc>
+    <loc>https://www.wyy-blog.cn/categories/MyBatis/</loc>
     <lastmod>2022-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
