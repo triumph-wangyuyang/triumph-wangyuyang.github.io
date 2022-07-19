@@ -286,14 +286,14 @@
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/tags/Java%E5%9F%BA%E7%A1%80/</loc>
+    <loc>https://www.wyy-blog.cn/tags/Linux/</loc>
     <lastmod>2022-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/tags/Linux/</loc>
+    <loc>https://www.wyy-blog.cn/tags/Java%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2022-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -342,14 +342,14 @@
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/tags/Spring-Framework/</loc>
+    <loc>https://www.wyy-blog.cn/tags/SpringCloud/</loc>
     <lastmod>2022-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/tags/SpringCloud/</loc>
+    <loc>https://www.wyy-blog.cn/tags/Spring-Framework/</loc>
     <lastmod>2022-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -363,7 +363,7 @@
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
+    <loc>https://www.wyy-blog.cn/tags/%E6%99%BA%E5%8A%9B%E9%A2%98/</loc>
     <lastmod>2022-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -377,7 +377,7 @@
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/tags/%E6%99%BA%E5%8A%9B%E9%A2%98/</loc>
+    <loc>https://www.wyy-blog.cn/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
     <lastmod>2022-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -421,14 +421,14 @@
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/categories/Java%E5%9F%BA%E7%A1%80/</loc>
+    <loc>https://www.wyy-blog.cn/categories/Linux/</loc>
     <lastmod>2022-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/categories/Linux/</loc>
+    <loc>https://www.wyy-blog.cn/categories/Java%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2022-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -463,14 +463,14 @@
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/categories/Spring-Framework/</loc>
+    <loc>https://www.wyy-blog.cn/categories/SpringCloud/</loc>
     <lastmod>2022-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/categories/SpringCloud/</loc>
+    <loc>https://www.wyy-blog.cn/categories/Spring-Framework/</loc>
     <lastmod>2022-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -484,7 +484,7 @@
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
+    <loc>https://www.wyy-blog.cn/categories/%E6%99%BA%E5%8A%9B%E9%A2%98/</loc>
     <lastmod>2022-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -498,7 +498,7 @@
   </url>
   
   <url>
-    <loc>https://www.wyy-blog.cn/categories/%E6%99%BA%E5%8A%9B%E9%A2%98/</loc>
+    <loc>https://www.wyy-blog.cn/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
     <lastmod>2022-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
