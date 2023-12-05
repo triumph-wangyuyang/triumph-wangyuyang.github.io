@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>JWT | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="记录JWT相关知识。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JWT">
+<meta property="og:url" content="http://example.com/2021/11/07/JWT/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="记录JWT相关知识。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/v2-85622297a93f493c891ffb90b67fd5e0_1440w.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/v2-1f49734871c5e2da2d264d28ac310a65_r.jpg">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/v2-b1147a2e2c3fbb6d6b46fdebda122ba3_1440w.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/20200309140918347.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/v2-0b02fa4a73a8072eb03cdf78270235e1_1440w.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/image-20210626223811598.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img7/hbgvyfctdxrtcfyvgubhinjomk.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img7/%E5%8F%AB%E4%BD%A0%E8%BF%98%E4%B8%8D%E5%A4%9Fv%E4%B8%8E%E4%BC%A0%E7%BB%9F%E7%AD%89%E4%B8%8B%E5%90%83%E9%A5%AD%E4%B8%80%E8%BE%B9%E5%8F%88import%E3%80%90.png">
+<meta property="article:published_time" content="2021-11-07T12:32:25.000Z">
+<meta property="article:modified_time" content="2022-02-11T14:25:34.000Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="JWT">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/v2-85622297a93f493c891ffb90b67fd5e0_1440w.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-JWT" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/11/07/JWT/" class="article-date">
+  <time class="dt-published" datetime="2021-11-07T12:32:25.000Z" itemprop="datePublished">2021-11-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JWT/">JWT</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      JWT
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <span id="more"></span>
+
+<p>说明：本篇博客主要借鉴<a target="_blank" rel="noopener" href="https://www.baobao555.tech/posts/4cc42459/">https://www.baobao555.tech/posts/4cc42459/</a></p>
+<h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><blockquote>
+<p>​	超文本传输协议，是一个基于请求与响应，无状态的，应用层的协议，常基于TCP&#x2F;IP协议传输数据，互联网上应用最为广泛的一种网络协议,所有的WWW文件都必须遵守这个标准。</p>
+</blockquote>
+<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><blockquote>
+<ul>
+<li>无状态：协议对客户端没有状态存储，对事物处理没有“记忆”能力，比如访问一个网站需要反复进行登录操作</li>
+<li>无连接：HTTP&#x2F;1.1之前，由于无状态特点，每次请求需要通过TCP三次握手四次挥手，和服务器重新建立连接。比如某个客户机在短时间多次请求同一个资源，服务器并不能区别是否已经响应过用户的请求，所以每次需要重新响应请求，需要耗费不必要的时间和流量。</li>
+<li>基于请求和响应：基本的特性，由客户端发起请求，服务端响应</li>
+<li>简单快速、灵活</li>
+<li>通信使用明文、请求和响应不会对通信方进行确认、无法保护数据的完整性</li>
+</ul>
+</blockquote>
+<h2 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h2><blockquote>
+<p>​	我们登录淘宝的时候首先要登录，我们看到了一个商品点进去，进行了页面跳转&#x2F;刷新，按照HTTP的无状态协议岂不是又要登录一次？<br>​	所以为了解决这个问题，Cookie诞生了，在保留无状态协议这个特征的同时又要解决类似记录状态的矛盾问题。Cookie 技术通过在请求和响应报文中写入Cookie 信息来控制客户端的状态。<br>​	Cookie 会根据从服务器端发送的响应报文内的一个叫做Set-Cookie的首部字段信息，通知客户端保存Cookie。当下次客户端再往该服务器发送请求时，客户端会自动在请求报文中加入Cookie 值后发送出去。<br>​	服务器端发现客户端发送过来的Cookie 后，会去检查究竟是从哪一个客户端发来的连接请求，然后对比服务器上的记录，最后得到之前的状态信息。</p>
+</blockquote>
+<ul>
+<li>没有Cookie信息状态下的请求</li>
+</ul>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/v2-85622297a93f493c891ffb90b67fd5e0_1440w.png"></p>
+<ul>
+<li>第2次以后（存有Cookie信息状态）的请求</li>
+</ul>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/v2-1f49734871c5e2da2d264d28ac310a65_r.jpg"></p>
+<p>上图很清晰地展示了发生Cookie 交互的情景。<br>HTTP 请求报文和响应报文的内容如下（数字和图中对应）。<br>① 请求报文（没有Cookie 信息的状态）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GET /reader/ HTTP/1.1</span><br><span class="line">Host: hackr.jp</span><br><span class="line">*首部字段内没有Cookie的相关信息</span><br></pre></td></tr></table></figure>
+
+<p>② 响应报文（服务器端生成Cookie 信息）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.1 200 OK</span><br><span class="line">Date: Thu, 12 Jul 2012 07:12:20 GMT</span><br><span class="line">Server: Apache</span><br><span class="line">＜Set-Cookie: sid=1342077140226724; path=/; expires=Wed,10-Oct-12 07:12:20 GMT＞</span><br><span class="line">Content-Type: text/plain; charset=UTF-8</span><br></pre></td></tr></table></figure>
+
+<p>③ 请求报文（自动发送保存着的Cookie 信息）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GET /image/ HTTP/1.1</span><br><span class="line">Host: hackr.jp</span><br><span class="line">Cookie: sid=1342077140226724</span><br></pre></td></tr></table></figure>
+
+<h3 id="关于Cookie-的首部字段"><a href="#关于Cookie-的首部字段" class="headerlink" title="关于Cookie 的首部字段"></a>关于Cookie 的首部字段</h3><table>
+<thead>
+<tr>
+<th align="center">首部字段名</th>
+<th align="center">说明</th>
+<th align="center">首部类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Set-Cookie</td>
+<td align="center">开始状态管理所使用的Cookie信息</td>
+<td align="center">响应首部字段</td>
+</tr>
+<tr>
+<td align="center">Cookie</td>
+<td align="center">服务器接收到的Cookie信息</td>
+<td align="center">请求首部字段</td>
+</tr>
+</tbody></table>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/v2-b1147a2e2c3fbb6d6b46fdebda122ba3_1440w.png"></p>
+<h4 id="Set-Cookie"><a href="#Set-Cookie" class="headerlink" title="Set-Cookie"></a>Set-Cookie</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Set-Cookie: status=enable; expires=Tue, 05 Jul 2011 07:26:31 GMT; ⇒</span><br><span class="line">path=/; domain=.hackr.jp;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>当服务器准备开始管理客户端的状态时，会事先告知各种信息。下面的表格列举了Set-Cookie 的字段值。</p>
+</blockquote>
+<h5 id="Set-Cookie-字段的属性"><a href="#Set-Cookie-字段的属性" class="headerlink" title="Set-Cookie 字段的属性"></a>Set-Cookie 字段的属性</h5><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>NAME&#x3D;VALUE</td>
+<td>赋予Cookie的名称和其值（必需项)</td>
+</tr>
+<tr>
+<td>expires&#x3D;DATE</td>
+<td>Cookie的有效期（若不明确指定则默认为浏览器关闭前为止)</td>
+</tr>
+<tr>
+<td>path&#x3D;PATH</td>
+<td>将服务器上的文件目录作为Cookie的适用对象（若不指定则默认为文档所在的文件目录)</td>
+</tr>
+<tr>
+<td>domain&#x3D;域名</td>
+<td>作为Cookie适用对象的域名（若不指定则默认为创建Cookie的服务器的域名)</td>
+</tr>
+</tbody></table>
+<h5 id="expires-属性"><a href="#expires-属性" class="headerlink" title="expires 属性"></a>expires 属性</h5><blockquote>
+<p>​	Cookie 的expires 属性指定浏览器可发送Cookie 的有效期。当省略expires 属性时，Cookie仅在浏览器关闭之前有效。<br>​	另外，一旦Cookie 从服务器端发送至客户端，服务器端就不存在可以显式删除Cookie 的方法。但可通过覆盖已过期的Cookie，实现对客户端Cookie 的实质性删除操作。</p>
+</blockquote>
+<h5 id="path-属性"><a href="#path-属性" class="headerlink" title="path 属性"></a>path 属性</h5><blockquote>
+<p>​	Cookie 的path 属性可用于限制指定Cookie 的发送范围的文件目录。不过另有办法可避开这项限制，看来对其作为安全机制的效果不能抱有期待。</p>
+</blockquote>
+<h5 id="domain-属性"><a href="#domain-属性" class="headerlink" title="domain 属性"></a>domain 属性</h5><blockquote>
+<p>​	通过Cookie 的domain 属性指定的域名可做到与结尾匹配一致。比如， 当指定<a href="http://example.com/">http://example.com</a> 后， 除<a href="http://example.com/">http://example.com</a> 以外，Example Domain或www2.example.com 等都可以发送Cookie。因此，除了针对具体指定的多个域名发送Cookie 之外，不指定domain 属性显得更安全。</p>
+</blockquote>
+<h5 id="secure-属性"><a href="#secure-属性" class="headerlink" title="secure 属性"></a>secure 属性</h5><blockquote>
+<p>​	Cookie 的secure 属性用于限制Web 页面仅在HTTPS 安全连接时，才可以发送Cookie。发送Cookie 时，指定secure 属性的方法如下所示。<br>​	Set-Cookie: name&#x3D;value; secure<br>​	以上例子仅当在https ：&#x2F;&#x2F;Example Domain（HTTPS）安全连接的情况下才会进行Cookie 的回收。也就是说，即使域名相同时http : &#x2F;&#x2F;Example Domain（HTTP） 也不会发生Cookie 回收行为。当省略secure 属性时，不论HTTP 还是HTTPS，都会对Cookie 进行回收。</p>
+</blockquote>
+<h5 id="HttpOnly-属性"><a href="#HttpOnly-属性" class="headerlink" title="HttpOnly 属性"></a>HttpOnly 属性</h5><blockquote>
+<p>​	Cookie 的HttpOnly 属性是Cookie 的扩展功能，它使JavaScript 脚本无法获得Cookie。其主要目的为防止跨站脚本攻击（Cross-sitescripting，XSS）对Cookie 的信息窃取。<br>​	发送指定HttpOnly 属性的Cookie 的方法如下所示。<br>​		Set-Cookie: name&#x3D;value; HttpOnly<br>​	通过上述设置，通常从Web 页面内还可以对Cookie 进行读取操作。但使用JavaScript 的document.cookie 就无法读取附加HttpOnly 属性后的Cookie 的内容了。因此，也就无法在XSS 中利用JavaScript 劫持Cookie 了。<br>​	虽然是独立的扩展功能，但Internet Explorer 6 SP1 以上版本等当下的主流浏览器都已经支持该扩展了。另外顺带一提，该扩展并非是为了防止XSS 而开发的。</p>
+</blockquote>
+<h3 id="Cookie有哪些缺陷-？"><a href="#Cookie有哪些缺陷-？" class="headerlink" title="Cookie有哪些缺陷 ？"></a>Cookie有哪些缺陷 ？</h3><blockquote>
+<ul>
+<li>数量受到限制。一个浏览器能创建的 Cookie 数量最多为 300 个，并且每个不能超过 4KB，每个 Web 站点能设置的<br>Cookie 总数不能超过 20 个</li>
+<li>安全性无法得到保障。通常跨站点脚本攻击往往利用网站漏洞在网站页面中植入脚本代码或网站页面引用第三方法脚本代码，均存在跨站点脚本攻击的可能，在受到跨站点脚本攻击时，脚本指令将会读取当前站点的所有Cookie 内容（已不存在 Cookie 作用域限制），然后通过某种方式将 Cookie 内容提交到指定的服务器（如：AJAX）。一旦 Cookie 落入攻击者手中，它将会重现其价值。</li>
+<li>浏览器可以禁用Cookie，禁用Cookie后，也就无法享有Cookie带来的方便。</li>
+</ul>
+</blockquote>
+<h3 id="cookie的应用场景"><a href="#cookie的应用场景" class="headerlink" title="cookie的应用场景"></a>cookie的应用场景</h3><h2 id="Session"><a href="#Session" class="headerlink" title="Session"></a><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/20200309140918347.png">Session</h2><blockquote>
+<p>​	Session是另一种记录客户状态的机制，不同的是Cookie保存在客户端浏览器中，而Session保存在服务器上。客户端浏览器访问服务器的时候，服务器把客户端信息以某种形式记录在服务器上。这就是Session。客户端浏览器再次访问时只需要从该Session中查找该客户的状态就可以了。</p>
+</blockquote>
+<blockquote>
+<p>​	鉴于HTTP 是无状态协议，之前已认证成功的用户状态无法通过协议层面保存下来。即，无法实现状态管理，因此即使当该用户下一次继续访问，也无法区分他与其他的用户。于是我们会使用Cookie 来管理Session，以弥补HTTP 协议中不存在的状态管理功能。</p>
+</blockquote>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/v2-0b02fa4a73a8072eb03cdf78270235e1_1440w.png"></p>
+<blockquote>
+<ol>
+<li><p>浏览器端第一次发送请求到服务器端，服务器端创建一个Session，同时会创建一个特殊的Cookie（name为JSESSIONID的固定值，value为session对象的ID），然后将该Cookie发送至浏览器端</p>
+</li>
+<li><p>浏览器端发送第N（N&gt;1）次请求到服务器端,浏览器端访问服务器端时就会携带该name为JSESSIONID的Cookie对象</p>
+</li>
+<li><p>服务器端根据name为JSESSIONID的Cookie的value(sessionId),去查询Session对象，从而区分不同用户。</p>
+</li>
+</ol>
+</blockquote>
+<h2 id="Session和Cookie的区别？"><a href="#Session和Cookie的区别？" class="headerlink" title="Session和Cookie的区别？"></a>Session和Cookie的区别？</h2><blockquote>
+<ol>
+<li>数据存储位置：cookie数据存放在客户的浏览器上，session数据放在服务器上。</li>
+<li>安全性：cookie不是很安全，别人可以分析存放在本地的cookie并进行cookie欺骗，考虑到安全应当使用session。</li>
+<li>服务器性能：session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能，考虑到减轻服务器性能方面，应当使用cookie。</li>
+<li>数据大小：单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。</li>
+<li>信息重要程度：可以考虑将登陆信息等重要信息存放为session，其他信息如果需要保留，可以放在cookie中。</li>
+</ol>
+</blockquote>
+<h2 id="JWT"><a href="#JWT" class="headerlink" title="JWT"></a>JWT</h2><h3 id="什么是JWT"><a href="#什么是JWT" class="headerlink" title="什么是JWT"></a>什么是JWT</h3><h4 id="token进行用户身份验证的流程"><a href="#token进行用户身份验证的流程" class="headerlink" title="token进行用户身份验证的流程"></a>token进行用户身份验证的流程</h4><blockquote>
+<ol>
+<li>客户端使用用户名和密码请求登录</li>
+<li>服务端收到请求，验证用户名和密码</li>
+<li>验证成功后，服务端会签发一个<code>token</code>，再把这个<code>token</code>返回给客户端</li>
+<li>客户端收到token后可以把它存储起来，比如放到cookie中</li>
+<li>客户端每次向服务端请求资源时需要携带服务端签发的token，可以在<code>cookie</code>或者<code>header</code>中携带</li>
+<li>服务端收到请求，然后去验证客户端请求里面带着的<code>token</code>，如果验证成功，就向客户端返回请求数据</li>
+</ol>
+</blockquote>
+<h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><blockquote>
+<ul>
+<li>这种基于<code>token</code>的认证方式相比传统的<code>session</code>认证方式更节约服务器资源，并且对移动端和分布式更加友好。</li>
+<li><strong>支持跨域访问</strong>：<code>cookie</code>是无法跨域的，而<code>token</code>由于没有用到<code>cookie</code>(前提是将<code>token</code>放到请求头中)，所以跨域后不会存在信息丢失问题</li>
+<li><strong>无状态</strong>：<code>token</code>机制在服务端不需要存储<code>session</code>信息，因为token自身包含了所有登录用户的信息，所以可以减轻服务端压力</li>
+<li><strong>更适用CDN</strong>：可以通过内容分发网络请求服务端的所有资料</li>
+<li><strong>更适用于移动端</strong>：当客户端是非浏览器平台时，<code>cookie</code>是不被支持的，此时采用<code>token</code>认证方式会简单很多</li>
+<li><strong>无需考虑CSRF</strong>：由于不再依赖<code>cookie</code>，所以采用token认证方式不会发生CSRF，所以也就无需考虑CSRF的防御</li>
+</ul>
+<p>说明：</p>
+<p>CSRF：跨站请求伪造，攻击者通过伪造用户的浏览器的请求，向访问一个用户自己曾经认证访问过的网站发送出去，使目标网站接收并误以为是用户的真实操作而去执行命令。常用于盗取账号、转账、发送虚假消息等。攻击者利用网站对请求的验证漏洞而实现这样的攻击行为，网站能够确认请求来源于用户的浏览器，却不能验证请求是否源于用户的真实意愿下的操作行为。</p>
+</blockquote>
+<p>​	而<code>JWT</code>就是上述流程当中<code>token</code>的一种具体实现方式，其全称是<code>JSON Web Token</code>，官网地址：<a target="_blank" rel="noopener" href="https://jwt.io/">https://jwt.io/</a></p>
+<p>​	通俗地说，<strong>JWT的本质就是一个字符串</strong>，它是将用户信息保存到一个Json字符串中，然后进行编码后得到一个<code>JWT token</code>，<strong>并且这个<code>JWT token</code>带有签名信息，接收后可以校验是否被篡改</strong>，所以可以用于在各方之间安全地将信息作为Json对象传输。</p>
+<h4 id="JWT的认证流程"><a href="#JWT的认证流程" class="headerlink" title="JWT的认证流程"></a>JWT的认证流程</h4><blockquote>
+<ol>
+<li>首先，前端通过Web表单将自己的用户名和密码发送到后端的接口，这个过程一般是一个<code>POST</code>请求。建议的方式是通过SSL加密的传输(HTTPS)，从而避免敏感信息被嗅探</li>
+<li>后端核对用户名和密码成功后，<strong>将包含用户信息的数据作为JWT的Payload，将其与JWT Header分别进行Base64编码拼接后签名</strong>，形成一个<code>JWT Token</code>，形成的<code>JWT Token</code>就是一个如同<code>lll.zzz.xxx</code>的字符串</li>
+<li>后端将<code>JWT Token</code>字符串作为登录成功的结果返回给前端。前端可以将返回的结果保存在浏览器中，退出登录时删除保存的<code>JWT Token</code>即可</li>
+<li><strong>前端在每次请求时将<code>JWT Token</code>放入HTTP请求头中的<code>Authorization</code>属性中</strong>(解决XSS和XSRF问题)</li>
+<li>后端检查前端传过来的<code>JWT Token</code>，验证其有效性，比如检查签名是否正确、是否过期、token的接收方是否是自己等等</li>
+<li>验证通过后，后端解析出<code>JWT Token</code>中包含的用户信息，进行其他逻辑操作(一般是根据用户信息得到权限等)，返回结果</li>
+</ol>
+</blockquote>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/image-20210626223811598.png"></p>
+<h3 id="传统的session认证问题"><a href="#传统的session认证问题" class="headerlink" title="传统的session认证问题"></a>传统的<code>session</code>认证问题</h3><blockquote>
+<ul>
+<li>每个用户的登录信息都会保存到服务器的<code>session</code>中，<strong>随着用户的增多，服务器开销会明显增大</strong></li>
+<li>由于<code>session</code>是存在与服务器的物理内存中，所以<strong>在分布式系统中，这种方式将会失效</strong>。虽然可以将<code>session</code>统一保存到Redis中，但是这样做无疑增加了系统的复杂性，对于不需要redis的应用也会白白多引入一个缓存中间件</li>
+<li><strong>对于非浏览器的客户端、手机移动端等不适用</strong>，因为<code>session</code>依赖于<code>cookie</code>，而移动端经常没有<code>cookie</code></li>
+<li>因为<code>session</code>认证本质基于<code>cookie</code>，所以如果<code>cookie</code>被截获，用户很容易收到跨站请求伪造攻击。并且如果浏览器禁用了<code>cookie</code>，这种方式也会失效</li>
+<li>前后端分离系统中更加不适用，后端部署复杂，前端发送的请求往往经过多个中间件到达后端，<code>cookie</code>中关于<code>session</code>的信息会转发多次</li>
+<li>由于基于Cookie，而<strong>cookie无法跨域，所以session的认证也无法跨域，对单点登录不适用</strong></li>
+</ul>
+</blockquote>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img7/hbgvyfctdxrtcfyvgubhinjomk.png"></p>
+<h3 id="JWT认证的优势"><a href="#JWT认证的优势" class="headerlink" title="JWT认证的优势"></a>JWT认证的优势</h3><blockquote>
+<ul>
+<li>简洁：<code>JWT Token</code>数据量小，传输速度也很快</li>
+<li>因为JWT Token是以JSON加密形式保存在客户端的，所以JWT是<strong>跨语言</strong>的，原则上任何web形式都支持</li>
+<li>不需要在服务端保存会话信息，也就是说<strong>不依赖于cookie和session，所以没有了传统session认证的弊端，特别适用于分布式微服务</strong></li>
+<li><strong>单点登录友好</strong>：使用Session进行身份认证的话，由于cookie无法跨域，难以实现单点登录。但是，使用token进行认证的话， <strong>token可以被保存在客户端的任意位置的内存中，不一定是cookie，所以不依赖cookie</strong>，不会存在这些问题</li>
+<li><strong>适合移动端应用</strong>：使用Session进行身份认证的话，需要保存一份信息在服务器端，而且这种方式会依赖到Cookie（需要 Cookie 保存 SessionId），所以不适合移动端</li>
+</ul>
+</blockquote>
+<h3 id="JWT结构"><a href="#JWT结构" class="headerlink" title="JWT结构"></a>JWT结构</h3><p>JWT由3部分组成：标头(Header)、有效载荷(Payload)和签名(Signature)。在传输的时候，会将JWT的3部分分别进行Base64编码后用<code>.</code>进行连接形成最终传输的字符串</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">JWTString = Base64(Header).</span><br><span class="line">            Base64(Payload).</span><br><span class="line">            HMACSHA256(base64UrlEncode(header) + “.” + base64UrlEncode(payload), secret)</span><br></pre></td></tr></table></figure>
+
+<h4 id="Header"><a href="#Header" class="headerlink" title="Header"></a>Header</h4><p><strong>JWT头</strong>是一个描述JWT元数据的JSON对象，alg属性表示签名使用的算法，默认为HMAC SHA256（写为HS256）；typ属性表示令牌的类型，JWT令牌统一写为JWT。最后，使用Base64 URL算法将上述JSON对象转换为字符串保存</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;alg&quot;</span>: <span class="string">&quot;HS256&quot;</span>,</span><br><span class="line">  <span class="string">&quot;typ&quot;</span>: <span class="string">&quot;JWT&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Payload"><a href="#Payload" class="headerlink" title="Payload"></a>Payload</h4><ul>
+<li><strong>Registered claims（注册声明）</strong>:<br>这些是一组预先定义的声明，它们不是强制性的，但推荐使用，以提供一组有用的，可互操作的声明。 其中一些是：<code>iss</code>（发行者），<code>exp</code>（到期时间），<code>sub</code>（主题），<code>aud</code>（受众）等。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">iss：发行人</span><br><span class="line">exp：到期时间</span><br><span class="line">sub：主题</span><br><span class="line">aud：用户</span><br><span class="line">nbf：在此之前不可用</span><br><span class="line">iat：发布时间</span><br><span class="line">jti：JWT ID用于标识该JWT</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>Public claims（公开声明）</strong>:<br>这些可以由使用JWT的人员随意定义。 但为避免冲突，应在IANA JSON Web令牌注册表中定义它们，或将其定义为包含防冲突命名空间的URI。</li>
+<li><strong>Private claims（私有声明）</strong>:<br>这些是为了同意使用它们但是既没有登记，也没有公开声明的各方之间共享信息，而创建的定制声明。</li>
+</ul>
+<blockquote>
+<p>​	请注意，<strong>默认情况下JWT是未加密的，因为只是采用base64算法，拿到JWT字符串后可以转换回原本的JSON数据，任何人都可以解读其内容，因此不要构建隐私信息字段，比如用户的密码一定不能保存到JWT中</strong>，以防止信息泄露。<strong>JWT只是适合在网络中传输一些非敏感的信息</strong></p>
+</blockquote>
+<h4 id="Signature"><a href="#Signature" class="headerlink" title="Signature"></a>Signature</h4><p><strong>签名哈希</strong>部分是对上面两部分数据签名，需要使用base64编码后的header和payload数据，通过指定的算法生成哈希，以<strong>确保数据不会被篡改</strong>。首先，需要指定一个密钥（secret）。该密码仅仅为保存在服务器中，并且不能向用户公开。然后，使用header中指定的签名算法（默认情况下为HMAC SHA256）根据以下公式生成签名</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HMACSHA256(base64UrlEncode(header) + “.” + base64UrlEncode(payload), secret)</span><br></pre></td></tr></table></figure>
+
+<p>在计算出签名哈希后，JWT头，有效载荷和签名哈希的三个部分组合成一个字符串，每个部分用<code>.</code>分隔，就构成整个JWT对象</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img7/%E5%8F%AB%E4%BD%A0%E8%BF%98%E4%B8%8D%E5%A4%9Fv%E4%B8%8E%E4%BC%A0%E7%BB%9F%E7%AD%89%E4%B8%8B%E5%90%83%E9%A5%AD%E4%B8%80%E8%BE%B9%E5%8F%88import%E3%80%90.png"></p>
+<blockquote>
+<p>注意JWT每部分的作用，在服务端接收到客户端发送过来的JWT token之后：</p>
+<ul>
+<li><code>header</code>和<code>payload</code>可以直接利用base64解码出原文，从<code>header</code>中获取哈希签名的算法，从<code>payload</code>中获取有效数据</li>
+<li><code>signature</code>由于使用了不可逆的加密算法，无法解码出原文，它的作用是<strong>校验token有没有被篡改</strong>。服务端获取<code>header</code>中的加密算法之后，利用该算法加上<code>secretKey</code>对<code>header</code>、<code>payload</code>进行加密，比对加密后的数据和客户端发送过来的是否一致。注意<code>secretKey</code>只能保存在服务端，而且对于不同的加密算法其含义有所不同，一般对于MD5类型的摘要加密算法，<code>secretKey</code>实际上代表的是盐值</li>
+</ul>
+</blockquote>
+<h2 id="JWT的种类"><a href="#JWT的种类" class="headerlink" title="JWT的种类"></a>JWT的种类</h2><p>其实JWT(JSON Web Token)指的是一种规范，这种规范允许我们使用JWT在两个组织之间传递安全可靠的信息，JWT的具体实现可以分为以下几种：</p>
+<ul>
+<li><code>nonsecure JWT</code>：未经过签名，不安全的JWT</li>
+<li><code>JWS</code>：经过签名的JWT</li>
+<li><code>JWE</code>：<code>payload</code>部分经过加密的JWT</li>
+</ul>
+<h3 id="nonsecure-JWT"><a href="#nonsecure-JWT" class="headerlink" title="nonsecure JWT"></a>nonsecure JWT</h3><p>未经过签名，不安全的JWT。其<code>header</code>部分没有指定签名算法，并且也没有<code>Signature</code>部分</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;alg&quot;</span>: <span class="string">&quot;none&quot;</span>,</span><br><span class="line">  <span class="string">&quot;typ&quot;</span>: <span class="string">&quot;JWT&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="JWS"><a href="#JWS" class="headerlink" title="JWS"></a>JWS</h3><p>JWS ，也就是JWT Signature，其结构就是在之前nonsecure JWT的基础上，在头部声明签名算法，并在最后添加上签名。<strong>创建签名，是保证jwt不能被他人随意篡改</strong>。我们通常使用的JWT一般都是JWS</p>
+<p>为了完成签名，除了用到header信息和payload信息外，还需要算法的密钥，也就是<code>secretKey</code>。加密的算法一般有2类：</p>
+<ul>
+<li>对称加密：<code>secretKey</code>指加密密钥，可以生成签名与验签</li>
+<li>非对称加密：<code>secretKey</code>指私钥，只用来生成签名，不能用来验签(验签用的是公钥)</li>
+</ul>
+<p>JWT的密钥或者密钥对，一般统一称为JSON Web Key，也就是<code>JWK</code></p>
+<p>到目前为止，jwt的签名算法有三种：</p>
+<ul>
+<li>HMAC【哈希消息验证码(对称)】：HS256&#x2F;HS384&#x2F;HS512</li>
+<li>RSASSA【RSA签名算法(非对称)】（RS256&#x2F;RS384&#x2F;RS512）</li>
+<li>ECDSA【椭圆曲线数据签名算法(非对称)】（ES256&#x2F;ES384&#x2F;ES512）</li>
+</ul>
+<h2 id="实际开发中的应用"><a href="#实际开发中的应用" class="headerlink" title="实际开发中的应用"></a>实际开发中的应用</h2><p>在实际的<code>SpringBoot</code>项目中，一般我们可以用如下流程做登录：</p>
+<ol>
+<li>在登录验证通过后，给用户生成一个对应的随机token(注意这个token不是指jwt，可以用uuid等算法生成)，然后将这个token作为key的一部分，用户信息作为value存入Redis，并设置过期时间，这个过期时间就是登录失效的时间</li>
+<li>将第1步中生成的随机token作为JWT的payload生成JWT字符串返回给前端</li>
+<li>前端之后每次请求都在请求头中的<code>Authorization</code>字段中携带JWT字符串</li>
+<li>后端定义一个拦截器，每次收到前端请求时，都先从请求头中的<code>Authorization</code>字段中取出JWT字符串并进行验证，验证通过后解析出payload中的随机token，然后再用这个随机token得到key，从Redis中获取用户信息，如果能获取到就说明用户已经登录</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">JWTInterceptor</span> <span class="keyword">implements</span> <span class="title class_">HandlerInterceptor</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">preHandle</span><span class="params">(HttpServletRequest request, HttpServletResponse response, Object handler)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">JWT</span> <span class="operator">=</span> request.getHeader(<span class="string">&quot;Authorization&quot;</span>);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">// 1.校验JWT字符串</span></span><br><span class="line">            <span class="type">DecodedJWT</span> <span class="variable">decodedJWT</span> <span class="operator">=</span> JWTUtils.decode(JWT);</span><br><span class="line">            <span class="comment">// 2.取出JWT字符串载荷中的随机token，从Redis中获取用户信息</span></span><br><span class="line">            ...</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;<span class="keyword">catch</span> (SignatureVerificationException e)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;无效签名&quot;</span>);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;<span class="keyword">catch</span> (TokenExpiredException e)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;token已经过期&quot;</span>);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;<span class="keyword">catch</span> (AlgorithmMismatchException e)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;算法不一致&quot;</span>);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;<span class="keyword">catch</span> (Exception e)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;token无效&quot;</span>);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/11/07/JWT/" data-id="clpsh97930003xgvshzjdd064" data-title="JWT" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JWT/" rel="tag">JWT</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/11/11/RabbitMQ/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          RabbitMQ
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/10/30/MongoDB/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">MongoDB</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JVM/">JVM</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JWT/">JWT</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java%E5%9F%BA%E7%A1%80/">Java基础</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MyBatis/">MyBatis</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SQL/">SQL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Spring-Framework/">Spring Framework</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringBoot/">SpringBoot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringCloud/">SpringCloud</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%99%BA%E5%8A%9B%E9%A2%98/">智力题</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/">消息队列</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/">面试题</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JVM/" rel="tag">JVM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JWT/" rel="tag">JWT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MyBatis/" rel="tag">MyBatis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redis/" rel="tag">Redis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL/" rel="tag">SQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring-Framework/" rel="tag">Spring Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringBoot/" rel="tag">SpringBoot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringCloud/" rel="tag">SpringCloud</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="tag">多线程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%99%BA%E5%8A%9B%E9%A2%98/" rel="tag">智力题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" rel="tag">消息队列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/" rel="tag">面试题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/" rel="tag">项目部署</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/JVM/" style="font-size: 15px;">JVM</a> <a href="/tags/JWT/" style="font-size: 10px;">JWT</a> <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 20px;">Java基础</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MyBatis/" style="font-size: 10px;">MyBatis</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/SQL/" style="font-size: 15px;">SQL</a> <a href="/tags/Spring-Framework/" style="font-size: 10px;">Spring Framework</a> <a href="/tags/SpringBoot/" style="font-size: 10px;">SpringBoot</a> <a href="/tags/SpringCloud/" style="font-size: 10px;">SpringCloud</a> <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" style="font-size: 10px;">多线程</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%99%BA%E5%8A%9B%E9%A2%98/" style="font-size: 10px;">智力题</a> <a href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" style="font-size: 10px;">消息队列</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">计算机网络</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">设计模式</a> <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/" style="font-size: 10px;">面试题</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/" style="font-size: 10px;">项目部署</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/03/22/Spring-Framework/">Spring Framework</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/13/SpringBoot/">SpringBoot</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/13/MyBatis/">MyBatis</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/04/Java%E5%8F%8D%E5%B0%84/">Java反射</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/02/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>SpringBoot | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="记录SpringBoot的基础知识。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringBoot">
+<meta property="og:url" content="http://example.com/2022/01/13/SpringBoot/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="记录SpringBoot的基础知识。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/bfe74f5f2dff4e278df349bf41asdcsdce840d.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/9e064d08a9484af0978scsdcdsf34aa0f519815.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/9ffcf2fa6a4f41008c8bexsxxsxs1f76755bdb8.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/beaf9410c6ff4f368cad7cdcddcdcd56ec38a0602.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/8ed81baf3156416497964cdscdsca2b4688c305.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/da21d1b9345f47a8b97cdcdsaad223663e831.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/1ea8b6a5b9654036945c8cdcdcdscdc29448b9d0.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/4919beb3764f4750afcddscsdca58cab4e8bbd4a.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/f212ef804fa8476dbcddscsdcf244ba5427f5429.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/6201de573e2e47csddcsd30a707f0bceaf818a3.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/da917e16f65b409e91c378csscscc4e3694a2e.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/3af9641e1c8d422686a51ecdscs71fa30565f.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/fbb6d7ab84144173bd2b92cddscf1b927b1d3.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/acd9aa8f646c45cf8cdcsd50ecedec08347da.png">
+<meta property="article:published_time" content="2022-01-13T12:18:07.000Z">
+<meta property="article:modified_time" content="2022-07-11T10:29:43.446Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="SpringBoot">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/bfe74f5f2dff4e278df349bf41asdcsdce840d.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-SpringBoot" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/01/13/SpringBoot/" class="article-date">
+  <time class="dt-published" datetime="2022-01-13T12:18:07.000Z" itemprop="datePublished">2022-01-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/SpringBoot/">SpringBoot</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      SpringBoot
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <span id="more"></span>
+
+<h1 id="SpringBoot"><a href="#SpringBoot" class="headerlink" title="SpringBoot"></a>SpringBoot</h1><blockquote>
+<p><code>SpringBoot</code>框架：两个非常重要的策略：开箱即用和约定优于配置。</p>
+<ul>
+<li>开箱即用：是指在开发过程中，通过在<code>MAVEN</code>项目的<code>pom</code>文件中添加相关依赖包，然后使用对应注解来代替繁琐的XML配置文件以管理对象的生命周期。这个特点使得开发人员摆脱了复杂的配置工作以及依赖的管理工作，更加专注于业务逻辑。</li>
+<li>约定优于配置：是一种由<code>SpringBoot</code>本身来配置目标结构，由开发者在结构中添加信息的软件设计范式。这一特点虽降低了部分灵活性，增加了<code>BUG</code>定位的复杂性，但减少了开发人员需要做出决定的数量，同时减少了大量的<code>XML</code>配置，并且可以将代码编译、测试和打包等工作自动化。</li>
+</ul>
+</blockquote>
+<h2 id="SpringBoot自动装配原理"><a href="#SpringBoot自动装配原理" class="headerlink" title="SpringBoot自动装配原理"></a>SpringBoot自动装配原理</h2><blockquote>
+<p>​		<code>SpringBoot</code>的<strong>自动装配</strong>实际上就是为了从spring.factories文件中获取到对应的需要进行自动装配的类，并生成相应的<code>Bean</code>对象，然后将它们交给<code>spring</code>容器来帮我们进行管理</p>
+</blockquote>
+<h3 id="启动类上注解的作用"><a href="#启动类上注解的作用" class="headerlink" title="启动类上注解的作用"></a>启动类上注解的作用</h3><h4 id="SpringBootApplication"><a href="#SpringBootApplication" class="headerlink" title="@SpringBootApplication"></a>@SpringBootApplication</h4><blockquote>
+<p>​		这个注解是<code>springboot</code>启动类上的一个注解，是一个组合注解，也就是由其他注解组合起来，它的主要作用就是标记说明这个类是<code>springboot</code>的主配置类，<code>springboot</code>应该运行这个类里面的<code>main()</code>方法来启动程序。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/bfe74f5f2dff4e278df349bf41asdcsdce840d.png"></p>
+</blockquote>
+<blockquote>
+<p>这个注解主要由三个子注解组成：</p>
+<ul>
+<li><code>@SpringBootConfiguration</code></li>
+<li><code>@EnableAutoConfiguration</code></li>
+<li><code>@ComponentScan</code></li>
+</ul>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/9e064d08a9484af0978scsdcdsf34aa0f519815.png"></p>
+</blockquote>
+<h5 id="SpringBootConfiguration"><a href="#SpringBootConfiguration" class="headerlink" title="@SpringBootConfiguration"></a>@SpringBootConfiguration</h5><blockquote>
+<p>​		这个注解包含了<code>@Configuration</code>，<code>@Configuration</code>里面又包含了一个<code>@Component</code>注解，也就是说，<strong>这个注解标注在哪个类上，就表示当前这个类是一个配置类，而配置类也是<code>spring</code>容器中的组件</strong>。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/9ffcf2fa6a4f41008c8bexsxxsxs1f76755bdb8.png"></p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/beaf9410c6ff4f368cad7cdcddcdcd56ec38a0602.png"></p>
+</blockquote>
+<h5 id="EnableAutoConfiguration"><a href="#EnableAutoConfiguration" class="headerlink" title="@EnableAutoConfiguration"></a>@EnableAutoConfiguration</h5><blockquote>
+<p>这个注解是开启自动配置的功能，里面包含了两个注解</p>
+<ul>
+<li><code>@AutoConfigurationPackage</code></li>
+<li><code>@Import（AutoConfigurationImportSelector.class）</code></li>
+</ul>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/8ed81baf3156416497964cdscdsca2b4688c305.png"></p>
+</blockquote>
+<h5 id="AutoConfigurationPackage"><a href="#AutoConfigurationPackage" class="headerlink" title="@AutoConfigurationPackage"></a>@AutoConfigurationPackage</h5><blockquote>
+<p>​		这个注解的作用说白了就是将主配置类（<code>@SpringBootApplication</code>标注的类）所在包以及子包里面的所有组件扫描并加载到<code>spring</code>的容器中，这也就是为什么我们在利用<code>springboot</code>进行开发的时候，无论是<code>Controller</code>还是<code>Service</code>的路径都是与主配置类同级或者次级的原因。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/da21d1b9345f47a8b97cdcdsaad223663e831.png"></p>
+</blockquote>
+<h5 id="Import-AutoConfigurationImportSelector-class"><a href="#Import-AutoConfigurationImportSelector-class" class="headerlink" title="@Import(AutoConfigurationImportSelector.class)"></a>@Import(AutoConfigurationImportSelector.class)</h5><blockquote>
+<p>​		上一个注解我们把所有组件都加载到了容器里面，<strong>这个注解就是将需要自动装配的类以全类名的方式返回</strong>，那是怎么找到哪些是需要自动装配的类呢？</p>
+<p>1、<code>AutoConfigurationImportSelector</code><strong>这个类里面有一个方法</strong><code>selectImports()</code>，如下</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/1ea8b6a5b9654036945c8cdcdcdscdc29448b9d0.png"></p>
+<p>2、在<strong>selectImport</strong>()方法里调用了一个<strong>getAutoConfigurationEntry</strong>()方法，这个方法里面又调用了一个<strong>getCandidateConfigurations</strong>()方法</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/4919beb3764f4750afcddscsdca58cab4e8bbd4a.png"></p>
+<p>3、在<strong>getCandidateConfigurations</strong>()方法里面调用了<strong>loadFactoryNames</strong>()方法</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/f212ef804fa8476dbcddscsdcf244ba5427f5429.png"></p>
+<p>4、<strong>loadFactoryNames</strong>()方法里面又调用了一个<strong>loadSpringFactories</strong>()方法</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/6201de573e2e47csddcsd30a707f0bceaf818a3.png"></p>
+<p>5、关键就在这个<strong>loadSpringFactories</strong>()方法里面，在这个方法里，它会查找所有在<strong>META-INF</strong>路径下的<strong>spring.factories</strong>文件</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/da917e16f65b409e91c378csscscc4e3694a2e.png"></p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/3af9641e1c8d422686a51ecdscs71fa30565f.png"></p>
+<p>6、在<strong>META-INF&#x2F;spring.factories</strong>这个文件里面的数据是以<strong>键&#x3D;值</strong>的方式存储，然后解析这些文件，找出以<strong>EnableAutoConfiguration</strong>为键的所有值，以列表的方式返回</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/fbb6d7ab84144173bd2b92cddscf1b927b1d3.png"></p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/acd9aa8f646c45cf8cdcsd50ecedec08347da.png"></p>
+</blockquote>
+<h5 id="ComponentScan"><a href="#ComponentScan" class="headerlink" title="@ComponentScan"></a>@ComponentScan</h5><blockquote>
+<p>​		这个注解的作用就是扫描当前包及子包的注解</p>
+</blockquote>
+<h4 id="springboot自动装配的流程"><a href="#springboot自动装配的流程" class="headerlink" title="springboot自动装配的流程"></a>springboot自动装配的流程</h4><blockquote>
+<ol>
+<li>在<code>springboot</code>启动的时候会创建一个<code>SpringApplication</code>对象，在对象的构造方法里面会进行一些参数的初始化工作，最主要的是判断当前应用程序的类型以及设置初始化器以及监听器，并在这个过程中会加载整个应用程序的<code>spring.factories</code>文件，将文件中的内容放到缓存当中，方便后续获取；</li>
+<li><code>SpringApplication</code>对象创建完成之后会执行run()方法来完成整个应用程序的启动，启动的过程中有两个最主要的方法<code>prepareContext()</code>和<code>refreshContext()</code>，在这两个方法中完成了自动装配的核心功能，在<code>run()</code>方法里还执行了一些包括上下文对象的创建，打印<code>banner</code>图，异常报告期的准备等各个准备工作，方便后续进行调用；</li>
+<li>在<code>prepareContext()</code>中主要完成的是对上下文对象的初始化操作，包括属性的设置，比如设置环境变量。在整个过程中有一个<code>load()</code>方法，它主要是完成一件事，那就是将启动类作为一个<code>beanDefinition</code>注册到<code>registry</code>，方便后续在进行<code>BeanFactoryPostProcessor</code>调用执行的时候，可以找到对应执行的主类，来完成对<code>@SpringBootApplication</code>、<code>@EnableAutoConfiguration</code>等注解的解析工作；</li>
+<li>在<code>refreshContext()</code>方法中会进行整个容器的刷新过程，会调用<code>spring</code>中的<code>refresh()</code>方法，<code>refresh()</code>方法中有<code>13</code>个非常关键的方法，来完成整个应用程序的启动。而在自动装配过程中，会调用的关键的一个方法就是<code>invokeBeanFactoryPostProcessors()</code>方法，在这个方法中主要是对<code>ConfigurationClassPostProcessor</code>类的处理，这个类是<code>BFPP（BeanFactoryPostProcessor）</code>的子类，因为实现了<code>BDRPP（BeanDefinitionRegistryPostProcessor）</code>接口，在调用的时候会先调用<code>BDRPP</code>中的<code>postProcessBeanDefinitionRegistry()</code>方法，然后再调用<code>BFPP</code>中的<code>postProcessBeanFactory()</code>方法，在执行<code>postProcessBeanDefinitionRegistry()</code>方法的时候会解析处理各种的注解，包含<code>@PropertySource</code>、<code>@ComponentScan</code>、<code>@Bean</code>、<code>@Import</code>等注解，最主要的是对<code>@Import</code>注解的解析；</li>
+<li>在解析<code>@Import</code>注解的时候，会有一个<code>getImport()</code>方法，从主类开始递归解析注解，把所有包含<code>@Import</code>的注解都解析到，然后在<code>processImport()</code>方法中对<code>import</code>的类进行分类，例如<code>AutoConfigurationImportSelect</code>归属于<code>ImportSelect</code>的子类，在后续的过程中会调用<code>DeferredImportSelectorHandler</code>类里面的<code>process</code>方法，来完成整个<code>EnableAutoConfiguration</code>的加载。</li>
+</ol>
+</blockquote>
+<h2 id="JavaConfig"><a href="#JavaConfig" class="headerlink" title="JavaConfig"></a>JavaConfig</h2><blockquote>
+<p>​		<code>JavaConfig</code>: 使用<code>java</code>类作为<code>xml</code>配置文件的替代， 是配置<code>spring</code>容器的纯<code>java</code>的方式。 在这个<code>java</code>类这可以创建<code>java</code>对象，把对象放入<code>spring</code>容器中（注入到容器）， </p>
+<p>使用两个注解：</p>
+<p>​	1）<code>@Configuration</code> ： 放在一个类的上面，表示这个类是作为配置文件使用的。</p>
+<p>​	2）<code>@Bean</code>：声明对象，把对象注入到容器中。</p>
+<p>例如：我们可以创建一个类叫<code>SpringConfig</code>，用这个类来代替以往在<code>xml</code>写<code>bean</code>的功能</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.bjpowernode.config;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> com.bjpowernode.vo.Student;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Configuration:表示当前类是作为配置文件使用的。 就是用来配置容器的</span></span><br><span class="line"><span class="comment"> *       位置：在类的上面</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *  SpringConfig这个类就相当于beans.xml</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SpringConfig</span> &#123;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 创建方法，方法的返回值是对象。 在方法的上面加入<span class="doctag">@Bean</span></span></span><br><span class="line"><span class="comment">     * 方法的返回值对象就注入到容器中。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@Bean</span>: 把对象注入到spring容器中。 作用相当于&lt;bean&gt;</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     *     位置：方法的上面</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     *     说明：<span class="doctag">@Bean</span>,不指定对象的名称，默认是方法名是 id</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> Student <span class="title function_">createStudent</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="type">Student</span> <span class="variable">s1</span>  <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>();</span><br><span class="line">        s1.setName(<span class="string">&quot;张三&quot;</span>);</span><br><span class="line">        s1.setAge(<span class="number">26</span>);</span><br><span class="line">        s1.setSex(<span class="string">&quot;男&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> s1;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    <span class="comment">/***</span></span><br><span class="line"><span class="comment">     * 指定对象在容器中的名称（指定&lt;bean&gt;的id属性）</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@Bean</span>的name属性，指定对象的名称（id）</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Bean(name = &quot;lisiStudent&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> Student <span class="title function_">makeStudent</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="type">Student</span> <span class="variable">s2</span>  <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>();</span><br><span class="line">        s2.setName(<span class="string">&quot;李四&quot;</span>);</span><br><span class="line">        s2.setAge(<span class="number">22</span>);</span><br><span class="line">        s2.setSex(<span class="string">&quot;男&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> s2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/01/13/SpringBoot/" data-id="clpsh9799000pxgvs0c7led60" data-title="SpringBoot" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SpringBoot/" rel="tag">SpringBoot</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/03/22/Spring-Framework/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Spring Framework
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/01/13/MyBatis/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">MyBatis</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JVM/">JVM</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JWT/">JWT</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java%E5%9F%BA%E7%A1%80/">Java基础</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MyBatis/">MyBatis</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SQL/">SQL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Spring-Framework/">Spring Framework</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringBoot/">SpringBoot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringCloud/">SpringCloud</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%99%BA%E5%8A%9B%E9%A2%98/">智力题</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/">消息队列</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/">面试题</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JVM/" rel="tag">JVM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JWT/" rel="tag">JWT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MyBatis/" rel="tag">MyBatis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redis/" rel="tag">Redis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL/" rel="tag">SQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring-Framework/" rel="tag">Spring Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringBoot/" rel="tag">SpringBoot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringCloud/" rel="tag">SpringCloud</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="tag">多线程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%99%BA%E5%8A%9B%E9%A2%98/" rel="tag">智力题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" rel="tag">消息队列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/" rel="tag">面试题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/" rel="tag">项目部署</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/JVM/" style="font-size: 15px;">JVM</a> <a href="/tags/JWT/" style="font-size: 10px;">JWT</a> <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 20px;">Java基础</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MyBatis/" style="font-size: 10px;">MyBatis</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/SQL/" style="font-size: 15px;">SQL</a> <a href="/tags/Spring-Framework/" style="font-size: 10px;">Spring Framework</a> <a href="/tags/SpringBoot/" style="font-size: 10px;">SpringBoot</a> <a href="/tags/SpringCloud/" style="font-size: 10px;">SpringCloud</a> <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" style="font-size: 10px;">多线程</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%99%BA%E5%8A%9B%E9%A2%98/" style="font-size: 10px;">智力题</a> <a href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" style="font-size: 10px;">消息队列</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">计算机网络</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">设计模式</a> <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/" style="font-size: 10px;">面试题</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/" style="font-size: 10px;">项目部署</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/03/22/Spring-Framework/">Spring Framework</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/13/SpringBoot/">SpringBoot</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/13/MyBatis/">MyBatis</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/04/Java%E5%8F%8D%E5%B0%84/">Java反射</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/02/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

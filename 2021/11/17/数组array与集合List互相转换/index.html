@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>Archives | Hexo</title>
+  <title>数组array与集合List互相转换 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="介绍数组array与集合List互相转换。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数组array与集合List互相转换">
+<meta property="og:url" content="http://example.com/2021/11/17/%E6%95%B0%E7%BB%84array%E4%B8%8E%E9%9B%86%E5%90%88List%E4%BA%92%E7%9B%B8%E8%BD%AC%E6%8D%A2/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="介绍数组array与集合List互相转换。">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-11-17T08:33:27.000Z">
+<meta property="article:modified_time" content="2022-01-06T03:30:56.000Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Java基础">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -67,226 +72,88 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/03/22/Spring-Framework/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-03-22T08:08:19.000Z" itemprop="datePublished">Mar 22</time>
+        <section id="main"><article id="post-数组array与集合List互相转换" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/11/17/%E6%95%B0%E7%BB%84array%E4%B8%8E%E9%9B%86%E5%90%88List%E4%BA%92%E7%9B%B8%E8%BD%AC%E6%8D%A2/" class="article-date">
+  <time class="dt-published" datetime="2021-11-17T08:33:27.000Z" itemprop="datePublished">2021-11-17</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java%E5%9F%BA%E7%A1%80/">Java基础</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/03/22/Spring-Framework/">Spring Framework</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      数组array与集合List互相转换
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <span id="more"></span>
+
+<h6 id="int-转-List"><a href="#int-转-List" class="headerlink" title="int[] 转 List&lt;Integer&gt;"></a><code>int[]</code> 转 <code>List&lt;Integer&gt;</code></h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Integer&gt; list1 = Arrays.stream(data).boxed().collect(Collectors.toList());</span><br><span class="line"><span class="comment">// Arrays.stream(arr) 可以替换成IntStream.of(arr)。</span></span><br><span class="line"><span class="comment">// 1.使用Arrays.stream将int[]转换成IntStream。</span></span><br><span class="line"><span class="comment">// 2.使用IntStream中的boxed()装箱。将IntStream转换成Stream&lt;Integer&gt;。</span></span><br><span class="line"><span class="comment">// 3.使用Stream的collect()，将Stream&lt;T&gt;转换成List&lt;T&gt;，因此正是List&lt;Integer&gt;。</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="int-转-Integer"><a href="#int-转-Integer" class="headerlink" title="int[] 转 Integer[]"></a><code>int[]</code> 转 <code>Integer[]</code></h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Integer[] integers1 = Arrays.stream(data).boxed().toArray(Integer[]::<span class="keyword">new</span>);</span><br><span class="line"><span class="comment">// 前两步同上，此时是Stream&lt;Integer&gt;。</span></span><br><span class="line"><span class="comment">// 然后使用Stream的toArray，传入IntFunction&lt;A[]&gt; generator。</span></span><br><span class="line"><span class="comment">// 这样就可以返回Integer数组。</span></span><br><span class="line"><span class="comment">// 不然默认是Object[]。</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="List-转-Integer"><a href="#List-转-Integer" class="headerlink" title="List&lt;Integer&gt; 转 Integer[]"></a><code>List&lt;Integer&gt;</code> 转 <code>Integer[]</code></h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Integer[] integers2 = list1.toArray(<span class="keyword">new</span> <span class="title class_">Integer</span>[<span class="number">0</span>]);</span><br><span class="line"><span class="comment">//  调用toArray。传入参数T[] a。这种用法是目前推荐的。</span></span><br><span class="line"><span class="comment">// List&lt;String&gt;转String[]也同理。</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="List-转-int"><a href="#List-转-int" class="headerlink" title="List&lt;Integer&gt; 转 int[]"></a><code>List&lt;Integer&gt;</code> 转 <code>int[]</code></h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] arr1 = list1.stream().mapToInt(Integer::valueOf).toArray();</span><br><span class="line"><span class="comment">// 想要转换成int[]类型，就得先转成IntStream。</span></span><br><span class="line"><span class="comment">// 这里就通过mapToInt()把Stream&lt;Integer&gt;调用Integer::valueOf来转成IntStream</span></span><br><span class="line"><span class="comment">// 而IntStream中默认toArray()转成int[]。</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="Integer-转-int"><a href="#Integer-转-int" class="headerlink" title="Integer[] 转 int[]"></a><code>Integer[]</code> 转 <code>int[]</code></h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] arr2 = Arrays.stream(integers1).mapToInt(Integer::valueOf).toArray();</span><br><span class="line"><span class="comment">// 思路同上。先将Integer[]转成Stream&lt;Integer&gt;，再转成IntStream。</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="Integer-转-List"><a href="#Integer-转-List" class="headerlink" title="Integer[] 转 List&lt;Integer&gt;"></a><code>Integer[]</code> 转 <code>List&lt;Integer&gt;</code></h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Integer&gt; list2 = Arrays.asList(integers1);</span><br><span class="line"><span class="comment">// 最简单的方式。String[]转List&lt;String&gt;也同理。</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String[] strings1 = &#123;<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>&#125;;</span><br><span class="line"><span class="comment">// String[] 转 List&lt;String&gt;</span></span><br><span class="line">List&lt;String&gt; list3 = Arrays.asList(strings1);</span><br><span class="line"><span class="comment">// List&lt;String&gt; 转 String[]</span></span><br><span class="line">String[] strings2 = list3.toArray(<span class="keyword">new</span> <span class="title class_">String</span>[<span class="number">0</span>]);</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/11/17/%E6%95%B0%E7%BB%84array%E4%B8%8E%E9%9B%86%E5%90%88List%E4%BA%92%E7%9B%B8%E8%BD%AC%E6%8D%A2/" data-id="clpsh979d001exgvs66ne9g27" data-title="数组array与集合List互相转换" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/11/25/%E9%9D%A2%E8%AF%95%E9%A2%98/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          面试题
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/11/13/StringTable%E8%AE%B2%E8%A7%A3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">StringTable讲解</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/01/13/SpringBoot/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-01-13T12:18:07.000Z" itemprop="datePublished">Jan 13</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/01/13/SpringBoot/">SpringBoot</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/01/13/MyBatis/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-01-13T12:15:31.000Z" itemprop="datePublished">Jan 13</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/01/13/MyBatis/">MyBatis</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/01/04/Java%E5%8F%8D%E5%B0%84/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-01-04T09:01:41.000Z" itemprop="datePublished">Jan 4</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/01/04/Java%E5%8F%8D%E5%B0%84/">Java反射</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/01/02/%E4%BA%8C%E5%8F%89%E6%A0%91/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-01-02T11:57:45.000Z" itemprop="datePublished">Jan 2</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/01/02/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/12/30/Java%E9%9B%86%E5%90%88/" class="archive-article-date">
-  <time class="dt-published" datetime="2021-12-30T02:57:33.000Z" itemprop="datePublished">Dec 30</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/12/30/Java%E9%9B%86%E5%90%88/">Java集合</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/12/22/%E6%99%BA%E5%8A%9B%E9%A2%98/" class="archive-article-date">
-  <time class="dt-published" datetime="2021-12-22T12:44:41.000Z" itemprop="datePublished">Dec 22</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/12/22/%E6%99%BA%E5%8A%9B%E9%A2%98/">智力题</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/12/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="archive-article-date">
-  <time class="dt-published" datetime="2021-12-13T12:13:22.000Z" itemprop="datePublished">Dec 13</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/12/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/12/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="archive-article-date">
-  <time class="dt-published" datetime="2021-12-13T12:13:16.000Z" itemprop="datePublished">Dec 13</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/12/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/12/11/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="archive-article-date">
-  <time class="dt-published" datetime="2021-12-11T14:58:18.000Z" itemprop="datePublished">Dec 11</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/12/11/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">Linux操作系统</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-  </nav>
 
 </section>
         

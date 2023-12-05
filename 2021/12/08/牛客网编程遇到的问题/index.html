@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>牛客网编程遇到的问题 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="记录在牛客网平台编程的遇到的一些问题。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="牛客网编程遇到的问题">
+<meta property="og:url" content="http://example.com/2021/12/08/%E7%89%9B%E5%AE%A2%E7%BD%91%E7%BC%96%E7%A8%8B%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="记录在牛客网平台编程的遇到的一些问题。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img/AC_S0TL%7BQIPETV4[R%7BYN]49.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img/7Q2%60EW9QDEP3VO]Q45G1[4P.png">
+<meta property="article:published_time" content="2021-12-08T08:23:10.000Z">
+<meta property="article:modified_time" content="2022-01-06T03:30:32.000Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Java基础">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img/AC_S0TL%7BQIPETV4[R%7BYN]49.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-牛客网编程遇到的问题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/12/08/%E7%89%9B%E5%AE%A2%E7%BD%91%E7%BC%96%E7%A8%8B%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" class="article-date">
+  <time class="dt-published" datetime="2021-12-08T08:23:10.000Z" itemprop="datePublished">2021-12-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java%E5%9F%BA%E7%A1%80/">Java基础</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      牛客网编程遇到的问题
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <span id="more"></span>
+
+<h6 id="问题：数据处理"><a href="#问题：数据处理" class="headerlink" title="问题：数据处理"></a>问题：数据处理</h6><p>问题描述：小明周末在家闲得没事，统计出了自己朋友的名字、性别、年龄、爱好。然后，他将数据交给你，想请你帮忙算个数。</p>
+<p><strong>输入描述：</strong>该数据的第 <code>1</code> 行表示性别限制，第 <code>2</code> 行表示年龄下限（包含），第 <code>3</code> 行表示年龄上限（包含），第 <code>4</code> 行表示爱好限制。之后的每行数据是每个人的名字、性别、年龄、爱好，用逗号隔开。注意某些行的前面可能加上了&#x2F;&#x2F;字符，表示该行数据被注释掉了，需要忽略。你需要算出「是第 1 行性别的人数」、「处于第 <code>2</code>, <code>3</code> 行年龄范围的人数」、「拥有第 <code>4</code> 行爱好的人数」，再将三个人数相加，算出结果。</p>
+<p><strong>输出描述：</strong>上面的数据样例表示，他想请你帮忙数出第 <code>5</code> 行到第 <code>8</code> 行数据中：<br>有多少男性（<code>male</code>）。（结果是 <code>2</code> 。）有多少年龄在 <code>16-19</code> 岁（包含）。（结果是 <code>2</code> 。）有多少喜欢游泳（<code>swimming</code>）。（结果是 <code>1</code> 。）将三个数据相加，算出结果，是 <code>2 + 2 + 1 = 5</code>。答案是 <code>5</code> 。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img/AC_S0TL%7BQIPETV4[R%7BYN]49.png"></p>
+<p>代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">in</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        <span class="type">String</span> <span class="variable">gender</span> <span class="operator">=</span> in.next();</span><br><span class="line">        <span class="type">int</span> <span class="variable">min</span> <span class="operator">=</span> in.nextInt();</span><br><span class="line">        <span class="type">int</span> <span class="variable">max</span> <span class="operator">=</span> in.nextInt();</span><br><span class="line">        <span class="type">String</span> <span class="variable">hobby</span> <span class="operator">=</span> in.next();</span><br><span class="line">        in.nextLine(); <span class="comment">//读掉hobby后面的换行</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">ans</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (in.hasNextLine()) &#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">infos</span> <span class="operator">=</span> in.nextLine();</span><br><span class="line">            <span class="keyword">if</span> (!infos.startsWith(<span class="string">&quot;//&quot;</span>)) &#123;<span class="comment">//如果不是 // 开头则进行处理</span></span><br><span class="line">                String[] info = infos.split(<span class="string">&quot;,&quot;</span>);</span><br><span class="line">                <span class="keyword">if</span> (gender.equals(info[<span class="number">1</span>])) &#123;</span><br><span class="line">                    ans++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="type">int</span> <span class="variable">age</span> <span class="operator">=</span> Integer.parseInt(info[<span class="number">2</span>]);</span><br><span class="line">                <span class="keyword">if</span> (age &gt;= min &amp;&amp; age &lt;= max) &#123;</span><br><span class="line">                    ans++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (hobby.equals(info[<span class="number">3</span>])) &#123;</span><br><span class="line">                    ans++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(ans);</span><br><span class="line">        in.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果在本地编译器时，是永远都不会停下里的，结果如下：</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img/7Q2%60EW9QDEP3VO]Q45G1[4P.png"></p>
+<p>首先先说明为什么这个 <code>in.hasNextLine()</code> 会结束，本人在考试期间测试过一个代码，如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">in</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        <span class="type">String</span> <span class="variable">gender</span> <span class="operator">=</span> in.next();</span><br><span class="line">        <span class="type">int</span> <span class="variable">min</span> <span class="operator">=</span> in.nextInt();</span><br><span class="line">        <span class="type">int</span> <span class="variable">max</span> <span class="operator">=</span> in.nextInt();</span><br><span class="line">        <span class="type">String</span> <span class="variable">hobby</span> <span class="operator">=</span> in.next();</span><br><span class="line">        in.nextLine(); <span class="comment">//读掉hobby后面的换行</span></span><br><span class="line">        <span class="keyword">while</span> (in.hasNextLine()) &#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">infos</span> <span class="operator">=</span> in.nextLine();</span><br><span class="line">            System.out.println(infos);</span><br><span class="line">        &#125;</span><br><span class="line">        in.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>大致意思就是把输入的内容读取出来，再打印出来，看一下 <code>while </code>循环是否能退出，输入内容如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">female</span><br><span class="line">10</span><br><span class="line">20</span><br><span class="line">dancing</span><br><span class="line">Anthony,male,49,swimming</span><br><span class="line">// Tonny,male,23,dancing</span><br><span class="line">Mike,male,19,swimming</span><br><span class="line">Amy,female,23,chatting</span><br><span class="line">Patrick,male,15,dancing</span><br><span class="line">// Erik,male,14,nothing</span><br><span class="line">Taylor,female,20,singing</span><br></pre></td></tr></table></figure>
+
+<p>输出内容我在考试期间未设定，控制台中打印了如下内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Anthony,male,49,swimming</span><br><span class="line">// Tonny,male,23,dancing</span><br><span class="line">Mike,male,19,swimming</span><br><span class="line">Amy,female,23,chatting</span><br><span class="line">Patrick,male,15,dancing</span><br><span class="line">// Erik,male,14,nothing</span><br><span class="line">Taylor,female,20,singing</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
+
+<p>这最后一个 <code>0</code> 可能代表的就是输入完毕 ，随后我又测试了一下在 <code>while</code> 循环后面能否打印输出内容 ，测试代码如下:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">in</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        <span class="type">String</span> <span class="variable">gender</span> <span class="operator">=</span> in.next();</span><br><span class="line">        <span class="type">int</span> <span class="variable">min</span> <span class="operator">=</span> in.nextInt();</span><br><span class="line">        <span class="type">int</span> <span class="variable">max</span> <span class="operator">=</span> in.nextInt();</span><br><span class="line">        <span class="type">String</span> <span class="variable">hobby</span> <span class="operator">=</span> in.next();</span><br><span class="line">        in.nextLine(); <span class="comment">//读掉hobby后面的换行</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">ans</span> <span class="operator">=</span> <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">while</span> (in.hasNextLine()) &#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">infos</span> <span class="operator">=</span> in.nextLine();</span><br><span class="line">            System.out.println(infos);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(ans);</span><br><span class="line">        in.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>测试控制台输出如下信息：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Anthony,male,49,swimming</span><br><span class="line">// Tonny,male,23,dancing</span><br><span class="line">Mike,male,19,swimming</span><br><span class="line">Amy,female,23,chatting</span><br><span class="line">Patrick,male,15,dancing</span><br><span class="line">// Erik,male,14,nothing</span><br><span class="line">Taylor,female,20,singing</span><br><span class="line">2</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
+
+<p>这个 <code>2</code> 的输出表明牛客 的 <code>ide</code> ，在输入结束时 <code>Scanner</code> 的 <code>hasNextLine()</code> 可以正常退出，而我们不需要做其他特殊操作，故采用之前的代码便能通过全部 样例</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/12/08/%E7%89%9B%E5%AE%A2%E7%BD%91%E7%BC%96%E7%A8%8B%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" data-id="clpsh979l002rxgvsd381389g" data-title="牛客网编程遇到的问题" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/12/08/JVM%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          JVM基础知识
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/12/06/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">并发编程</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JVM/">JVM</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JWT/">JWT</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java%E5%9F%BA%E7%A1%80/">Java基础</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MyBatis/">MyBatis</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SQL/">SQL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Spring-Framework/">Spring Framework</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringBoot/">SpringBoot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringCloud/">SpringCloud</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%99%BA%E5%8A%9B%E9%A2%98/">智力题</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/">消息队列</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/">面试题</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JVM/" rel="tag">JVM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JWT/" rel="tag">JWT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MyBatis/" rel="tag">MyBatis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redis/" rel="tag">Redis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL/" rel="tag">SQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring-Framework/" rel="tag">Spring Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringBoot/" rel="tag">SpringBoot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringCloud/" rel="tag">SpringCloud</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="tag">多线程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%99%BA%E5%8A%9B%E9%A2%98/" rel="tag">智力题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" rel="tag">消息队列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/" rel="tag">面试题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/" rel="tag">项目部署</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/JVM/" style="font-size: 15px;">JVM</a> <a href="/tags/JWT/" style="font-size: 10px;">JWT</a> <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 20px;">Java基础</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MyBatis/" style="font-size: 10px;">MyBatis</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/SQL/" style="font-size: 15px;">SQL</a> <a href="/tags/Spring-Framework/" style="font-size: 10px;">Spring Framework</a> <a href="/tags/SpringBoot/" style="font-size: 10px;">SpringBoot</a> <a href="/tags/SpringCloud/" style="font-size: 10px;">SpringCloud</a> <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" style="font-size: 10px;">多线程</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%99%BA%E5%8A%9B%E9%A2%98/" style="font-size: 10px;">智力题</a> <a href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" style="font-size: 10px;">消息队列</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">计算机网络</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">设计模式</a> <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/" style="font-size: 10px;">面试题</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/" style="font-size: 10px;">项目部署</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/03/22/Spring-Framework/">Spring Framework</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/13/SpringBoot/">SpringBoot</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/13/MyBatis/">MyBatis</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/04/Java%E5%8F%8D%E5%B0%84/">Java反射</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/02/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

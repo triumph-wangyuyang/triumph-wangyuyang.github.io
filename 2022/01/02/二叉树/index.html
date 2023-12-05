@@ -4,15 +4,29 @@
   <meta charset="utf-8">
   
   
-  <title>Archives | Hexo</title>
+  <title>二叉树 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="记录比较常见的二叉树种类。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二叉树">
+<meta property="og:url" content="http://example.com/2022/01/02/%E4%BA%8C%E5%8F%89%E6%A0%91/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="记录比较常见的二叉树种类。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/99fba80666a17ccaa0e6a7fecab52efb.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/526f13015bd3b2cf81467505baa335d9.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/e804b9faee65694a14ca2ebaf80856b2.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/2020111810534458.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/20201118111507265.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img/%E4%B8%8BDFSAFASDFASDFADSFASD%E8%BD%BD.PNG">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/7e230d584aac4714bcd30a09ea5d6b4a.webp">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/1d0d6ee8db3f434b8d64dc350bcd23db.webp">
+<meta property="article:published_time" content="2022-01-02T11:57:45.000Z">
+<meta property="article:modified_time" content="2022-01-07T12:29:52.000Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Java基础">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/99fba80666a17ccaa0e6a7fecab52efb.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -67,226 +81,118 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/03/22/Spring-Framework/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-03-22T08:08:19.000Z" itemprop="datePublished">Mar 22</time>
+        <section id="main"><article id="post-二叉树" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/01/02/%E4%BA%8C%E5%8F%89%E6%A0%91/" class="article-date">
+  <time class="dt-published" datetime="2022-01-02T11:57:45.000Z" itemprop="datePublished">2022-01-02</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java%E5%9F%BA%E7%A1%80/">Java基础</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/03/22/Spring-Framework/">Spring Framework</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      二叉树
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <span id="more"></span>
+
+<blockquote>
+<p>二叉树：二叉树是由<code>n（n&gt;=0）</code>个结点组成的有序集合，集合或者为空，或者是由一个根节点加上两棵分别称为左子树和右子树的、互不相交的二叉树组成。</p>
+</blockquote>
+<blockquote>
+<p>二叉树的五种形态：</p>
+</blockquote>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/99fba80666a17ccaa0e6a7fecab52efb.png"></p>
+<h2 id="满二叉树"><a href="#满二叉树" class="headerlink" title="满二叉树"></a>满二叉树</h2><blockquote>
+<p>1.树的每层都有最多的结点；<br>2.树中含有的结点个数为 <code>(2^n) - 1</code>；<br>3.叶子节点都在最底下一层，除叶子节点外的所有结点度数都为<code>2</code>。</p>
+</blockquote>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/526f13015bd3b2cf81467505baa335d9.png"></p>
+<h2 id="完全二叉树"><a href="#完全二叉树" class="headerlink" title="完全二叉树"></a>完全二叉树</h2><blockquote>
+<p>​	如果一棵具有<code>n</code>个结点的高度为k的二叉树，树的每个结点都与高度为<code>k</code>的满二叉树中编号为<code>1——n</code>的结点一一对应，则二叉树为完全二叉树。<br>完全二叉树的特性：<br>A、同样结点数的二叉树，完全二叉树的高度最小<br>B、完全二叉树的叶子结点仅出现在最下边两层，并且最底层的叶子结点一定出现在左边，倒数第二层的叶子结点一定出现在右边。<br>C、完全二叉树中度为<code>1</code>的结点只有左孩子。</p>
+</blockquote>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/e804b9faee65694a14ca2ebaf80856b2.png"></p>
+<h2 id="二叉排序树（BST树）"><a href="#二叉排序树（BST树）" class="headerlink" title="二叉排序树（BST树）"></a>二叉排序树（BST树）</h2><blockquote>
+<p>二叉排序树或是一棵空树，或具有以下特性：</p>
+<ol>
+<li>若左子树非空，其左子树上所有结点的值均小于根节点的值；</li>
+<li>若右子树非空，其右子树上所有结点的值均大于根节点的值；</li>
+<li>左右子树也满足二叉排序树的特性；</li>
+<li>左子树结点值 &lt; 根节点值 &lt; 右子树结点值，所以如果对二叉排序树进行中序遍历可以得到一个递增的有序序列。</li>
+</ol>
+</blockquote>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/2020111810534458.png"></p>
+<h2 id="平衡二叉树（AVL树）"><a href="#平衡二叉树（AVL树）" class="headerlink" title="平衡二叉树（AVL树）"></a>平衡二叉树（AVL树）</h2><blockquote>
+<p>​	为避免树高增长过快，降低二叉排序树的性能，规定在插入和删除结点时，要保证任意结点的左右子树高度差的绝对值不超过1，将这样的二叉树成为平衡二叉树。</p>
+<p>平衡二叉树或是一棵空树，或具有以下特性：</p>
+<ol>
+<li>平衡树必须是排序树；</li>
+<li>平衡二叉树的左子树和右子树都是平衡二叉树，且左子树和右子树的高度差绝对值不超过<code>1</code>（平衡因子的绝对值不超过<code>1</code>）。</li>
+</ol>
+</blockquote>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/20201118111507265.png"></p>
+<h2 id="红黑树"><a href="#红黑树" class="headerlink" title="红黑树"></a>红黑树</h2><h3 id="红黑树的特性"><a href="#红黑树的特性" class="headerlink" title="红黑树的特性"></a>红黑树的特性</h3><blockquote>
+<ul>
+<li>每个节点或者是黑色，或者是红色。</li>
+<li>根节点是黑色。</li>
+<li>每个叶子节点<code>（NIL）</code>是黑色。 [注意：这里叶子节点，是指为空(<code>NIL</code>或<code>NULL</code>)的叶子节点！]</li>
+<li>如果一个节点是红色的，则它的子节点必须是黑色的。不可以同时存在两个红色节点相连</li>
+<li>从一个节点到该节点的子孙节点的所有路径上包含相同数目的黑节点。如果一个节点存在黑色子节点，那么该节点肯定有两个子节点</li>
+</ul>
+</blockquote>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img/%E4%B8%8BDFSAFASDFASDFADSFASD%E8%BD%BD.PNG"></p>
+<p>左旋</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/7e230d584aac4714bcd30a09ea5d6b4a.webp"></p>
+<p>右旋</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img2/1d0d6ee8db3f434b8d64dc350bcd23db.webp"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/01/02/%E4%BA%8C%E5%8F%89%E6%A0%91/" data-id="clpsh979c0014xgvs1urahqo6" data-title="二叉树" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/01/04/Java%E5%8F%8D%E5%B0%84/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Java反射
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/12/30/Java%E9%9B%86%E5%90%88/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Java集合</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/01/13/SpringBoot/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-01-13T12:18:07.000Z" itemprop="datePublished">Jan 13</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/01/13/SpringBoot/">SpringBoot</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/01/13/MyBatis/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-01-13T12:15:31.000Z" itemprop="datePublished">Jan 13</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/01/13/MyBatis/">MyBatis</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/01/04/Java%E5%8F%8D%E5%B0%84/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-01-04T09:01:41.000Z" itemprop="datePublished">Jan 4</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/01/04/Java%E5%8F%8D%E5%B0%84/">Java反射</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/01/02/%E4%BA%8C%E5%8F%89%E6%A0%91/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-01-02T11:57:45.000Z" itemprop="datePublished">Jan 2</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/01/02/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/12/30/Java%E9%9B%86%E5%90%88/" class="archive-article-date">
-  <time class="dt-published" datetime="2021-12-30T02:57:33.000Z" itemprop="datePublished">Dec 30</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/12/30/Java%E9%9B%86%E5%90%88/">Java集合</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/12/22/%E6%99%BA%E5%8A%9B%E9%A2%98/" class="archive-article-date">
-  <time class="dt-published" datetime="2021-12-22T12:44:41.000Z" itemprop="datePublished">Dec 22</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/12/22/%E6%99%BA%E5%8A%9B%E9%A2%98/">智力题</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/12/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="archive-article-date">
-  <time class="dt-published" datetime="2021-12-13T12:13:22.000Z" itemprop="datePublished">Dec 13</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/12/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/12/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="archive-article-date">
-  <time class="dt-published" datetime="2021-12-13T12:13:16.000Z" itemprop="datePublished">Dec 13</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/12/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/12/11/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="archive-article-date">
-  <time class="dt-published" datetime="2021-12-11T14:58:18.000Z" itemprop="datePublished">Dec 11</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/12/11/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">Linux操作系统</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-  </nav>
 
 </section>
         

@@ -4,15 +4,22 @@
   <meta charset="utf-8">
   
   
-  <title>Archives | Hexo</title>
+  <title>SpringCloud | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="学习SpringCloud框架时，会碰到各种配置问题，这篇博客主要记录一些常见的问题及解决方案。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringCloud">
+<meta property="og:url" content="http://example.com/2021/07/14/SpringCloud%E5%AD%A6%E4%B9%A0%E6%97%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E8%B8%A9%E5%9D%91%E7%82%B9/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="学习SpringCloud框架时，会碰到各种配置问题，这篇博客主要记录一些常见的问题及解决方案。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img/1629038951(1).jpg">
+<meta property="article:published_time" content="2021-07-14T14:59:38.000Z">
+<meta property="article:modified_time" content="2022-03-13T09:00:08.000Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="SpringCloud">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img/1629038951(1).jpg">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -67,226 +74,104 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/03/22/Spring-Framework/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-03-22T08:08:19.000Z" itemprop="datePublished">Mar 22</time>
+        <section id="main"><article id="post-SpringCloud学习时的一些踩坑点" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/07/14/SpringCloud%E5%AD%A6%E4%B9%A0%E6%97%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E8%B8%A9%E5%9D%91%E7%82%B9/" class="article-date">
+  <time class="dt-published" datetime="2021-07-14T14:59:38.000Z" itemprop="datePublished">2021-07-14</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/SpringCloud/">SpringCloud</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/03/22/Spring-Framework/">Spring Framework</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      SpringCloud
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <span id="more"></span>
+
+<h5 id="特征："><a href="#特征：" class="headerlink" title="特征："></a>特征：</h5><ul>
+<li><p>单一职责：微服务拆分粒度更小，每一个服务都对应唯一的业务能力，做到单一职责，避免重复业务开发</p>
+</li>
+<li><p>面向服务：微服务对外暴露业务接口</p>
+</li>
+<li><p>自治：团队独立、技术独立、数据独立、部署独立</p>
+</li>
+<li><p>隔离性强：服务调用做好隔离、容错、降级，避免出现级联问题</p>
+</li>
+</ul>
+<h5 id="CAP理论："><a href="#CAP理论：" class="headerlink" title="CAP理论："></a>CAP理论：</h5><ul>
+<li>C - Consistency  一致性</li>
+<li>A - Availability   可用性</li>
+<li>P - Partition tolerance    分区容忍性</li>
+</ul>
+<h6 id="在保证C和P的情况下"><a href="#在保证C和P的情况下" class="headerlink" title="在保证C和P的情况下"></a>在保证C和P的情况下</h6><blockquote>
+<p>​	为了保证数据一致性，data1需要将数据复制给data2，即data1和data2需要进行通信。但是由于网络是不可靠的，我们系统有保证了分区容忍性，也就是说这个系统是可以容忍网络的不可靠的。这时候data2就不一定能及时的收到data1的数据复制消息，当有请求向data2访问number数据时，为了保证数据的一致性，data2只能阻塞等待数据真正同步完成后再返回，这时候就没办法保证高可用性了。</p>
+</blockquote>
+<blockquote>
+<p>在保证C和P的情况下，是无法同时保证A的。</p>
+</blockquote>
+<h6 id="在保证A和P的情况下"><a href="#在保证A和P的情况下" class="headerlink" title="在保证A和P的情况下"></a>在保证A和P的情况下</h6><blockquote>
+<p>​	为了保证高可用性，data1和data2都有在有限时间内返回。同样由于网络的不可靠，在有限时间内，data2有可能还没收到data1发来的数据更新消息，这时候返回给客户端的可能是旧的数据，和访问data1的数据是不一致的，也就是违法了C。</p>
+</blockquote>
+<blockquote>
+<p>也就是说，在保证A和P的情况下，是无法同时保证C的。</p>
+</blockquote>
+<h6 id="在保证A和C的情况下"><a href="#在保证A和C的情况下" class="headerlink" title="在保证A和C的情况下"></a>在保证A和C的情况下</h6><blockquote>
+<p>​	如果要保证高可用和一致性，只有在网络情况良好且可靠的情况下才能实现。这样data1才能立即将更新消息发送给data2。但是我们都知道网络是不可靠的，是会存在丢包的情况的。所以要满足即时可靠更新，只有将data1和data2放到一个区内才可以，也就丧失了P这个保证。其实这时候整个系统也不能算是一个分布式系统了。</p>
+</blockquote>
+<h5 id="SpringCloud组件："><a href="#SpringCloud组件：" class="headerlink" title="SpringCloud组件："></a>SpringCloud组件：</h5><p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img/1629038951(1).jpg"></p>
+<h5 id="常见问题："><a href="#常见问题：" class="headerlink" title="常见问题："></a>常见问题：</h5><h6 id="serlvet-api包版本冲突问题"><a href="#serlvet-api包版本冲突问题" class="headerlink" title="serlvet-api包版本冲突问题"></a>serlvet-api包版本冲突问题</h6><p>​		这个问题产生的原因是项目生成的<code>serlvet-api</code>包版本与我们所需要的版本不一致造成，有两种解决方案，第一种是在<code>maven</code>的仓库下删掉低版本的<code>serlvet-api</code>包，这种方法不是一劳永逸，推荐第二种方案，就是在<code>pom.xml</code>文件中加入以下配置：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">exclusions</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">exclusion</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>javax.servlet<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>servlet-api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">exclusion</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">exclusions</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这里举个例子：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-eureka-client<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.2.1.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">exclusions</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">exclusion</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>javax.servlet<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>servlet-api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">exclusion</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">exclusions</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/07/14/SpringCloud%E5%AD%A6%E4%B9%A0%E6%97%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E8%B8%A9%E5%9D%91%E7%82%B9/" data-id="clpsh979b000yxgvs0w41484c" data-title="SpringCloud" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SpringCloud/" rel="tag">SpringCloud</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/07/19/Redis/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Redis
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/01/13/SpringBoot/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-01-13T12:18:07.000Z" itemprop="datePublished">Jan 13</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/01/13/SpringBoot/">SpringBoot</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/01/13/MyBatis/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-01-13T12:15:31.000Z" itemprop="datePublished">Jan 13</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/01/13/MyBatis/">MyBatis</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/01/04/Java%E5%8F%8D%E5%B0%84/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-01-04T09:01:41.000Z" itemprop="datePublished">Jan 4</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/01/04/Java%E5%8F%8D%E5%B0%84/">Java反射</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/01/02/%E4%BA%8C%E5%8F%89%E6%A0%91/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-01-02T11:57:45.000Z" itemprop="datePublished">Jan 2</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/01/02/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/12/30/Java%E9%9B%86%E5%90%88/" class="archive-article-date">
-  <time class="dt-published" datetime="2021-12-30T02:57:33.000Z" itemprop="datePublished">Dec 30</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/12/30/Java%E9%9B%86%E5%90%88/">Java集合</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/12/22/%E6%99%BA%E5%8A%9B%E9%A2%98/" class="archive-article-date">
-  <time class="dt-published" datetime="2021-12-22T12:44:41.000Z" itemprop="datePublished">Dec 22</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/12/22/%E6%99%BA%E5%8A%9B%E9%A2%98/">智力题</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/12/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="archive-article-date">
-  <time class="dt-published" datetime="2021-12-13T12:13:22.000Z" itemprop="datePublished">Dec 13</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/12/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/12/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="archive-article-date">
-  <time class="dt-published" datetime="2021-12-13T12:13:16.000Z" itemprop="datePublished">Dec 13</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/12/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/12/11/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="archive-article-date">
-  <time class="dt-published" datetime="2021-12-11T14:58:18.000Z" itemprop="datePublished">Dec 11</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/12/11/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">Linux操作系统</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-  </nav>
 
 </section>
         

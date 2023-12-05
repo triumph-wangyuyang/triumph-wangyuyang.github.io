@@ -1,0 +1,1647 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>计算机网络 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="记录计算机网络的基础知识。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机网络">
+<meta property="og:url" content="http://example.com/2021/12/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="记录计算机网络的基础知识。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img12/20210104093sdfaghdjfhdnsgbdfvdg70574.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/gsahsgsnagrgsnhfdgndghnhgdmhmfh.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/vfsgbfvfsbfvdsfbgfnggdfndghnhdgndg.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/a4accb18056645ba98a9a627c1ee5392.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/c6dc3a086f314bdc96e31f048805da70.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/gbhnjmnjmujytyhtggvffdvftrgrhytujtnyb.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/cvbgvfcvfgbdffvdsvsbgsfvdbgfbfgbfgbdbgb.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/28774c42cfgbhnjmkmjnhbb62d4ca8b55513c.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2116e7dbdfa3frgtyhdfsgsb189c4ab3.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2244db1b7b314bb49edsfs5aefb5fe.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/01b56f21795c432e8dcfsgdha543d707.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/f0e9af094d864f0jnbhgfhj3ceda2e23.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2e483c9cd9784c8fgbhn36efd3c26db0c.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/ffa071d868ea464e8e7fd27bb8cxzvf8172b.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/80c8a91f0dsfadfb168d8085681a315.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/3bd6cdsvdf4b76928bd58d55ab1b73.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2020cdfddfsgrdthyjdfdf522631.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/202009dfgbfjfgjfhdg14172.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2cec8dbf0cdsafdabe65bf947.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/c24eaa37c02b4a1b98sdfasg1c754f860.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/94b827c51034427b911d72sss0e1301496a.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/f604188d10c24c3983weeb8a98a2e78dbea.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/sss7934296f49868107bc322720a76f.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/6967598ad8b44asss9b8780196fbcbf69a9.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/ce6ac466649b4395bdsssa7583540d.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/202107071948cdfsgdhfhmk46480.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/202107041dfgbfhgjmhgf53147334.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210704154FDSGFHGJGFJFKFH234313.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/FDGSHGNHDGNGNGBCVBVBDGNDGHNDGHN.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/202107sdfggefghgfhggh06170238713.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210707101fsgdhnfhngfbvbdgnhm75936.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021070710sdfgfcdsvsgbdhgn3603765.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021070710362svfgfdhndsfgsdfg4.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210707dsfgfhdsfdsgdhg0523843.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210706181cdvbgfnhgmjgnfbdg713948.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210706181cdsfdgthydtdsgfbhg724463.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210706191dsfghdjyhtgrvfbgnhgfbdsv006470.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210707190dfbgnhmjhdnbdgnfhm726822.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021070718dfdgfhgjhkfjg5324681.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021070719cdsvdbffgfndhfjnfgb0335971.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/202108311fegtrhdyrfuhht02952222.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2019053110dvfdbfndygmbfbfgbf5135488.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021011019371vfbgfnhgjmhngbf3551.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210110204923cvfsgbfvvdbbvnbn968.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021011021fgdhdgjdfdagd0404746.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/vdfvvsfdvfvgfberdfvasdvfvfdU0MjdfOTMxLnBuZw.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/a57e96esssss3ssssd4636dd4f.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/24bab5fgsdfgfhvfvfxvxcvxc711373d.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/24bab53c091edcfdgfdsgfdsgfdsgs72711373d.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2fbf7883925ed8dda53de1bcccabf6e618f.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/754550612861f5e8a0c9ddddfbe32e1dde7.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/9d42d50c3507sss0b580435df1bbff25c6a.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021031609ffffffffffffssssssssssss4015847.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210316swwwwwwwwwwwwwwwww094505743.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021031609sssssssss4813779.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021031609sssssssssswwwwwwww4840809.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/202103160949fdfsfaddfsdg5033.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021031609ssssssssaaaa5105734.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/202103160ssssszzzzzz95152109.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210316095dgdsfgdfbdvxcfv324144.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/202103160953gfbfnbfnbdhbd5943.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/202103160956fdfdafgfsdbsf19339.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021031609591vdfvbfsbsg1448.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021031610044vsdbfbsfbsfrgsdf3633.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021031610vsfbgfbdgb115445.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021031610100ghnmndhfgg1747.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/202103161020fsdgfgsbgsss39162.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210316fgfbfdbsds102010560.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/202101sssswwwwwwwwwwwwwqqq20124147.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210119205gbdbdgbdgbdgbd250.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021011bgdbgdbdbfgbdgbgd9205159.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210120105gbgsbsbsndgndgnd950.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210119bsfgbfvsfvfbfsbsgsb214844.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021012011vfsbgfbsnfnsfnfns1157.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/202101201bsgbngndndghnhdg14419.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/202101fvfsdbfgbsbfbs20121349.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021011923vfsdbsgbsbss2409.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210119fbfgbsbsgbsbsbs232744.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210120dvdaffsbsgbsgbsbsfbsf115853.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/202101201200bsbgfnbdfgbdbfd35.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210120120bfsbbsfgbdfbsbd212.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021012012vfsgbfbdfgbdbdfbd3619.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/fbsfvfgbsvsfdvdszEzMy0xMzAwNDA2NjE4LnBuZw.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210126cvbnhrjmtumyubrtercrvtbyntu145429.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210126nytngbgfbfgbsfbdsbs154224.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021012vdsgbndhyjmyjmtngbfv6153110.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/202101dvndakjvbadfjvbjdbfv26154500.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021hfvhkfsvbkbvvs0126153402.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/20210126fvjbsdfjvbdkcsdvca4526.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/202101261dbajkbvjakdvj54626.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/2021cdnvj;bvjsdjfvbs0126154655.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/202101cyvubhjbhugycftxcfgv26154727.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/202101ckdjbjdkjacdavadf26154752.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/202101261dgsfdfdbdfcdsca55025.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/2021012kfdvbjkbafadvb6155100.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/20210126vuybunoinoubiyvubj155245.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/20210cjdbcjkbladjvkda126155317.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/202102072fdjkvbsdfjvbjsdfbv10245.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/2021020721dbjkadbvjbfjlbajdf0750.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/2021020cjbfvjbfvbjvbsjvsdvfdsvds7212035.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/202102072vnsdfjvnbvdsjkcndsfnsjkd30329.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/202101201ndvfjvbdsjvbdsjjdsjv23619.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021011019371vfbgfnhgjmhngbf3551.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/2021011dhcdkfjbcjdfdjv4143919.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/202101151djcbnjadfvbds51809.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/202101232vbdsfsvbsdfjkvbdsjk13052.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/2021012322vbjdfvbsdjvbsj0759.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/20200427jkdbcksdfjvbjk210248.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/2021020cdbvbdgfbsdfvbdsvb7224444.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/sdafgsthvcdsvdbsgndtsbgfvbgsvfbsg.png">
+<meta property="og:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/tgsfbsfbdgbdgbdfca0860d344f94dfvdsv.jpg">
+<meta property="article:published_time" content="2021-12-13T12:13:22.000Z">
+<meta property="article:modified_time" content="2022-07-16T07:01:09.699Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="计算机网络">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img12/20210104093sdfaghdjfhdnsgbdfvdg70574.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-计算机网络" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/12/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="article-date">
+  <time class="dt-published" datetime="2021-12-13T12:13:22.000Z" itemprop="datePublished">2021-12-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      计算机网络
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <span id="more"></span>
+
+<h1 id="OSI-七层模型"><a href="#OSI-七层模型" class="headerlink" title="OSI 七层模型"></a>OSI 七层模型</h1><blockquote>
+<p>OSI：是<code>Open System Interconnect</code>的缩写，意为开放式系统互联。其各个层次的划分遵循下列原则：</p>
+<ul>
+<li>同一层中的各网络节点都有相同的层次结构，具有同样的功能。</li>
+<li>同一节点内相邻层之间通过接口进行通信。</li>
+<li>七层结构中的每一层使用下一层提供的服务，并且向其上层提供服务。</li>
+<li>不同节点的同等层按照协议实现对等层之间的通信。</li>
+</ul>
+</blockquote>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img12/20210104093sdfaghdjfhdnsgbdfvdg70574.png"></p>
+<p><strong><font color = 'red'>为什么要分层？</font></strong></p>
+<blockquote>
+<p>通信协议：通信双方都必须要遵守的通信规则。</p>
+<p>答：两个系统中实体间的通信是一个十分复杂的过程，为了减少协议设计和调试过程的复杂性，网络协议通常都按结构化的层次方式来进行组织，每一层完成一定功能，每一层又都建立在它的下层之上。</p>
+<p>​		每一层都是在下一层的基础上，通过层间接口向上一层提供一定的服务。</p>
+</blockquote>
+<h2 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h2><blockquote>
+<p>物理层：<strong>解决在各种传输媒体上传输比特 <code>0 </code>和 <code>1</code> 的问题</strong>，进而给数据链路层提供透明传输比特流的服务。</p>
+</blockquote>
+<h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><blockquote>
+<ul>
+<li><strong>机械特性</strong>：指明接口所用的接线器的<code>形状</code>和<code>尺寸</code>，<code>引脚数目</code>和<code>排列</code>，<code>固定</code>和<code>锁定装置</code>。</li>
+<li><strong>电气特性</strong>：指明在接口电缆的各条线上出现的<code>电压的范围</code>。</li>
+<li><strong>功能特性</strong>：指明某条线上出现的某一电平的<code>电压表示何种意义</code>。</li>
+<li><strong>过程特征</strong>：指明对于不同功能的各种可能<code>事件的出现顺序</code>。</li>
+</ul>
+</blockquote>
+<h3 id="传输媒体"><a href="#传输媒体" class="headerlink" title="传输媒体"></a>传输媒体</h3><blockquote>
+<p>传输媒体一共分为两大类：<code>引导型传输媒体</code>和<code>非引导性传输媒体</code>。</p>
+<ul>
+<li>引导性传输媒体有：<code>同轴电缆</code>，<code>双绞线</code>，<code>光纤</code>，<code>电力线</code>。</li>
+<li>非引导性传输媒体有：<code>无线电波</code>，<code>微波</code>，<code>红外线</code>，<code>可见光</code>。</li>
+</ul>
+</blockquote>
+<h3 id="传输方式"><a href="#传输方式" class="headerlink" title="传输方式"></a>传输方式</h3><blockquote>
+<p><strong>数据传输方式</strong>（data transmission mode）：<code>是数据在信道上传送所采取的方式</code>。若按<strong>数据传输的顺序</strong>可以分为<code>并行传输</code>和<code>串行传输</code>；若按<strong>数据传输的同步方式</strong>可分为<code>同步传输</code>和<code>异步传输</code>；若按<strong>数据传输的流向和时间关系</strong>可以分为<code>单工</code>、<code>半双工</code>和<code>全双工数据传输</code>。</p>
+<ul>
+<li><strong>并行传输</strong>：是将数据以成组的方式在两条以上的并行信道上同时传输。</li>
+<li><strong>串行传输</strong>：是数据流以串行方式在一条信道上传输。</li>
+<li><strong>同步传输</strong>：是以<code>固定时钟节拍</code>来发送数据信号的。</li>
+<li><strong>异步传输</strong>：<code>每次传送一个字符代码</code>（5～8bit），在发送每一个字符代码的前面均加上一个“起”信号，后面均加一个止信号。</li>
+<li><strong>单工数据传输</strong>：是两数据站之间<code>只能沿一个指定的方向</code>进行数据传输。</li>
+<li><strong>半双工数据传输</strong>：是两数据站之间可以在两个方向上进行数据传输，但不能同时进行。</li>
+<li><strong>全双工数据传输</strong>：是在两数据站之间，可以在两个方向上同时进行传输。</li>
+</ul>
+</blockquote>
+<h3 id="编码与调制"><a href="#编码与调制" class="headerlink" title="编码与调制"></a>编码与调制</h3><blockquote>
+<p><strong>编码</strong>：<code>用数字信号</code>承载数字或模拟数据<br><strong>调制</strong>：<code>用模拟信号</code>承载数字或模拟数据</p>
+</blockquote>
+<h2 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h2><blockquote>
+<p>数据链路层：用于两个设备(同一种数据链路节点)之间进行信息传递，数据链路层以<strong>帧</strong>为单位传输和处理数据。</p>
+</blockquote>
+<h3 id="三个基本问题"><a href="#三个基本问题" class="headerlink" title="三个基本问题"></a>三个基本问题</h3><blockquote>
+<ul>
+<li>封装成帧</li>
+<li>透明传输</li>
+<li>差错检测</li>
+</ul>
+</blockquote>
+<h4 id="封装成帧"><a href="#封装成帧" class="headerlink" title="封装成帧"></a>封装成帧</h4><blockquote>
+<p><strong>封装成帧</strong>：是指数据链路层给上层交付的协议数据单元<code>添加帧头和帧尾</code>使之成为帧。</p>
+</blockquote>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/gsahsgsnagrgsnhfdgndghnhgdmhmfh.png"></p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/vfsgbfvfsbfvdsfbgfnggdfndghnhdgndg.png"></p>
+<h4 id="常见的两种帧的格式"><a href="#常见的两种帧的格式" class="headerlink" title="常见的两种帧的格式"></a>常见的两种帧的格式</h4><p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/a4accb18056645ba98a9a627c1ee5392.png"></p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/c6dc3a086f314bdc96e31f048805da70.png"></p>
+<blockquote>
+<p>ASCII控制字符<code>SOH</code>表示<strong>帧首部</strong>开始，<code>EOT</code>表示<strong>帧的结束</strong>。</p>
+</blockquote>
+<blockquote>
+<p><strong>接收方的数据链路层如何从物理层交付的比特流中提取出一个一个的帧呢？</strong></p>
+<p>帧头和帧尾的作用之一就是<strong>帧定界</strong>。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/gbhnjmnjmujytyhtggvffdvftrgrhytujtnyb.png"></p>
+</blockquote>
+<blockquote>
+<p>不是所有的帧都有帧定界符的，比如以太网V2的MAC帧就没有帧定界符，它是通过前导码和帧间间隔来识别一个一个的帧的。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/cvbgvfcvfgbdffvdsvsbgsfvdbgfbfgbfgbdbgb.png"></p>
+</blockquote>
+<h4 id="透明传输"><a href="#透明传输" class="headerlink" title="透明传输"></a>透明传输</h4><blockquote>
+<p>透明传输：是指数据链路层对上层交付的传输数据<code>没有任何限制</code>，就好像数据链路层不存在一样。</p>
+</blockquote>
+<blockquote>
+<p>没有透明传输，会出下面的问题：</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/28774c42cfgbhnjmkmjnhbb62d4ca8b55513c.png"></p>
+</blockquote>
+<blockquote>
+<ul>
+<li><p>字节填充或字符填充——发送端的数据链路层在数据中出现控制字符<code>“SOH”</code>或<code>“EOT”</code>的前面插入一个转义字符<code>“ESC”</code>。</p>
+</li>
+<li><p>接收端的数据链路层在将数据送往网络层之前删除插入的转义字符。</p>
+</li>
+<li><p>如果转义字符也出现数据当中，那么应在转义字符前面插入一个转义字符。当接收端收到连续的两个转义字符时，就删除其中前面的一个。</p>
+</li>
+</ul>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2116e7dbdfa3frgtyhdfsgsb189c4ab3.png"></p>
+</blockquote>
+<blockquote>
+<p>为了<strong>提高帧的传输效率</strong>，我们应当<code>使帧的数据部分的长度尽可能大些</code>。</p>
+<p>每一种数据链路层协议都规定了<strong>帧的数据部分的上限长度</strong>，即：<code>最大传输单位MTU</code>。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2244db1b7b314bb49edsfs5aefb5fe.png"></p>
+</blockquote>
+<h4 id="差错检测"><a href="#差错检测" class="headerlink" title="差错检测"></a>差错检测</h4><blockquote>
+<p>实际的通信链路都不是理想的，比特在传输过程中可能会产生差错：<code>1可能会变成0，而0也可能会变成1。这称为比特差错。</code></p>
+<p>误码率BER(BitErrorRate)：在一段时间内，传输错误的比特占所传输比特总数的<code>比率</code>。误码率与<code>信噪比有很大的关系</code>。</p>
+<p>使用<code>差错检测码</code>来检测数据在传输过程中是否产生了比特差错，是数据链路层索要解决的重要问题之一。</p>
+</blockquote>
+<h5 id="奇偶校验"><a href="#奇偶校验" class="headerlink" title="奇偶校验"></a>奇偶校验</h5><blockquote>
+<p><strong>奇偶校验</strong>：在待发送的<code>数据后面添加1位奇偶校验位</code>，使得整个数据（<code>包括所添加的校验码</code>位在内）中的“1”的个数为奇数（奇校验）或偶数（偶校验）。</p>
+<p><code>如果有奇数个位发生误码</code>，则奇偶性发生变化，<code>可以检查出误码</code>；</p>
+<p><code>如果有偶数个位发生误码</code>，则奇偶性不发生变化，<code>不能检查出误码（漏检）</code>；</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/01b56f21795c432e8dcfsgdha543d707.png"></p>
+<p><strong>漏检率比较高所以一般不使用这种检测方法。</strong></p>
+</blockquote>
+<h5 id="循环冗余校验CRC"><a href="#循环冗余校验CRC" class="headerlink" title="循环冗余校验CRC"></a>循环冗余校验CRC</h5><blockquote>
+<p>（1）收发双方约定好一个<code>生成多项式G(x)</code>.<br>（2）发送方基于待发送的数据生成多项式计算出<code>差错检测码（冗余码）</code>，将其添加到带传输数据的后面<code>一起传输</code>。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/f0e9af094d864f0jnbhgfhj3ceda2e23.png"></p>
+<p>（3）接收方<code>通过生成多项式来计算</code>收到的数据<code>是否产生了误码</code>。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2e483c9cd9784c8fgbhn36efd3c26db0c.png"></p>
+</blockquote>
+<h3 id="三种可靠传输的实现机制"><a href="#三种可靠传输的实现机制" class="headerlink" title="三种可靠传输的实现机制"></a>三种可靠传输的实现机制</h3><blockquote>
+<p>三种可靠传输的实现机制分别是：<code>停止-等待协议SW</code>，<code>回退N帧协议GBN</code>，<code>选择重传协议SR</code></p>
+</blockquote>
+<h4 id="停止-等待协议SW"><a href="#停止-等待协议SW" class="headerlink" title="停止-等待协议SW"></a>停止-等待协议SW</h4><blockquote>
+<p><strong>停止等待协议的信道利用率比较低</strong></p>
+</blockquote>
+<blockquote>
+<ol>
+<li>首先，每次<strong>发送方</strong>都<code>只发一个数据分组</code>，<strong>接收方</strong>对数据分组进行差错检测，<code>检验是否有误码</code>。</li>
+</ol>
+<ul>
+<li>如果<strong>没有误码</strong>，那么给发送方<code>发送ACK确认分组</code>；</li>
+<li>如果<strong>有误码</strong>，则丢弃分组，并给发送方<code>发送NAK否认分组</code>；</li>
+</ul>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/ffa071d868ea464e8e7fd27bb8cxzvf8172b.png"></p>
+<ol start="2">
+<li>但其实，数据分组在传输过程中并不会那么一帆风顺，数据分组有可能在半路上遇到一个已经满了的路由器等情况，此时路由器会毫不犹豫地丢失该分组，如此便会产生数据分组被丢失，发送方等不到接收方的ACK或者NAK。<br> 所以，我们需要给每次的数据分组的传输提供一个超时计时器，若到了超时计时器所设置的重传时间，而发送方仍收不到接收方的ACK或NAK，则重传原来的数据分组。</li>
+</ol>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/80c8a91f0dsfadfb168d8085681a315.png"></p>
+<ol start="3">
+<li>在传输的过程中接收方的确认可能会丢失或者迟到。这样就会导致发送方误判重新传一个重复的数据，而接受方也无法判断这个数据是不是接受过。或者来了一个重复的确认不能判断这个ACK是哪个消息的。<br> 所以我们需要给发送方发送的消息和接受方发送的ACK进行编号使他们相互对应来避免这些问题的发生。</li>
+</ol>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/3bd6cdsvdf4b76928bd58d55ab1b73.png"></p>
+</blockquote>
+<h4 id="回退N帧协议GBN"><a href="#回退N帧协议GBN" class="headerlink" title="回退N帧协议GBN"></a>回退N帧协议GBN</h4><blockquote>
+<p>停止等待协议在传输中都是单个信息进行传输的，其实我们可以一次传输多条信息，这样就可以解决信道利用率低的问题了。</p>
+</blockquote>
+<blockquote>
+<p>我们在发送方和接收方分别定义设置一个发送窗口与接收窗口。</p>
+<p><strong>对于发送方：</strong></p>
+<p>（1）发送窗口尺寸<code>T</code>的取值范围是：<code>1 &lt; T&lt;= 2^n − 1</code></p>
+<p>接收方无法辨析新旧数据分组。<br>（2）发送方可在未收到接收方确认分组的情况下，将序号落在发送窗口内的多个数据分组全部发送出去；</p>
+<p>（3）发送方只有收到对已发送数据分组的确认时，发送窗口才能向前相应滑动；</p>
+<p>（4）发送方收到多个重复确认时，可在重传计时器超时前尽早开始重传，由具体实现决定。</p>
+<p>（5）发送方发送窗口内某个已发送的数据分组产生超时重发时，其后续在发送窗口内的分且已发送的数据分组也必须重传，这就是回退N帧协议。</p>
+<p><strong>对于接收方：</strong></p>
+<p>（1）接收方的的接收窗口取值R为1，因此接收方只能按序接收分组。</p>
+<p>（2）接收方只接受序号落在接收窗口内且无误码的数据分组，并且将接收窗口向前滑动一个位置，为此同时给发送方发回相应的确认分组，为了减少开销接收方不一定要对收到的数据分组逐个发送确认。</p>
+<ul>
+<li>而是可以在连续收到好几个按序到达且无误码的数据分组后，在针对最后一个数据分组发回确认分组，这也称为累计确认。</li>
+<li>或者可以在自己有数据分组发送时才对之前按序接收且无误码的数据分组进行捎带确认。</li>
+</ul>
+<p>（3）接收方收到未按需到达的数据分组，除丢弃外，还要对最近按序接收的数据分组进行确认。</p>
+</blockquote>
+<h4 id="选择重传协议SR"><a href="#选择重传协议SR" class="headerlink" title="选择重传协议SR"></a>选择重传协议SR</h4><blockquote>
+<p>回退N帧协议的接收窗口尺寸R<code>只能等于1</code>，因此<code>接收方只能按序接收正确到达的数据分组</code>。</p>
+<p>一个数据分组的误码就会导致其后续多个数据分组不能被接收方按序接收而丢弃（尽管他们无乱序和误码）。这势必会造成发送方对这些数据分组的超时重传，显然这是对通信资源的极大浪费。</p>
+<p>为了进一步提高性能，可以设法只重传出现误码的数据分组。因此，接收窗口的尺寸R不应再等于1（应该大于1），以便接收方先收下失序到达但无误码并且序号落在接收窗口内的那些数据分组，等到所缺分组收起在一并送交上层，这就是选择重传协议。<br><strong>注意：选择重传协议为了使发送方仅重传出现差错的分组，接收方不能再使用累计确认，而需要对每一个正确接收到的数据分组进行逐一确认。</strong></p>
+<p><strong>对于发送方：</strong></p>
+<p>（1）发送窗口尺寸<code>T</code>的取值范围是：<code>1 &lt; T&lt;= 2^n − 1</code></p>
+<p>接收方无法辨析新旧数据分组。<br>（2）发送方可在未收到接收方确认分组的情况下，将序号落在发送窗口内的多个数据分组全部发送出去；</p>
+<p>（3）发送方只有按序收到对已发送数据分组的确认时，发送窗口才能向前相应滑动；若收到未按序到达的确认分组时，对其进行记录，以防止其相应数据分组的超时重发，但发送窗口不能向前滑动；</p>
+<p><strong>对于接收方：</strong></p>
+<p>（1）接收窗口尺寸R的取值范围是：<code>1 &lt; R &lt; = T</code></p>
+<p>（2）接收方<code>可接受未按序到达但没有误码并且序号落在接收窗口内的数据分组</code>。</p>
+<ul>
+<li>为了使发送方仅重传出现差错的分组，接收方不能在采用累计确认，而需要<code>对正确接收到的分组逐一确认!</code></li>
+</ul>
+<p>（3）接收方只有在<code>按序接收到数据分组之后</code>，接收窗口<code>才能向前相应滑动</code>。</p>
+</blockquote>
+<h3 id="点对点PPP协议"><a href="#点对点PPP协议" class="headerlink" title="点对点PPP协议"></a>点对点PPP协议</h3><blockquote>
+<p><strong>点对点协议PPP</strong>是目前<code>使用最广泛的</code>点对点数据链路层协议。</p>
+</blockquote>
+<blockquote>
+<p>PPP协议为在点对点链路传输各种协议数据报提供了一个标准方法，主要由以下三部分构成：</p>
+<p>（1）对各种协议数据报的<code>封装方法</code>（封装成帧）；<br>（2）<code>链路控制协议LCP</code>：用于建立，配置以及测试数据链路的连接；<br>（3）<code>一层网络控制协议NCPs</code>：其中每一个协议支持不同的网络层协议；</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2020cdfddfsgrdthyjdfdf522631.png"></p>
+<ul>
+<li><p>PPP帧的首部和尾部分别为4个和2个字段</p>
+</li>
+<li><p>首部和尾部都有标志字段F（flag），规定为0x7E，表示一帧的开始或结束，也就是帧定界符，连续两帧之间，只需要一个标志字段（帧定界符），如果连续出现两个标志字段，认为是空帧，直接丢弃</p>
+</li>
+<li><p>首部的地址字段<code>A</code>规定为<code>0xFF</code>，控制字段<code>C</code>规定为<code>0x03</code>，这两个字段目前就是固定的，不会有其它值</p>
+</li>
+<li><p>首部的协议字段是<code>2</code>字节</p>
+<ul>
+<li><code>0x0021</code>：信息字段是<code>IP</code>数据报</li>
+<li><code>0xC021</code>：信息字段是<code>PPP</code>链路控制协议<code>LCP</code>的数据</li>
+<li><code>0x8021</code>：信息字段是网络层的控制数据</li>
+</ul>
+</li>
+<li><p>信息字段的长度可变，但是不超过<code>1500</code>字节，<code>MTU</code>规定了最大长度</p>
+</li>
+<li><p>尾部的第一个字段为<code>2</code>个字节，是使用<code>CRC</code>的帧检验序列<code>FCS</code></p>
+</li>
+</ul>
+<p><strong>字节填充</strong></p>
+<ul>
+<li>当信息字段出现了和标志字段一样的值时，就需要采取措施，使接收端正确接收信息，而不是当错误帧丢弃</li>
+<li>当<code>PPP</code>使用异步传输时，转义符定义为<code>0x7D</code>，并使用字节填充，<code>RFC1662</code>规定了如下填充方法<ul>
+<li>把信息字段中的<code>0x7E</code>转换成2字节序列（<code>0x7D</code>，<code>0x5E</code>）</li>
+<li>把信息字段中的<code>0x7D</code>转换成2字节序列（<code>0x7D</code>，<code>0x5D</code>）</li>
+<li>若信息字段中出现<code>ASCII</code>码控制字符，则在该字符前加<code>0x7D</code>，同时改变该字符的编码，例如出现<code>0x03</code>，则转换成（<code>0x7D</code>，<code>0x23</code>），改变编码就是在本身基础上加<code>0x20</code></li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 id="以太网的MAC层"><a href="#以太网的MAC层" class="headerlink" title="以太网的MAC层"></a>以太网的MAC层</h3><h4 id="MAC层的硬件地址"><a href="#MAC层的硬件地址" class="headerlink" title="MAC层的硬件地址"></a>MAC层的硬件地址</h4><blockquote>
+<p>在局域网中，硬件地址又称为物理地址或MAC地址，地址就是识别某个系统的重要标识符</p>
+<p>（1）<code>MAC</code>地址<strong>是以太网的MAC子层所使用的地址（<code>数据链路层</code>）；<br>（2）</strong><code>IP</code>地址<strong>是TCP&#x2F;IP体系结构<code>网际层</code>所使用的地址；<br>（3）</strong><code>ARP</code>协议属于TCP&#x2F;IP体系结构的<code>网际层</code>，其作用是已知设备所分配到的IP地址，使用ARP协议可以通过该IP地址获取到设备的MAC地址；</p>
+</blockquote>
+<h5 id="MAC帧的格式"><a href="#MAC帧的格式" class="headerlink" title="MAC帧的格式"></a>MAC帧的格式</h5><p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/202009dfgbfjfgjfhdg14172.png"></p>
+<h3 id="ARP-地址解析协议"><a href="#ARP-地址解析协议" class="headerlink" title="ARP 地址解析协议"></a>ARP 地址解析协议</h3><blockquote>
+<p><code>ARP</code> 地址解析协议：<strong>实现由<code> IP</code> 地址得到 <code>MAC</code> 地址</strong></p>
+</blockquote>
+<p><strong>示例：</strong></p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2cec8dbf0cdsafdabe65bf947.png"></p>
+<blockquote>
+<p>​		主机<code>B</code>要向主机<code>C</code>发送数据包，但是主机<code>B</code>只知道主机<code>C</code>的<code>IP</code>地址，不知道<code>C</code>的<code>MAC</code>地址，所以主机<code>B</code>在数据链路层封装<code>MAC</code>帧时，无法填写目的<code>MAC</code>地址。</p>
+<p>​		每台主机都有<code>arp</code>缓存表，<code>arp</code>缓存表中记录有<code>ip</code>地址和<code>mac</code>地址的对应关系，<code>arp</code>缓存表里面记录着之前和该主机通信的主机信息，例如，<code>ip</code>地址，<code>mac</code>地址。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/c24eaa37c02b4a1b98sdfasg1c754f860.png"></p>
+<p>​		主机<code>B</code>和主机<code>C</code>通信时会首先查看<code>arp</code>缓存表，在表里查找主机<code>C</code>的<code>ip</code>地址和所对应的<code>mac</code>地址。但是主机<code>B</code>的<code>arp</code>缓存表里面并没有主机<code>C</code>的<code>ip</code>地址和<code>mac</code>地址，因此，主机<code>B</code>需要发送<code>arp</code>请求报文来获取主机<code>C</code>的<code>mac</code>地址。它会发送如下<code>arp</code>请求报文（因为不知道目的<code>mac</code>地址，所以会进行广播）</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/94b827c51034427b911d72sss0e1301496a.png"></p>
+<p>​		<code>arp</code>请求报文被封装在帧中发送，目的地址为广播地址，主机<code>B</code>发送封装有<code>arp</code>请求报文的广播帧，总线上的所有设备都能收到广播，</p>
+<p>​		当主机<code>A</code>收到广播以后，网卡将帧交付上层处理，上层的<code>arp</code>进程解析<code>arp</code>请求报文，发现所询问的<code>ip</code>地址不是自己的<code>ip</code>地址，主机<code>A</code>就会将该帧丢弃不会响应。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/f604188d10c24c3983weeb8a98a2e78dbea.png"></p>
+<p>​		当主机<code>C</code>收到广播以后，网卡将帧交付上层处理，上层的<code>arp</code>进程解析<code>arp</code>请求报文，发现所询问的<code>ip</code>地址是自己的<code>ip</code>地址，需要进行响应，于是主机<code>C</code>会首先将<code>B</code>的<code>ip</code>地址和<code>mac</code>地址记录到自己的<code>arp</code>缓存表里面，然后给<code>B</code>发送<code>arp</code>响应，告诉主机<code>B</code>自己的<code>mac</code>地址</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/sss7934296f49868107bc322720a76f.png"></p>
+<p>​		主机<code>C</code>给主机<code>B</code>发送<code>arp</code>响应报文（因为此时主机<code>C</code>知道主机<code>B</code>的<code>mac</code>地址，所以<code>arp</code>响应报文会进行单播）主机<code>A</code>收到单播以后发现<code>mac</code>地址与自己不匹配，网卡会直接丢弃该帧，主机<code>B</code>发现<code>mac</code>地址匹配，网卡将帧交付上层处理，上层的<code>arp</code>进程会解析<code>arp</code>报文，然后将主机<code>C</code>的<code>ip</code>地址与<code>mac</code>地址记录到自己的<code>arp</code>缓存表中</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/6967598ad8b44asss9b8780196fbcbf69a9.png"></p>
+<p>​		然后主机<code>B</code>就可以给主机<code>C</code>发送数据包了。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/ce6ac466649b4395bdsssa7583540d.png"></p>
+</blockquote>
+<h2 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h2><blockquote>
+<p>网络层：负责在不同的网络之间(基于数据包的IP地址)<code>尽力转发数据包，不负责丢包重传和接收顺序</code>。</p>
+</blockquote>
+<h3 id="IP数据报"><a href="#IP数据报" class="headerlink" title="IP数据报"></a>IP数据报</h3><blockquote>
+<p>IP 协议是一个无连接的服务，负责在源地址和目的地址之间传送数据报，其主要功能就是把数据报在互连的网络上传送，将数据报在一个个模块间通过路由处理网络地址传送到目的地址。</p>
+<p>（1）寻址<br>在不同网络中必须通过三层地址进行寻址。常用的IP网络中运行的三层协议就是 IP 协议，对应的三层地址就是 IP 地址。</p>
+<p>（2） 数据报的封装<br>从传输层过来的数据段需要经过IP协议的重封装，而从数据链路层过来的数据帧就需要进行解封装。在IP网络中封装后形成的是IP数据报，IP封装的目的就是标识此IP数据报发送节点和接受节点的IP地址和控制信息。</p>
+<p>（3）分段与重组<br>不同网络上的链路可以传输的最大报文大小是不同的，这就是我们通常说的MTU（最大传输单元）。尺寸较大的数据报在MTU值较小的网络链路传输需要将数据报分段依次传输，对应的接收方就需要把这些接收到的拆分的分段组合起来，还原成原来的数据报。</p>
+</blockquote>
+<h4 id="IP数据报的格式"><a href="#IP数据报的格式" class="headerlink" title="IP数据报的格式"></a>IP数据报的格式</h4><blockquote>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/202107071948cdfsgdhfhmk46480.png"></p>
+<ul>
+<li>版本：指定IP数据报中使用的IP协议版本，占4位。IPv4对应值为4（0100）</li>
+<li>首部长度：指示IP数据报头部的总长度，占4位。IP数据报头部的总长度以4字节为单位（即4字节的整数倍）</li>
+<li>区分服务：用于表示数据报的优先级和服务类型，占8位。包括一个3位长度的优先级，4位长度的标志位，最高位未用</li>
+<li>总长度：标识整个IP数据报的总长度，包括报头和数据部分，占16位，由此可知IPv4的最大长度为65535（64KB）</li>
+<li>标识：用于表示IP数据报的标识符，占16位，每个IP数据报有一个唯一的标识（不是序号）。当数据报分段时，这个标识的值就被复制到所有分段的标识字段中，相同的标识字段值使分段后的数据报分段最后能正确地重组成为原来的数据报。</li>
+<li>标志：指出该IP数据报后面是否还有分段，为分段标志，占3位，仅最低位有意义</li>
+<li>片偏移：指出该分段在数据报中的相对位置。相对于用户数据字段的起点，该字段从何处开始，占13位</li>
+<li>生存时间：标识IP数据报在网络中传输的有效期，以秒来计数，占8位。现在通常认为这个数值是指数据报允许经过的路由器数，当值为0时，就丢弃这个数据报。设定生存时间是为了防止数据报在网络中无限制地循环转发。</li>
+<li>协议：用来标识此IP数据报在传输层所采用的协议类型（如TCP、UDP或ICMP等），以便使目的主机的IP层知道应将数据部分上交给哪个处理过程，占8位</li>
+<li>首部校验和：用来检验IP数据报的包头部分（不含“数据”部分）在传输到接收端后是否发生了变化，占16位。因为数据报每经过一个路由器，路由器都要重新计算一下报头校验和</li>
+<li>源地址&#x2F;目的地址：分别表示该IP数据报发送者和接收者的IP地址，各站32位</li>
+<li>可变部分：用来支持各种选项，提供扩展余地，可用来支持排错、测量以及安全等措施。后面的填充字段就是为了保证IP数据报的报头是32位的整数倍。</li>
+</ul>
+</blockquote>
+<h4 id="IPv4数据报的封装与解封转"><a href="#IPv4数据报的封装与解封转" class="headerlink" title="IPv4数据报的封装与解封转"></a>IPv4数据报的封装与解封转</h4><blockquote>
+<ul>
+<li>发送端网络层生成的IP数据报还要继续向下传输，到达数据链路层就要封装成数据帧了。IP数据报的“帧封装”只需把来自网络层的整个 IP 数据报（报头和数据部分）当做数据链路层帧的数据部分，然后在前面加上与数据链路层对应的协议头即可。</li>
+<li>在以太局域网中，由于数据链路层分成了LLC子层和MAC子层这两层，所以来自网络层的IP数据报在到达数据链路层后先要经过LLC子层和MAC子层的协议头封装，最终形成数据链路层的以太网MAC帧。</li>
+</ul>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/202107041dfgbfhgjmhgf53147334.png"></p>
+<p>​		<code>IP 数据报无论经过了多少个网络，整个数据报内容都不会变，包括报头部分的源和目的地址信息。变化的只是在不同网络数据链路上传输的帧头信息</code>。</p>
+</blockquote>
+<h4 id="IP-地址"><a href="#IP-地址" class="headerlink" title="IP 地址"></a>IP 地址</h4><h5 id="分类的-IP-地址"><a href="#分类的-IP-地址" class="headerlink" title="分类的 IP 地址"></a>分类的 IP 地址</h5><blockquote>
+<p>​		每一类地址都由两个固定长度的字段组成，其中一个字段是网络号 net-id，它标志主机（或路由器）所连接到的网络，而另一个字段则是主机号，host-id，它标志该主机（或路由器）。</p>
+<ul>
+<li>网络号：保证相互连接的两个网段具有不同的标识, 简单来说就是标识网络 (网段:一段范围内的IP, 具体是网络号相同的所有IP)</li>
+<li>主机号：同一网段内, 主机之间具有相同的网络号, 但是必须有不同的主机号, 简单来说就是标识同一网段下的不同主机.</li>
+<li>子网：IP 地址是以网络号和主机号来表示网络上的主机的, 只有在一个网络号下的计算机之间才能“直接”互通, 不同网络号的计算机要通过网关（Gateway）才能互通. 但这样的划分在大多数情况下显得并不十分灵活. 为此IP网络还允许划分成更小的网络, 称为子网（Subnet）.</li>
+</ul>
+</blockquote>
+<p>通过合理的设置网络号和主机号，就可以保证在相互连接的网络中，每台主机的IP地址都不同。那么如何自动管理子网内的IP：</p>
+<blockquote>
+<p><code>DHCP 动态主机配置协议</code> ：首先,这是一个应用层协议，<code>可以自动给子网内新增的主机节点分配IP地址</code>. 。一般的路由器都带有DHCP功能， 因此路由器也可以看做是一个DHCP服务器。</p>
+</blockquote>
+<h5 id="IP-地址分类"><a href="#IP-地址分类" class="headerlink" title="IP 地址分类"></a>IP 地址分类</h5><blockquote>
+<p> IP 地址分为三类：A类、B类、C类、D类、E类</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210704154FDSGFHGJGFJFKFH234313.png"></p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/FDGSHGNHDGNGNGBCVBVBDGNDGHNDGHN.png"></p>
+</blockquote>
+<h5 id="特殊的几个地址"><a href="#特殊的几个地址" class="headerlink" title="特殊的几个地址"></a>特殊的几个地址</h5><blockquote>
+<ul>
+<li>IP地址中的主机号全为0，就成了网络号，代表这个局域网</li>
+<li>将IP地址中的主机号的二进制全部设为1，就成为了广播地址，用于给同一个链路中相互连接的所有主机发送数据包(此时目的地址当然就被设为了广播地址)</li>
+<li>127.0.0.1. 它代表设备的本地虚拟接口， 所以默认被看作是永远不会宕掉的接口。所以通常在安装物理网卡前就可以ping通这个本地回环地址。 一般都会用来检查本地网络协议、基本数据接口等是否正常的。</li>
+<li>0.0.0.0 标识本机上的所有网卡。用与TCP服务端程序的绑定地址，相当于监听本机的所有网卡。</li>
+</ul>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/202107sdfggefghgfhggh06170238713.png"></p>
+</blockquote>
+<h5 id="IP-地址的特点"><a href="#IP-地址的特点" class="headerlink" title="IP 地址的特点"></a>IP 地址的特点</h5><blockquote>
+<p>① IP 地址是一种分等级的地址结构。分两个等级的好处是：</p>
+<blockquote>
+<p>● IP 地址管理机构在分配 IP 地址时只分配网络号，而剩下的主机号则由得到该网络号的单位自行分配。这样就方便了 IP 地址的管理。<br>● 路由器仅根据目的主机所连接的网络号来转发分组（而不考虑目的主机号），这样就可以使路由表中的项目数大幅度减少，从而减小了路由表所占的存储空间。</p>
+</blockquote>
+<p>② 实际上 IP 地址是标志一个主机（或路由器）和一条链路的接口。</p>
+<blockquote>
+<p>当一个主机同时连接到两个网络上时，该主机就必须同时具有两个相应的 IP 地址，其网络号 net-id 必须是不同的。这种主机称为多接口主机(multihomed host)。<br>由于一个路由器至少应当连接到两个网络（这样它才能将 IP 数据报从一个网络转发到另一个网络），因此一个路由器至少应当有两个不同的 IP 地址。</p>
+</blockquote>
+<p>③ 用转发器或网桥连接起来的若干个局域网仍为一个网络</p>
+<blockquote>
+<p>因此这些局域网都具有同样的网络号 net-id。</p>
+</blockquote>
+<p>④ 所有网络都是平等的。</p>
+<blockquote>
+<p>所有分配到网络号 net-id 的网络，范围很小的局域网，还是可能覆盖很大地理范围的广域网，都是平等的。</p>
+</blockquote>
+<p>⑤ 路由器总是具有两个或两个以上的 IP 地址。</p>
+<blockquote>
+<p>路由器的每一个接口都有一个不同网络号的 IP 地址。</p>
+</blockquote>
+<p>⑥ 两个路由器直接相连的接口处，可指明也可不指明 IP 地址。</p>
+<blockquote>
+<p> 如指明 IP 地址，则这一段连线就构成了一种只包含一段线路的特殊“网络” 。现在常不指明 IP 地址。</p>
+</blockquote>
+</blockquote>
+<h5 id="私有IP地址和公网IP地址"><a href="#私有IP地址和公网IP地址" class="headerlink" title="私有IP地址和公网IP地址"></a>私有IP地址和公网IP地址</h5><blockquote>
+<p>私有IP地址 ：在局域网中使用的IP；<br>公网IP地址 ：在互联网中使用的地址。</p>
+</blockquote>
+<h5 id="IP-地址与硬件地址"><a href="#IP-地址与硬件地址" class="headerlink" title="IP 地址与硬件地址"></a>IP 地址与硬件地址</h5><h6 id="IP-地址与硬件地址的区别"><a href="#IP-地址与硬件地址的区别" class="headerlink" title="IP 地址与硬件地址的区别"></a>IP 地址与硬件地址的区别</h6><blockquote>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210707101fsgdhnfhngfbvbdgnhm75936.png"></p>
+<p>① IP 地址</p>
+<blockquote>
+<p>● IP 地址是一种<code>逻辑地址</code>。<br>● IP 地址称为逻辑地址，是因为IP地址是用软件实现的。<br>● IP 地址是<code>网络层及其以上各层(包括运输层、应用层等)使用的地址</code>。<br>● IP 地址<code>放在 IP 数据报的首部</code>。</p>
+</blockquote>
+<p>② 硬件地址</p>
+<blockquote>
+<p>● 硬件地址是一种<code>物理地址</code>。<br>● 硬件地址称为物理地址，是因为硬件地址是用硬件实现的。<br>● 硬件地址是<code>数据链路层和物理层使用的地址</code>。<br>● 硬件地址<code>放在 MAC 帧的首部</code>。</p>
+</blockquote>
+</blockquote>
+<h6 id="数据发送中的-IP-地址与硬件地址"><a href="#数据发送中的-IP-地址与硬件地址" class="headerlink" title="数据发送中的 IP 地址与硬件地址"></a>数据发送中的 IP 地址与硬件地址</h6><blockquote>
+<p>① 发送数据</p>
+<blockquote>
+<p>● 在发送数据时，数据从高层下到低层，然后才到通信链路上传输。<br>● 使用 IP 地址的 IP 数据报一旦交给了数据链路层，就被封装成 MAC 帧了。<br>● MAC 帧在传送时使用的源地址和目的地址都是硬件地址，这两个硬件地址都写在 MAC 帧的首部。<br>● 当 IP 数据报放入到数据链路层的 MAC 帧中以后，整个 IP 数据报就成了 MAC 帧的数据部分，因而在数据链路层看不见 IP 数据报的 IP 地址。</p>
+</blockquote>
+<p>② 接收数据</p>
+<blockquote>
+<p>● 在接收数据时，数据从低层上到高层。<br>● 连接在通信链路上的设备(主机或路由器)在接收 MAC 帧时，其根据是 MAC 帧首部的硬件地址。<br>● 在数据链路层看不见隐藏在 MAC 帧的数据中的 IP 地址。<br>● 只有在剥去 MAC 帧的首部和尾部后，把 MAC 帧的数据部分上交给网络层后，网络层才能在 IP 数据报的首部中找到源 IP 地址和目的 IP 地址。</p>
+</blockquote>
+</blockquote>
+<h6 id="例子讲解"><a href="#例子讲解" class="headerlink" title="例子讲解"></a>例子讲解</h6><blockquote>
+<p>三个局域网用两个路由器 R1 和 R2 互连起来，现在主机 H1 要和主机 H2 通信。<br>主机 H1 的IP地址是 IP1，硬件地址是 HA1；主机 H2 的 IP 地址是 IP2，硬件地址是 HA2。路由器 R1 由于同时连接到两个局域网上，因此它有两个硬件地址 HA3 和 HA4。路由器 R2 由于同时连接到两个局域网上，因此它有两个硬件地址 HA5 和 HA6。<br><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021070710sdfgfcdsvsgbdhgn3603765.png"></p>
+<p>通信的路径是：H1 —&gt; 经过 R1 转发 —&gt; 再经过 R2 转发 —&gt; H2</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021070710362svfgfdhndsfgsdfg4.png"></p>
+</blockquote>
+<h3 id="路由转发分组"><a href="#路由转发分组" class="headerlink" title="路由转发分组"></a>路由转发分组</h3><blockquote>
+<p><code>分组转发是指在互联网络中路由器转发IP分组的物理传输过程与数据报转发机制</code>。根据分组的目的IP地址与源IP地址是否属于同一个子网可分为直接转发和间接转发。</p>
+</blockquote>
+<blockquote>
+<p><code>路由器的主要工作就是为经过路由器的每个数据包寻找一条最佳的传输路径，并将该数据有效地传送到目的站点</code>。</p>
+<p><code>在路由表中，对每一条路由最主要的是以下两个信息：(目的网络地址，下一跳地址)</code>。</p>
+</blockquote>
+<blockquote>
+<p>假设：有四个 A 类网络通过三个路由器连接在一起。每一个网络上都可能有成千上万个主机。可以想象，若按目的主机号来制作路由表，每一个路由表就有 4 万个项目，即 4 万行（每一行对应于一台主机），则所得出的路由表就会过于庞大。但若按主机所在的网络地址来制作路由表，那么每一个路由器中的路由表就只包含 4 个项目（每一行对应于一个网络），这样就可使路由表大大简化。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210707dsfgfhdsfdsgdhg0523843.png"></p>
+<p>根据目的网络地址就能确定下一跳路由器，这样做的结果是：</p>
+<p>● IP 数据报<code>最终一定可以找到目的主机所在目的网络上的路由器（可能要通过多次的间接交付）</code>。<br>● <code>只有到达最后一个路由器时，才试图向目的主机进行直接交付</code>。</p>
+</blockquote>
+<h4 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h4><blockquote>
+<p>①　当 IP数据包到达路由器,，路由器会先查看目的地址 ；<br>②　通过判断目的IP，判定目的主机的所在网络是否与自己相连 ；<br>③　若相连， 则直接发送给目标主机；<br>④　若不相连，则发送给下一个路由器(这个过程中源IP地址会被替换为路由器的WAN口地址)；<br>⑤　重复这个过程, 一直到达目的IP(或者TTL为0时被丢弃)；</p>
+</blockquote>
+<h3 id="划分子网和构造超网"><a href="#划分子网和构造超网" class="headerlink" title="划分子网和构造超网"></a>划分子网和构造超网</h3><h4 id="划分子网"><a href="#划分子网" class="headerlink" title="划分子网"></a>划分子网</h4><blockquote>
+<p>从两级 IP 地址到三级 IP 地。</p>
+<p>① 划分子网纯属一个单位内部的事情，对外部网络透明，单位<code>对外仍然表现为没有划分子网的网络</code></p>
+<p>② <code>从主机号借用若干个位作为子网号 subnet-id</code>，而主机号 host-id 也就相应减少了若干个位。于是两级 IP 地址变成了三级 IP 地址：网络号、子网号和主机号。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210706181cdvbgfnhgmjgnfbdg713948.png"></p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210706181cdsfdgthydtdsgfbhg724463.png"></p>
+<p>③ 凡是从其他网络发送给本单位某个主机的 IP 数据报，仍然是根据 IP 数据报的目的网络号 net-id，先找到连接在本单位网络上的路由器。然后此路由器在收到 IP 数据报后，再按目的网络号 net-id 和子网号 subnet-id 找到目的子网。</p>
+<p>④ 最后就将 IP 数据报直接交付目的主机。</p>
+</blockquote>
+<h4 id="划分子网后变成三级结构的优点"><a href="#划分子网后变成三级结构的优点" class="headerlink" title="划分子网后变成三级结构的优点"></a>划分子网后变成三级结构的优点</h4><blockquote>
+<p>● 减少了 IP 地址的浪费<br>● 使网络的组织更加灵活<br>● 更便于维护和管理</p>
+</blockquote>
+<h4 id="子网掩码"><a href="#子网掩码" class="headerlink" title="子网掩码"></a>子网掩码</h4><h5 id="子网掩码-1"><a href="#子网掩码-1" class="headerlink" title="子网掩码"></a>子网掩码</h5><blockquote>
+<p>● 子网掩码是一个应用于 TCP&#x2F;IP 网络的32位二进制值，每节 8 位，必须结合IP地址对应使用。 （常见的 255.255.255.0 等）</p>
+<p>● 子网掩码 32 位都与 IP 地址 32 位对应，如果某位是网络地址（网络号部分和子网号部分）则对应的位全为“1”，如果是主机号部分则对应的位全为“0”。(11111111.11111111.11111111.0)</p>
+<p>● 子网掩码(subnet masking)的功能是告知主机或路由设备，地址的哪一部分是网络号，包括子网的网络号部分，哪一部分是主机号部分。</p>
+<p>● 子网掩码可以分离出 IP 地址中的网络地址和主机地址，用于判断该 IP 地址是在局域网上，还是在广域网上。</p>
+<p>● 子网掩码一般用于将网络进一步划分为若干子网，以避免主机过多而拥堵或过少而 IP 浪费。</p>
+</blockquote>
+<h5 id="子网掩码使用原因"><a href="#子网掩码使用原因" class="headerlink" title="子网掩码使用原因"></a>子网掩码使用原因</h5><blockquote>
+<p>从一个 IP 数据报的首部并无法判断源主机或目的主机所连接的网络是否进行了子网划分，因为 IP 地址本身及数据报的首部没有包含任何关于有关子网划分的信息。<code>使用子网掩码 (subnet mask) 可以找出 IP 地址中的子网部分</code>。</p>
+</blockquote>
+<h5 id="子网掩码是一个重要属性"><a href="#子网掩码是一个重要属性" class="headerlink" title="子网掩码是一个重要属性"></a>子网掩码是一个重要属性</h5><blockquote>
+<p>● 子网掩码是一个网络或一个子网的重要属性。</p>
+<p>● 路由器在和相邻路由器交换路由信息时，必须把自己所在网络（或子网）的子网掩码告诉相邻路由器。</p>
+<p>● 路由器的路由表中的每一个项目，除了要给出目的网络地址外，还必须同时给出该网络的子网掩码。</p>
+<p>● 若一个路由器连接在两个子网上，就拥有两个网络地址和两个子网掩码。</p>
+</blockquote>
+<h5 id="子网掩码的作用"><a href="#子网掩码的作用" class="headerlink" title="子网掩码的作用"></a>子网掩码的作用</h5><blockquote>
+<p><code>子网掩码可以分离出 IP 地址中的网络地址和主机地址。当两台计算机要通讯，首先要判断是否处于同一个广播域（局域网）内，即网络地址（网络号）是否相同。如果网络地址相同，表明接受方在本网络上，那么可以把数据包直接发送到目标主机，否则就需要路由网关将数据包转发送到目的地</code>。</p>
+</blockquote>
+<h5 id="默认子网掩码"><a href="#默认子网掩码" class="headerlink" title="默认子网掩码"></a>默认子网掩码</h5><p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210706191dsfghdjyhtgrvfbgnhgfbdsv006470.png"></p>
+<h5 id="子网掩码的使用"><a href="#子网掩码的使用" class="headerlink" title="子网掩码的使用"></a>子网掩码的使用</h5><blockquote>
+<p>● 网络号：IP地址和子网掩码进行与运算得到网络号。</p>
+<p>● 子网号：子网掩码 32 位都与 IP 地址 32 位对应，如果某位是网络地址（网络号部分和子网号部分）则对应的位全为“1”，如果是主机号部分则对应的位全为“0”。将子网掩码中“1”的位数减去该类的默认子网掩码的“1”的位数即为子网号位数。</p>
+<p>● 主机号：子网掩码取反再和 IP 地址做与运算得到主机号。</p>
+</blockquote>
+<h3 id="国际控制报文协议-ICMP"><a href="#国际控制报文协议-ICMP" class="headerlink" title="国际控制报文协议 ICMP"></a>国际控制报文协议 ICMP</h3><blockquote>
+<p>为了更有效地转发 IP 数据报和提高交付成功的机会，在网际层使用了网际控制报文协议 ICMP (Internet Control Message Protocol)。</p>
+<ul>
+<li>ICMP 是互联网的标准协议。</li>
+<li>ICMP 允许主机或路由器报告差错情况和提供有关异常情况的报告。</li>
+<li>ICMP 报文作为 IP 数据报的数据，加上数据报的首部，组成 IP 数据报发送出去。</li>
+<li>ICMP 不是高层协议（看起来好像是高层协议，因为 ICMP 报文是装在 IP 数据报中，作为其中的数据部分），而是 IP 层的协议。</li>
+<li>ICMP只能搭配IPv4工作，如果是IPv6，需要使用ICMPv6</li>
+</ul>
+</blockquote>
+<h4 id="ICMP协议的功能"><a href="#ICMP协议的功能" class="headerlink" title="ICMP协议的功能"></a>ICMP协议的功能</h4><blockquote>
+<p>● <code>确认IP包是否成功到达目标地址</code><br>● <code>通知在发送过程中 IP 包被丢弃的原因</code></p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210707190dfbgnhmjhdnbdgnfhm726822.png"></p>
+<p>​		接收主机根据这两个信息就可以断定引起重定向的IP数据报应该使用哪个路由器来转发，并且以此来更新路由表（通常是更新路由表缓冲，而不是直接更改路由表）。一般来说，主机只能接收ICMP重定向报文，路由器只能发送ICMP重定向报文。</p>
+</blockquote>
+<h4 id="ICMP-的报文格式"><a href="#ICMP-的报文格式" class="headerlink" title="ICMP 的报文格式"></a>ICMP 的报文格式</h4><blockquote>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021070718dfdgfhgjhkfjg5324681.png"></p>
+<p>（1）8 位类型字段用于区分报文类型。它将ICMP报文分为两大类：<br>        ● 差错报文：主要用于回应网络错误，比如目标不可到达（类型值为3）和重定向（类型值为5）<br>        ● 查询报文：用于查询网络信息，比如ping命令就是使用ICMP报文查看目标是否可到达（类型值为8）的</p>
+<p>（2）有的类型通过8位代码字段来进一步细分不同的条件：<br>        比如重定向报文使用代码值0表示对网络重定向，代码值1表示对主机重定向</p>
+<p>（3）ICMP报文使用16位校验和字段对整个报文（包括头部和内容部分）进行CRC校验（循环冗余校验），以校验报文是否损坏</p>
+</blockquote>
+<h4 id="ICMP-报文的种类"><a href="#ICMP-报文的种类" class="headerlink" title="ICMP 报文的种类"></a>ICMP 报文的种类</h4><blockquote>
+<p>ICMP 报文的种类有两种，即 ICMP 差错报告报文和 ICMP 询问报文。</p>
+<p>ICMP 报文的前 4 个字节是统一的格式，共有三个字段：即类型、代码和检验和。接着的 4 个字节的内容与 ICMP 的类型有关。</p>
+</blockquote>
+<blockquote>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021070719cdsvdbffgfndhfjnfgb0335971.png"></p>
+<p>​		把收到的需要进行差错报告的 IP 数据报的首部和数据字段的前 8 个字节提取出来，作为 ICMP 报文的数据字段，再加上相应的 ICMP差错报告的前8个字节，就构成了ICMP差错报告报文。</p>
+<p>​		ICMP报文包含在IP数据报中，IP报头在ICMP报文的最前面。一个ICMP报文包括IP报头（至少20字节）、ICMP报头（至少八字节）和ICMP报文（属于ICMP报文的数据部分）。当IP报头中的协议字段值为1时，就说明这是一个ICMP报文。</p>
+</blockquote>
+<h4 id="ICMP-差错报告报文种类"><a href="#ICMP-差错报告报文种类" class="headerlink" title="ICMP 差错报告报文种类"></a>ICMP 差错报告报文种类</h4><blockquote>
+<p>① 终点不可达</p>
+<blockquote>
+<p>当路由器发送的数据报不能发送到指定目的地时，或者说当路由器不能够给数据报找到路由或主机不能够交付数据报时，就丢弃这个数据报，然后向发送数据报的源主机设备发回一个终点不可达数据报文。</p>
+</blockquote>
+<p>② 端口不可达</p>
+<blockquote>
+<p>当目标系统收到一个ip数据报的某个服务请求时，如果本地没有此服务，那么会向源头返回ICMP端口不可达信息。   <br>常见的端口不可达有，R1向R3发起一个ftp的传输请求，从R3传输一个文件到R1，由于R3设备没有开启ftp服务的69端口，因此R1在请求R3时会收到R3回复的一个ICMP端口不可达的差错报文。</p>
+</blockquote>
+<p>③ 超时</p>
+<blockquote>
+<p>ICMP差错报告报文主要在以下几种情况中，会发送ICMP超时报文：<br> ●  当路由器接收到的数据报的生命周期字段值为0时，路由器会把该数据报丢弃掉，并向源主机发回一个 ICMP 超时报文。<br> ●  当目标主机在规定时间内没有收到所有的数据分片时，会把已经收到的所有数据分片丢弃，并向源主机发回一个 ICMP 超时报文。在超时报文中，代码 0 只能给路由器使用，表示生存周期字段值为 0，代码 1 只能给目的主机使用，它表示在规定的时间内，目的主机没有收到所有的数据分片。</p>
+</blockquote>
+<p>④ 参数问题</p>
+<blockquote>
+<p> 当路由器或目的主机收到的数据报的首部字段中有的字段的值不正确时，就会丢弃该数据报，并向源点回送参数问题报文。</p>
+</blockquote>
+<p>⑤ 改变路由（重定向）</p>
+<blockquote>
+<p>路由器吧改变路由报文发送给主机，让主机知道下次应将数据报发送给另外的路由器（可通过更好的路由）。</p>
+</blockquote>
+</blockquote>
+<h4 id="ICMP-询问报文有两种"><a href="#ICMP-询问报文有两种" class="headerlink" title="ICMP 询问报文有两种"></a>ICMP 询问报文有两种</h4><blockquote>
+<p>● 回送请求和回答报文<br>● 时间戳请求和回答报文</p>
+</blockquote>
+<h2 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h2><blockquote>
+<p>作用：运输层为它上面的应用层提供通信服务。</p>
+<p>传输层两大重要的功能：<strong>复用</strong> 和 <strong>分用</strong></p>
+<ul>
+<li>复用：在发送端，多个应用进程公用一个传输层；</li>
+<li>分用：在接收端，传输层会根据端口号将数据分派给不同的应用进程。</li>
+</ul>
+<p>传输层和网络层的区别：</p>
+<ul>
+<li>网络层为不同主机提供通信服务，而传输层为不同主机的不同应用提供通信服务。</li>
+<li>网络层只对报文头部进行差错检测，而传输层对整个报文进行差错检测。</li>
+</ul>
+</blockquote>
+<h3 id="用户数据报协议UDP"><a href="#用户数据报协议UDP" class="headerlink" title="用户数据报协议UDP"></a>用户数据报协议UDP</h3><blockquote>
+<ul>
+<li><strong>面向无连接</strong>（目的是减少开销和发送时延）：通信前不需要建立连接，通信结束也无需释放连接，即 UDP 客户与服务器不必存在长期的关系。不需要像 TCP 一样在发送数据前进行三次握手，想发就直接发了，<code>它只是数据的搬运工，不会对数据进行任何拆分和拼接操作</code>。具体来说，就是在发送端，应用层将数据传递给传输层的 UDP 协议，UDP 只会给数据增加一个 UDP 头，标识一下是 UDP 协议，然后就传递给网络层了；在接收端，网络层将数据传递给传输层，UDP 只去除 IP 报文头就传递给应用层，不会任何拼接操作。</li>
+<li><strong>尽最大努力交付</strong>：它是尽力而为交付，不能确保每一个数据报都送达</li>
+<li><strong>不可靠性</strong>：由于 “尽最大努力交付” 的，所以不保证每个数据报都到达目的地，也不保证各个数据报的先后顺序跨网络保持不变，也不保证每个数据报只到达一次</li>
+<li><strong>面向报文</strong>：所谓面向报文就是指UDP数据传输的单位是报文，且不会对数据作任何拆分和拼接操作。</li>
+<li><strong>没有拥塞控制</strong>：当网络出现堵塞不会使源主机的发送速率降低，这对实时视频会议比较重要，即允许在网络发生堵塞时丢失一些数据，但不允许数据有太大时延</li>
+<li><strong>支持一对一，一对多，多对一，多对多的交互通信</strong>（单播、多播、广播），而TCP只支持一对一通信</li>
+<li><strong>首部开销小</strong>（只有 8 个字节），而TCP头部至少20字节</li>
+</ul>
+</blockquote>
+<h4 id="UDP的首部格式"><a href="#UDP的首部格式" class="headerlink" title="UDP的首部格式"></a>UDP的首部格式</h4><blockquote>
+<p>用户数据报 UDP 有两个部分组成：首部 + 数据部分。首部部分很简单，只有 8 个字节（如图 5-5），由四个字段组成，每个字段的长度都是两个字节。各字段含义如下：</p>
+<ul>
+<li>源端口：源端口号。在需要对方回信时选用。不需要使用时可用 0 填充。</li>
+<li>目的端口：目的端口号。这在终点交付报文时必须使用。</li>
+<li>长度：UDP 用户数据报的长度，其最小值是 8（即仅有首部部分），单位：字节。</li>
+<li>校验和：检测 UDP 用户数据报在传输过程中是否出错。有错就丢弃。</li>
+</ul>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/202108311fegtrhdyrfuhht02952222.png"></p>
+</blockquote>
+<h3 id="传输控制协议-TCP"><a href="#传输控制协议-TCP" class="headerlink" title="传输控制协议 TCP"></a>传输控制协议 TCP</h3><blockquote>
+<p> TCP（Transmission Control Protocol）是 面向连接 的，提供可靠交付，有 流量控制，拥塞控制，提供 全双工通信，面向 字节流，每一条 TCP 连接只能是 点对点 的（一对一）的传输层通信协议。TCP将用户数据打包成报文段，它发送后会启动一个定时器。TCP 既可以使用 IPv4 也可以使用 IPv6。</p>
+<ul>
+<li><strong>面向连接的</strong>：通信前需要建立连接（三次握手），通信结束也需要释放连接（四次挥手）</li>
+<li><strong>提供可靠交付</strong>：保证数据无重复、无丢失、无错误、与发送端顺序一致。当使用 TCP 向另一端发送数据时，它要求对端返回一个确认，如果没有收到确认，TCP 会自动重传数据并等待更长时间，数次重传失败后，TCP 才放弃</li>
+<li><strong>面向字节流</strong>：把应用层传下来的报文看成字节流，把字节流组织成大小不等的数据块</li>
+<li><strong>提供流量控制</strong>： TCP 会告诉对端它能接收多少字节的数据，称作“通知窗口”，该窗口任何时刻都指出接收缓冲区中的可用空间，从而确保发送端发送的数据不会溢出接收缓冲区</li>
+<li><strong>提供拥塞控制</strong>：慢开始（slow-start）、拥塞避免（congestion avoidance）、快重传（fast retransmit）和快恢复（fast recovery）。</li>
+<li><strong>点对点通信（单播）</strong>：TCP 只能提供点到点的通信，而 UDP 可以任意方式的通信</li>
+<li><strong>提供全双工通信</strong>：全双工通信指的是 TCP 的两端既可以作为发送端，也可以作为接收端，且两个方向可以同时进行发送和接收，就好比双行道（UDP 其实也可以是全双工的）</li>
+</ul>
+</blockquote>
+<h4 id="TCP的首部格式"><a href="#TCP的首部格式" class="headerlink" title="TCP的首部格式"></a>TCP的首部格式</h4><blockquote>
+<ul>
+<li><p><strong>源端口</strong>：源端口和IP地址的作用是标识报文的返回地址。</p>
+</li>
+<li><p><strong>目的端口</strong>：端口指明接收方计算机上的应用程序接口。</p>
+</li>
+<li><p><strong>序号</strong>：序号是本报文段发送的数据组的第一个字节的序号。在TCP传送的流中，每一个字节一个序号。例如一个报文段的序号为300，此报文段数据部分共有100字节，则下一个报文段的序号为400。所以序号确保了TCP传输的有序性。</p>
+</li>
+<li><p><strong>确认号</strong>：即ACK，指明下一个期待收到的字节序号，表明该序号之前的所有数据已经正确无误的收到。确认号只有当ACK标志为1时才有效。比如建立连接时，SYN报文的ACK标志位为0。</p>
+</li>
+<li><p><strong>数据偏移</strong>：由于首部可能含有可选项内容，因此TCP报头的长度是不确定的，报头不包含任何任选字段则长度为20字节，4位首部长度字段所能表示的最大值为1111，转化为10进制为15，15*32&#x2F;8 &#x3D; 60，故报头最大长度为60字节。首部长度也叫数据偏移，是因为首部长度实际上指示了数据区在报文段中的起始偏移值。</p>
+</li>
+<li><p><strong>保留</strong>：为将来定义新的用途保留，现在一般置0。</p>
+</li>
+<li><p>控制位：URG  ACK  PSH  RST  SYN  FIN，共6个，每一个标志位表示一个控制功能。</p>
+<ul>
+<li><code>URG</code>：紧急指针标志，为1时表示紧急指针有效，为0则忽略紧急指针。</li>
+<li><code>ACK</code>：确认序号标志，为1时表示确认号有效，为0表示报文中不含确认信息，忽略确认号字段。</li>
+<li><code>PSH</code>：push标志，为1表示是带有push标志的数据，指示接收方在接收到该报文段以后，应尽快将这个报文段交给应用程序，而不是在缓冲区排队。</li>
+<li><code>RST</code>：重置连接标志，用于重置由于主机崩溃或其他原因而出现错误的连接。或者用于拒绝非法的报文段和拒绝连接请求。</li>
+<li><code>SYN</code>：同步序号，用于建立连接过程，在连接请求中，SYN&#x3D;1和ACK&#x3D;0表示该数据段没有使用捎带的确认域，而连接应答捎带一个确认，即SYN&#x3D;1和ACK&#x3D;1。</li>
+<li><code>FIN</code>：finish标志，用于释放连接，为1时表示发送方已经没有数据发送了，即关闭本方数据流。</li>
+</ul>
+</li>
+<li><p><strong>窗口</strong>：滑动窗口大小，用来告知发送端接受端的缓存大小，以此控制发送端发送数据的速率，从而达到流量控制。窗口大小时一个16bit字段，因而窗口大小最大为65535。</p>
+</li>
+<li><p><strong>校验和</strong>：奇偶校验，此校验和是对整个的 TCP 报文段，包括 TCP 头部和 TCP 数据，以 16 位字进行计算所得。由发送端计算和存储，并由接收端进行验证。</p>
+</li>
+<li><p><strong>紧急指针</strong>：只有当 URG 标志置 1 时紧急指针才有效。紧急指针是一个正的偏移量，和顺序号字段中的值相加表示紧急数据最后一个字节的序号。 TCP 的紧急方式是发送端向另一端发送紧急数据的一种方式。</p>
+</li>
+<li><p><strong>选项和填充</strong>：最常见的可选字段是最长报文大小，又称为MSS（Maximum Segment Size），每个连接方通常都在通信的第一个报文段（为建立连接而设置SYN标志为1的那个段）中指明这个选项，它表示本端所能接受的最大报文段的长度。选项长度不一定是32位的整数倍，所以要加填充位，即在这个字段中加入额外的零，以保证TCP头是32的整数倍。</p>
+</li>
+<li><p><strong>数据部分</strong>： TCP 报文段中的数据部分是可选的。在一个连接建立和一个连接终止时，双方交换的报文段仅有 TCP 首部。如果一方没有数据要发送，也使用没有任何数据的首部来确认收到的数据。在处理超时的许多情况中，也会发送不带任何数据的报文段。</p>
+</li>
+</ul>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2019053110dvfdbfndygmbfbfgbf5135488.png"></p>
+</blockquote>
+<h4 id="TCP-三次握手"><a href="#TCP-三次握手" class="headerlink" title="TCP 三次握手"></a>TCP 三次握手</h4><blockquote>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021011019371vfbgfnhgjmhngbf3551.png"></p>
+<p>刚开始客户端处于 Closed 的状态，服务端处于 Listen 状态。</p>
+<ul>
+<li><p>第一次握手：客户端给服务端发一个 SYN 报文，并指明客户端的初始化序列号 ISN。此时客户端处于 SYN_SENT 状态。<strong>首部的同步位SYN&#x3D;1，初始序号seq&#x3D;x，SYN&#x3D;1的报文段不能携带数据，但要消耗掉一个序号。</strong></p>
+</li>
+<li><p>第二次握手：服务器收到客户端的 SYN 报文之后，会以自己的 SYN 报文作为应答，并且也是指定了自己的初始化序列号 ISN(s)。同时会把客户端的 ISN + 1 作为ACK 的值，表示自己已经收到了客户端的 SYN，此时服务器处于 SYN_RCVD 的状态。<strong>在确认报文段中SYN&#x3D;1，ACK&#x3D;1，确认号ack&#x3D;x+1，初始序号seq&#x3D;y。</strong></p>
+</li>
+<li><p>第三次握手：客户端收到 SYN 报文之后，会发送一个 ACK 报文，当然，也是一样把服务器的 ISN + 1 作为 ACK 的值，表示已经收到了服务端的 SYN 报文，此时客户端处于 ESTABLISHED 状态。服务器收到 ACK 报文之后，也处于 ESTABLISHED 状态，此时，双方已建立起了连接。<strong>确认报文段ACK&#x3D;1，确认号ack&#x3D;y+1，序号seq&#x3D;x+1（初始为seq&#x3D;x，第二个报文段所以要+1），ACK报文段可以携带数据，不携带数据则不消耗序号。</strong></p>
+</li>
+</ul>
+</blockquote>
+<p><strong>为什么要三次握手，而不是两次握手&#x2F;四次握手?</strong></p>
+<blockquote>
+<ol>
+<li>三次握手才可以<code>阻止历史重复连接</code>（主要原因）</li>
+<li>三次握手才可以<code>同步双方的初始序列号</code></li>
+<li>三次握手才可以<code>避免重复建立连接</code></li>
+</ol>
+<p><strong>原因一：避免历史连接</strong></p>
+<blockquote>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210110204923cvfsgbfvvdbbvnbn968.png"></p>
+</blockquote>
+<p><strong>原因二：同步双方初始序列号</strong></p>
+<blockquote>
+<p>两次握手只保证了客户端的初始序列号被服务端成功接收，没办法保证服务端的初始序列号被客户端确认接收。</p>
+<p>四次握手当然能够可靠的同步双方的初始化序号，但由于第二步和第三步可以优化成一步，所以就成了「三次握手」，即四次握手没有必要，优化成了三次握手。</p>
+</blockquote>
+<p><strong>原因三：避免重复建立连接</strong></p>
+<blockquote>
+<p>​		如果只有「两次握手」，当客户端的 SYN 请求连接在网络中阻塞，客户端没有接收到 ACK 报文，就会重新发送 SYN ，由于没有第三次握手，服务器不清楚客户端是否收到了自己发送的建立连接的 ACK 确认信号，所以每收到一个 SYN 就会建立一个新的连接，服务器就会建立多个冗余的无效链接，造成不必要的资源浪费。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021011021fgdhdgjdfdagd0404746.png"></p>
+</blockquote>
+</blockquote>
+<h5 id="最大TCP连接数量问题总结"><a href="#最大TCP连接数量问题总结" class="headerlink" title="最大TCP连接数量问题总结"></a>最大TCP连接数量问题总结</h5><blockquote>
+<p><strong>最大TCP连接数量限制有：可用端口号数量、文件描述符数量、线程、内存、CPU</strong></p>
+<ul>
+<li>可用端口号限制：</li>
+</ul>
+<blockquote>
+<p><strong>Q：一台主机可以有多少端口号？端口号与TCP连接？是否能修改？端口号限制因素？</strong></p>
+<p>第一：端口号是<strong>16位</strong>的，所以总共有65535个，即<strong>可创建65535个TCP连接</strong></p>
+<p>第二：端口分为<code>知名端口(0~1023)</code>、<code>注册端口(1024~49511)</code>、<code>动态/私有端口(49152~65535)</code></p>
+</blockquote>
+<ul>
+<li>文件描述符限制</li>
+</ul>
+<blockquote>
+<p>每建立一个TCP连接，操作系统就得分配一个文件描述符，linux 对可打开的文件描述符的数量分别作了三个方面的限制。</p>
+<p>系统级：当前系统可打开的最大数量，通过 cat &#x2F;proc&#x2F;sys&#x2F;fs&#x2F;file-max 查看</p>
+<p>用户级：指定用户可打开的最大数量，通过 cat &#x2F;etc&#x2F;security&#x2F;limits.conf查看</p>
+<p>进程级：单个进程可打开的最大数量，通过 cat &#x2F;proc&#x2F;sys&#x2F;fs&#x2F;nr_open查看</p>
+</blockquote>
+<ul>
+<li>线程的限制</li>
+</ul>
+<blockquote>
+<p><strong>传统的多线程并发模型</strong>：<strong>一个TCP连接</strong>就需要<strong>创建一个线程</strong></p>
+<p>I&#x2F;O多路复用：一个线程可以管理多个 TCP 连接的资源</p>
+</blockquote>
+<ul>
+<li>内存的限制</li>
+</ul>
+<blockquote>
+<p>TCP连接数过大可能会出现: <code>ERROR: out of memory</code> ,即内存溢出。</p>
+<p><strong>原因</strong>：每个TCP连接本身，以及这个连接所用到的缓冲区，<strong>都是需要占用一定内存的</strong>，现在内存已经被占满了，不够用了就会报这个错。</p>
+</blockquote>
+<ul>
+<li>CPU的限制</li>
+</ul>
+<blockquote>
+<p>每个TCP连接都是需要占用CPU资源的，若占用CPU资源过多，则会导致死机，用户啥也干不了，然后就重启了，TCP连接也就全没了。</p>
+</blockquote>
+</blockquote>
+<h4 id="TCP-四次挥手"><a href="#TCP-四次挥手" class="headerlink" title="TCP 四次挥手"></a>TCP 四次挥手</h4><blockquote>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img17/vdfvvsfdvfvgfberdfvasdvfvfdU0MjdfOTMxLnBuZw.png"></p>
+<p>刚开始双方都处于<code>ESTABLISHED</code> 状态，假如是客户端先发起关闭请求。四次挥手的过程如下：</p>
+<ul>
+<li>第一次挥手：客户端发送一个 FIN 报文，报文中会指定一个序列号。此时客户端处于 FIN_WAIT1 状态。即发出连接释放报文段（FIN&#x3D;1，序号seq&#x3D;u），并停止再发送数据，主动关闭TCP连接，进入FIN_WAIT1（终止等待1）状态，等待服务端的确认。</li>
+<li>第二次挥手：服务端收到 FIN 之后，会发送 ACK 报文，且把客户端的序列号值 +1 作为 ACK 报文的序列号值，表明已经收到客户端的报文了，此时服务端处于 CLOSE_WAIT 状态。即服务端收到连接释放报文段后即发出确认报文段（ACK&#x3D;1，确认号ack&#x3D;u+1，序号seq&#x3D;v），服务端进入CLOSE_WAIT（关闭等待）状态，此时的TCP处于半关闭状态，客户端到服务端的连接释放。客户端收到服务端的确认后，进入FIN_WAIT2（终止等待2）状态，等待服务端发出的连接释放报文段。</li>
+<li>第三次挥手：如果服务端也想断开连接了，和客户端的第一次挥手一样，发给 FIN 报文，且指定一个序列号。此时服务端处于 LAST_ACK 的状态。即服务端没有要向客户端发出的数据，服务端发出连接释放报文段（FIN&#x3D;1，ACK&#x3D;1，序号seq&#x3D;w，确认号ack&#x3D;u+1），服务端进入LAST_ACK（最后确认）状态，等待客户端的确认。</li>
+<li>第四次挥手：客户端收到 FIN 之后，一样发送一个 ACK 报文作为应答，且把服务端的序列号值 +1 作为自己 ACK 报文的序列号值，此时客户端处于 TIME_WAIT 状态。需要过一阵子以确保服务端收到自己的 ACK 报文之后才会进入 CLOSED 状态，服务端收到 ACK 报文之后，就处于关闭连接了，处于 CLOSED 状态。<br>即客户端收到服务端的连接释放报文段后，对此发出确认报文段（ACK&#x3D;1，seq&#x3D;u+1，ack&#x3D;w+1），客户端进入TIME_WAIT（时间等待）状态。此时TCP未释放掉，需要经过时间等待计时器设置的时间2MSL后，客户端才进入CLOSED状态。</li>
+</ul>
+</blockquote>
+<p><strong>挥手为什么需要四次？</strong></p>
+<blockquote>
+<p>​		因为当服务端收到客户端的SYN连接请求报文后，可以直接发送SYN+ACK报文。其中ACK报文是用来应答的，SYN报文是用来同步的。但是关闭连接时，当服务端收到FIN报文时，很可能并不会立即关闭SOCKET，所以只能先回复一个ACK报文，告诉客户端，“你发的FIN报文我收到了”。只有等到我服务端所有的报文都发送完了，我才能发送FIN报文，因此不能一起发送。故需要四次挥手。</p>
+</blockquote>
+<p><strong>四次挥手释放连接时，等待2MSL的意义?</strong></p>
+<blockquote>
+<p><strong>保证客户端发送的最后一个ACK报文段能够到达服务端</strong>。</p>
+<blockquote>
+<p>​		这个ACK报文段有可能丢失，使得处于LAST-ACK状态的B收不到对已发送的FIN+ACK报文段的确认，服务端超时重传FIN+ACK报文段，而客户端能在2MSL时间内收到这个重传的FIN+ACK报文段，接着客户端重传一次确认，重新启动2MSL计时器，最后客户端和服务端都进入到CLOSED状态，若客户端在TIME-WAIT状态不等待一段时间，而是发送完ACK报文段后立即释放连接，则无法收到服务端重传的FIN+ACK报文段，所以不会再发送一次确认报文段，则服务端无法正常进入到CLOSED状态。</p>
+</blockquote>
+<p><strong>防止“已失效的连接请求报文段”出现在本连接中</strong>。</p>
+<blockquote>
+<p>​		客户端在发送完最后一个ACK报文段后，再经过2MSL，就可以使本连接持续的时间内所产生的所有报文段都从网络中消失，使下一个新的连接中不会出现这种旧的连接请求报文段。</p>
+</blockquote>
+</blockquote>
+<h4 id="TCP的流量控制"><a href="#TCP的流量控制" class="headerlink" title="TCP的流量控制"></a>TCP的流量控制</h4><blockquote>
+<p>流量控制：如果发送者发送数据过快，接收者来不及接收，那么就会有分组丢失。为了避免分组丢失，控制发送者的发送速度，使得接收者来得及接收，这就是流量控制。流量控制根本目的是防止分组丢失，它是构成TCP可靠性的一方面。</p>
+</blockquote>
+<blockquote>
+<p>假设主机A发送的每个TCP 报文段可携带100字节数据，因此，图中每个小格子表示100个字节数据的序号。</p>
+<p>在主机A和B建立TCP 连接时，B 告诉A 我的接收窗口为400，因此，主机A 将自己的发送窗口也设置为400。</p>
+<p>这意味着主机A 在未收到主机B 发来的确认时，可将序号落入发送窗口中的全部数据发送出去。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/a57e96esssss3ssssd4636dd4f.png"></p>
+<blockquote>
+<p>这里的seq是TCP报文段首部中的序号字段，取值1表示TCP报文段数据载荷的第一个字节的序号是1。这里的DATA 表示这是TCP 数据报文段。</p>
+<p>这里的大写ACK 是TCP 报文段首部中的标志位，取值1表示这是一个TCP 确认报文段，小写ack 是TCP报文段首部中的确认号字段，取值201表示序号201之前的数据已全部正确接收。现在希望收到序号201及其后续数据。</p>
+<p>rwnd 是TCP 报文段首部中的窗口字段取值300，表示自己的接收窗口大小为300。</p>
+</blockquote>
+<p>上图主机A现在可将发送缓存中序号1~200的字节数据全部删除，因为已经收到了主机B对它们的累计确认</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/24bab5fgsdfgfhvfvfxvxcvxc711373d.png"></p>
+<p>上图主机A现在可将发送缓存中序号201~500的字节数据全部删除，因为已经收到了主机B对它们的累计确认</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/24bab53c091edcfdgfdsgfdsgfdsgs72711373d.png"></p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2fbf7883925ed8dda53de1bcccabf6e618f.png"></p>
+<p>上图主机A现在可将发送缓存中序号501~600的字节数据全部删除，因为已经收到了主机B对它们的累计确认</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/754550612861f5e8a0c9ddddfbe32e1dde7.png"></p>
+<blockquote>
+<p>​		为了解决这个问题，TCP为每一个连接设有一个持续计时器。只要TCP连接的一方，收到对方的零窗口通知，就启动持续计时器。若持续计时计超时，就发送一个零窗口探测报文，仅携带一字节的数据。而对方在确认这个探测报文段时，给出自己现在的接收窗口值。如果接收窗口仍然是零，那么收到这个报文段的一方就重新启动持续计时器。如果接收窗口不是零，那么死锁的局面就可以被打破了。</p>
+</blockquote>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/9d42d50c3507sss0b580435df1bbff25c6a.png"></p>
+<p>上图如果零窗口探测报文在发送过程中如果丢失，还是能打破死锁局面</p>
+<p>因为零窗口探测报文段也有重传计时器，重传计时器超时后，零窗口探测报文段会被重传</p>
+</blockquote>
+<h4 id="TCP的拥塞控制"><a href="#TCP的拥塞控制" class="headerlink" title="TCP的拥塞控制"></a>TCP的拥塞控制</h4><blockquote>
+<p>拥塞控制：在某段时间，若对网络中某一资源的需求超过了该资源所能提供的可用部分，网络性能就要变坏。这种情况就叫做拥塞(congestion)。</p>
+<p>算法：慢开始（slow-start）、拥塞避免（congestion avoidance）、快重传（fast retransmit）、快恢复（fast recovery）。</p>
+</blockquote>
+<blockquote>
+<ul>
+<li>MSS:报文段</li>
+<li>RTT：往返时间 (表示从发送端发送数据开始，到发送端收到来自接收端的确认（接收端收到数据后便立即发送确认，不包含数据传输时间,总共经历的时间)。</li>
+<li>SWND:发送窗口 (发送端向网络一次连续写入的数据量，窗口大小就是无需等待确认应答而可以继续发送数据的最大值）</li>
+<li>CWND:拥塞窗口 指某一源端数据流在一个RTT内可以最多发送的数据包数</li>
+<li>RWND：接收窗口</li>
+</ul>
+</blockquote>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021031609ffffffffffffssssssssssss4015847.png"></p>
+<h5 id="慢开始"><a href="#慢开始" class="headerlink" title="慢开始"></a>慢开始</h5><blockquote>
+<p>纵坐标：拥塞窗口cwnd会随着网络拥塞程度以及所使用的拥塞控制算法动态变化</p>
+<p>横坐标：传输轮次：发送方给接收方发送数据报文段后，接收方给发送方返回相应的确认报文段，一个传输轮次所经历的时间就是往返时间RTT(RTT并非是恒定的数值），使用传输轮次是为了强调，把拥塞窗口cwnd所允许发送的报文段都连续发送出去，并收到了对已发送的最后一个报文段的确认<br><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210316swwwwwwwwwwwwwwwww094505743.png"></p>
+<p>设置初始值：cwnd &#x3D; 1，ssthresh &#x3D; 16，swnd &#x3D; cwnd，即发送方当前只能发送一个数据报文段</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021031609sssssssss4813779.png"></p>
+<p>接收方收到报文段后，给发送方返回一个确认报文段</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021031609sssssssssswwwwwwww4840809.png"></p>
+<p>发送方收到确认报文段后，cwnd 加一，并在图中标注</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/202103160949fdfsfaddfsdg5033.png"></p>
+<p>此时发送方可以依此发送2个数据报文段</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021031609ssssssssaaaa5105734.png"></p>
+<p>接收方收到后，依此返回发送方2个确认报文段</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/202103160ssssszzzzzz95152109.png"></p>
+<p>此时cwnd + 2 &#x3D; 4</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210316095dgdsfgdfbdvxcfv324144.png"></p>
+<p>此时发送方可以依此发送4个数据报文段，cwnd + 4 &#x3D; 8</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/202103160953gfbfnbfnbdhbd5943.png"></p>
+<p>此时发送方可以依此发送8个数据报文段，cwnd + 8 &#x3D; 16，cwnd &#x3D; ssthresh</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/202103160956fdfdafgfsdbsf19339.png"></p>
+</blockquote>
+<h5 id="拥塞避免"><a href="#拥塞避免" class="headerlink" title="拥塞避免"></a>拥塞避免</h5><blockquote>
+<p>此时发送方可以依此发送16个数据报文段，但cwnd只能加一，cwnd + 1 &#x3D; 17</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021031609591vdfvbfsbsg1448.png"></p>
+<p>直至cwnd &#x3D; 24时，发送方理应接受到24个确认报文段，但只接受到20个，被认为出现拥塞状态。将ssthresh更新为12 &#x3D; 24&#x2F; 2，cwnd减少为1，并重新执行慢开始算法。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021031610044vsdbfbsfbsfrgsdf3633.png"></p>
+<p><strong>存在的问题：</strong></p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021031610vsfbgfbdgb115445.png"></p>
+</blockquote>
+<h5 id="快重传"><a href="#快重传" class="headerlink" title="快重传"></a>快重传</h5><blockquote>
+<ul>
+<li>在之前的拥塞控制网络中，收到全部的数据报文段后才会发送确认报文段。</li>
+<li>现在只要收到一个数据报文段，就立即确认。比如M3丢失，M4发送后，由于接收方没有收到按序的M3，会继续返回M2的确认报文段。同理，发送M5、M6时，也会收到对M2的重复确认。</li>
+<li>连续收到3个重复确认，立即重传M3。</li>
+<li>此时接收方会返回M6的确认报文段，表示到M6的所有报文都收到了</li>
+</ul>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021031610100ghnmndhfgg1747.png"></p>
+</blockquote>
+<h5 id="快恢复"><a href="#快恢复" class="headerlink" title="快恢复"></a>快恢复</h5><blockquote>
+<p>在连续收到3个重复确认后，知道丢失个别的报文段，开始执行快恢复算法</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/202103161020fsdgfgsbgsss39162.png"></p>
+</blockquote>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210316fgfbfdbsds102010560.png"></p>
+<h2 id="会话层"><a href="#会话层" class="headerlink" title="会话层"></a>会话层</h2><blockquote>
+<p>会话层：主要功能是用来管理网络设备的会话连接，细分为三大功能：</p>
+<ul>
+<li><strong>建立会话</strong>：A、B两台网络设备之间要通信，要建立一条会话供他们使用，在建立会话的过程中也会有身份验证，权限鉴定等环节；</li>
+<li><strong>保持会话</strong>：通信会话建立后，通信双方开始传递数据，当数据传递完成后，OSI会话层不一定会立刻将两者这条通信会话断开，它会根据应用程序和应用层的设置对该会话进行维护，在会话维持期间两者可以随时使用这条会话传输局；</li>
+<li><strong>断开会话</strong>：当应用程序或应用层规定的超时时间到期后，OSI会话层才会释放这条会话。或者A、B重启、关机、手动执行断开连接的操作时，OSI会话层也会将A、B之间的会话断开。</li>
+</ul>
+</blockquote>
+<h2 id="表示层"><a href="#表示层" class="headerlink" title="表示层"></a>表示层</h2><blockquote>
+<p>表示层：负责数据格式的转换，如加密解密、压缩解压缩等。</p>
+</blockquote>
+<h2 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h2><blockquote>
+<p><strong>应用层</strong>：位于传输层之上，主要提供两个终端设备上的应用程序之间信息交换的服务，它定义了信息交换的格式，消息会交给下一层传输层来传输。 </p>
+</blockquote>
+<h3 id="DNS域名解析协议"><a href="#DNS域名解析协议" class="headerlink" title="DNS域名解析协议"></a>DNS域名解析协议</h3><h4 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h4><blockquote>
+<p>​		为了保证网址的正常访问，域名解析协议（DNS）其实在背后做出了很多努力，本文将透彻讲解 DNS 协议的原理，了解我们每天都在接触的网址到底是怎么工作的。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/202101sssswwwwwwwwwwwwwqqq20124147.png"></p>
+</blockquote>
+<h4 id="1-什么是-DNS-协议"><a href="#1-什么是-DNS-协议" class="headerlink" title="1. 什么是 DNS 协议"></a>1. 什么是 DNS 协议</h4><blockquote>
+<p>​		在学习 DNS 协议之前，我们先区分一下域名和 IP 地址这个两个概念：</p>
+<ul>
+<li><strong>IP 地址</strong>：一长串能够唯一地标记网络上的计算机的数字</li>
+<li><strong>域名</strong>：又称网域，是由一串用点分隔的名字组成的 Internet 上某一台计算机或计算机组的名称，用于在数据传输时对计算机的定位标识（有时也指地理位置）比如 <code>www.baidu.com</code></li>
+</ul>
+<blockquote>
+<p>​		不知道有没有同学会混淆域名和网址的概念，可以这样理解，网址里面含有域名。举个例子：<a target="_blank" rel="noopener" href="http://www.gitee.com/veal98">www.gitee.com/veal98</a> 就是一个网址，而 <a target="_blank" rel="noopener" href="http://www.gitee.com/">www.gitee.com</a> 就是域名</p>
+</blockquote>
+<p>​		由于 IP 地址具有不方便记忆并且不能显示地址组织的名称和性质等缺点，人们设计出了域名，并<strong>通过域名解析协议（DNS，Domain Name System）来将域名和 IP 地址相互映射</strong>，使人更方便地访问互联网，而不用去记住能够被机器直接读取的 IP 地址数串。将域名映射成 IP 地址称为正向解析，将 IP 地址映射成域名称为反向解析。</p>
+</blockquote>
+<blockquote>
+<p>​		DNS 协议可以使用 UDP 或者 TCP 进行传输，使用的端口号都为 53。但大多数情况下 DNS 都使用 UDP 进行传输。</p>
+</blockquote>
+<h4 id="2-域名详解"><a href="#2-域名详解" class="headerlink" title="2. 域名详解"></a>2. 域名详解</h4><blockquote>
+<p>​		那么域名由谁来规定和管理呢？不能是随便写吧？</p>
+<p>​		全世界域名的最高管理机构，是一个叫做 ICANN （Internet Corporation for Assigned Names and Numbers）的组织，总部在美国加州。<strong>ICANN 负责管理全世界域名系统的运作</strong>。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210119205gbdbdgbdgbdgbd250.png"></p>
+<p>​		域名其实是具有一定的层次结构的，从上到下依次为：<strong>根域名</strong>、<strong>顶级域名</strong>（top level domain，TLD）、<strong>二级域名</strong>、（三级域名）</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021011bgdbgdbdbfgbdgbgd9205159.png"></p>
+</blockquote>
+<h5 id="①-顶级域名"><a href="#①-顶级域名" class="headerlink" title="① 顶级域名"></a>① 顶级域名</h5><blockquote>
+<p>​		先来讲讲<strong>顶级域名</strong>（TLD），即最高层级的域名。简单说，就是网址的最后一个部分。比如，网址<code>www.baidu.com</code> 的顶级域名就是 <code>.com</code>。ICANN 的一项主要工作，就是规定哪些字符串可以当作顶级域名。截至 2015 年 7 月，顶级域名共有 1058 个，它们大致可以分成两类：</p>
+<ul>
+<li><p>一类是<strong>通用顶级域名</strong>（gTLD），比如<code>.com</code>、<code>.net</code>、<code>.edu</code>、<code>.org</code>、<code>.xxx</code>等等，共有 700 多个。</p>
+</li>
+<li><p>另一类是<strong>国家顶级域名</strong>（ccTLD），代表不同的国家和地区，比如<code>.cn</code>（中国）、<code>.io</code>（英属印度洋领地）、<code>.cc</code>（ 科科斯群岛）、<code>.tv</code>（图瓦卢）等，共有 300 多个。</p>
+<p>​	当然，ICANN 自己不会去管理这些顶级域名，因为根本管不过来。想想看，顶级域名有1000多个，每个顶级域名下面都有许多批发商，如果每个都要管，就太麻烦了。ICANN 的政策是，每个顶级域名都找一个<strong>托管商</strong>，该域名的所有事项都由托管商负责。ICANN 只与托管商联系，这样管理起来就容易多了。举例来说，<code>.cn</code> 国家顶级域名的托管商就是中国互联网络信息中心（CNNIC），它决定了 <code>.cn</code> 域名的各种政策。</p>
+</li>
+</ul>
+</blockquote>
+<h5 id="②-二级域名"><a href="#②-二级域名" class="headerlink" title="② 二级域名"></a>② 二级域名</h5><blockquote>
+<p>​		而<strong>二级域名</strong>(Second Level Domain,SLD) 在通用顶级域名或国家顶级域名之下具有不同的意义：</p>
+<ul>
+<li><p>通用顶级域名下的二级域名：一般是指域名注册人选择使用的网上名称，如 <code>yahoo.com</code>（商业组织通常使用自己的商标、商号或其他商业标志作为自己的网上名称，如 <code>baidu.com</code>）</p>
+</li>
+<li><p>国家顶级域名下的二级域名：一般是指类似于通用顶级域名的表示注册人类别和功能的标志。例如，在 <code>.com.cn</code> 域名结构中，<code>.com</code> 此时是置于国家顶级域名 <code>.cn</code> 下的二级域名，表示中国的商业性组织，以此类推。</p>
+<p>​	<strong>三级域名</strong>是形如 <code>www.baidu.com</code> 的域名，可以当做是二级域名的子域名，特征为域名包含两个 <code>.</code>。对于域名所有者&#x2F;使用者而言，三级域名都是二级域名的附属物而无需单独费用。<strong>三级域名甚至不能称为域名，一般称之为域名下的 “二级目录”</strong>。</p>
+</li>
+</ul>
+</blockquote>
+<h5 id="③-根域名"><a href="#③-根域名" class="headerlink" title="③ 根域名"></a>③ 根域名</h5><blockquote>
+<p>​		 那么<strong>根域名</strong>在哪里呢？在层次结构中根域名不是最顶级的吗？域名中怎么没有看见它？</p>
+<p>​		由于 ICANN 管理着所有的顶级域名，所以它是最高一级的域名节点，被称为根域名（root domain）。在有些场合，<code>www.xxx.com</code> 被写成 <code>www.xxx.com.</code>，即最后还会多出一个点。这个点就是根域名。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210120105gbgsbsbsndgndgnd950.png"></p>
+<p>​		理论上，<strong>所有域名的查询都必须先查询根域名</strong>，因为只有根域名才能告诉你，某个顶级域名由哪台服务器管理。事实上也确实如此，<strong>ICANN 维护着一张列表（根域名列表），里面记载着顶级域名和对应的托管商</strong>。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210119bsfgbfvsfvfbfsbsgsb214844.png"></p>
+<p>​		比如，我要访问<code>abc.xyz</code>，也必须先去询问根域名列表，它会告诉我 <code>.xyz</code> 域名由 CentralNic 公司托管。根域名列表还记载，<code>.google</code>由谷歌公司托管，<code>.apple</code>由苹果公司托管等等。</p>
+<p>​		由于根域名列表很少变化，大多数 DNS 服务商都会提供它的缓存，所以根域名的查询事实上不是那么频繁。</p>
+</blockquote>
+<h4 id="3-域名服务器详解"><a href="#3-域名服务器详解" class="headerlink" title="3. 域名服务器详解"></a>3. 域名服务器详解</h4><blockquote>
+<p>​		域名服务器是指管理域名的主机和相应的软件，它可以管理所在分层的域的相关信息。一个域名服务器所负责管里的分层叫作 区 (ZONE)。域名的每层都设有一个域名服务器：</p>
+<ul>
+<li><p>根域名服务器</p>
+</li>
+<li><p>顶级域名服务器</p>
+</li>
+<li><p>权限域名服务器</p>
+<p>​	下面这幅图就很直观了：</p>
+</li>
+</ul>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021012011vfsbgfbsnfnsfnfns1157.png"></p>
+<p>​		除了上面三种 DNS 服务器，还有一种不在 DNS 层次结构之中，但是很重要的 DNS 服务器，即<strong>本地域名服务器</strong>。下面我们分别讲解这四种服务器都是用来干什么的 👇</p>
+</blockquote>
+<h5 id="①-根域名服务器"><a href="#①-根域名服务器" class="headerlink" title="① 根域名服务器"></a>① 根域名服务器</h5><blockquote>
+<p>​		上面我们提到，ICANN 维护着一张根域名列表，里面记载着顶级域名和对应的托管商，其实根域名列表的正式名称是 <strong>DNS 根区</strong>（DNS root zone），保存 DNS 根区文件的服务器，就叫做 <strong>DNS 根域名服务器</strong>（root name server）。根域名服务器<strong>保存所有的顶级域名服务器的地址</strong></p>
+<p>​		由于早期的 DNS 查询结果是一个 512 字节的 UDP 数据包。这个包最多可以容纳 13 个服务器的地址，因此就规定全世界有 13 个根域名服务器，编号从 <code>a.root-servers.net</code> 一直到 <code>m.root-servers.net</code>。其中 10 台设置在美国，另外各有一台设置于荷兰、瑞典和日本。</p>
+<p>​		前面我们说过，理论上<strong>所有域名的查询都必须先查询根域名</strong>，所以一般来说所有的域名服务器都会注册一份根域名服务器的 IP 地址的缓存，用于在必要的时候向其发送请求。</p>
+</blockquote>
+<h5 id="②-顶级域名服务器"><a href="#②-顶级域名服务器" class="headerlink" title="② 顶级域名服务器"></a>② 顶级域名服务器</h5><blockquote>
+<p>​		按照根域名服务器管理顶级域名的逻辑，顶级域名服务器显然就是用来<strong>管理注册在该顶级域名下的所有二级域名</strong>的，<strong>记录这些二级域名的 IP 地址</strong>。</p>
+</blockquote>
+<h5 id="③-权限域名服务器"><a href="#③-权限域名服务器" class="headerlink" title="③ 权限域名服务器"></a>③ 权限域名服务器</h5><blockquote>
+<p>​		按照上面的逻辑，权限域名服务器应该是管理注册在二级域名下的所有三&#x2F;四级域名的，但其实不是这样，如果一个二级域名或者一个三&#x2F;四级域名对应一个域名服务器，则域名服务器数量会很多，我们需要使用<strong>划分区</strong>的办法来解决这个问题。那么权限域名服务器就是负责管理一个“<strong>区</strong>”的域名服务器。</p>
+<p>​		什么是区？怎样划分区呢？</p>
+<p>​		区和域其实是不同的，区可以有多种不同的划分方法。以百度为例，我们假设有 <code>fanyi.baidu.com</code>、<code>ai.baidu.com</code>、<code>tieba.baidu.com</code> 这三个三级域名。我们可以这样分区，<code>fanyi.baidu.com</code> 和 <code>tieba.baidu.com</code> 放在 <code>baidu.com</code> 权限域名服务器，<code>ai.baidu.com</code> 放在 <code>ai.baidu.com</code> 权限域名服务器中。并且 <code>baidu.com</code> 权限域名服务器和 <code>ai.baidu.com</code> 权限域名服务器是<strong>同等地位</strong>的，而具体怎么分区是百度公司根据域名多少、访问多少等情况去自己规定的。</p>
+<p>​		画个图直观理解一下：</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/202101201bsgbngndndghnhdg14419.png"></p>
+</blockquote>
+<h5 id="④-本地域名服务器"><a href="#④-本地域名服务器" class="headerlink" title="④ 本地域名服务器"></a>④ 本地域名服务器</h5><blockquote>
+<p>​		除了上面三种 DNS 服务器，还有一种不在 DNS 层次结构之中，但是很重要的 DNS 服务器，就是<strong>本地域名服务器</strong>（也被称为<strong>权威域名服务器</strong>）。本地域名服务器是电脑解析时的<strong>默认</strong>域名服务器，即电脑中设置的首选 DNS 服务器和备选 DNS 服务器。常见的有电信、联通、谷歌、阿里等的本地 DNS 服务。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/202101fvfsdbfgbsbfbs20121349.png"></p>
+<p>​		每个因特网服务提供者或一所大学，甚至一所大学中的各个系，都可以拥有一个本地域名服务器。<strong>当一台主机发出 DNS 查询请求时，这个查询请求报文就发送给该主机的本地域名服务器</strong>。<strong>本地域名服务器管理本地域名的解析和映射，并且能够向上级域名服务器进行查询</strong>。</p>
+<p>​		那么具体本地域名服务器是如何向上级域名服务器转发查询请求的呢？</p>
+</blockquote>
+<h4 id="4-DNS-查询方式"><a href="#4-DNS-查询方式" class="headerlink" title="4. DNS 查询方式"></a>4. DNS 查询方式</h4><blockquote>
+<p>​		具体 DNS 查询的方式有两种：</p>
+<ul>
+<li><p>递归查询</p>
+</li>
+<li><p>迭代查询</p>
+<p>​	所谓递归就是，如果请求的接收者不知道所请求的内容，那么<strong>接收者将扮演请求者</strong>，发出有关请求，直到获得所需要的内容，然后将内容返回给最初的请求者。</p>
+<p>​	通俗点来说，在递归查询中，如果 A 请求 B，那么 B 作为请求的接收者一定要给 A 想要的答案；而迭代查询则是指，如果接收者 B 没有请求者 A 所需要的准确内容，接收者 B 将告诉请求者 A，如何去获得这个内容，但是自己并不去发出请求。</p>
+<p>​	一般来说，<strong>域名服务器之间的查询使用迭代查询方式，以免根域名服务器的压力过大</strong>。通过下面这两个图就能很好的理解了 👇</p>
+</li>
+</ul>
+<p>1）递归查询：</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021011923vfsdbsgbsbss2409.png"></p>
+<p>2）迭代查询：</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210119fbfgbsbsgbsbsbs232744.png"></p>
+</blockquote>
+<h4 id="5-域名缓存"><a href="#5-域名缓存" class="headerlink" title="5. 域名缓存"></a>5. 域名缓存</h4><blockquote>
+<p>​		上面讲解的是域名服务器之间的 DNS 查询请求过程，但实际上，每个时刻都有无数网民要上网，那每次都去访问本地域名服务器去获取 IP 地址显然是不实际的。解决方法就是<strong>使用缓存保存域名和 IP 地址的映射</strong>。</p>
+<p>​		计算机中 DNS 记录在本地有两种缓存方式：浏览器缓存和操作系统缓存。</p>
+<p>​		1）<strong>浏览器缓存</strong>：浏览器在获取网站域名的实际 IP 地址后会对其进行缓存，减少网络请求的损耗。每种浏览器都有一个固定的 DNS 缓存时间，如 Chrome 的过期时间是 1 分钟，在这个期限内不会重新请求 DNS</p>
+<p>​		2）<strong>操作系统缓存</strong>：操作系统的缓存其实是用户自己配置的 hosts 文件。比如 Windows10 下的 hosts 文件存放在 C:\Windows\System32\drivers\etc\hosts</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210120dvdaffsbsgbsgbsbsfbsf115853.png"></p>
+<p>​		Windows 系统默认开启 DNS 缓存服务，服务名是 <code>DNSClient</code>，可以缓存一些常用的域名。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/202101201200bsbgfnbdfgbdbfd35.png"></p>
+<p>​		使用命令 <code>ipconfig/displaydns</code> 可以查看电脑中缓存的域名。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210120120bfsbbsfgbdfbsbd212.png"></p>
+<p>​		在浏览器中进行访问的时候，会优先查询浏览器缓存，如果未命中则继续查询操作系统缓存，最后再查询本地域名服务器，然后本地域名服务器会递归的查找域名记录，最后返回结果。<strong>主机和本地域名服务器之间的查询方式是递归查询</strong>，也就是说主机请求本地域名服务器，那么本地域名服务器作为请求的接收者一定要给主机想要的答案。</p>
+</blockquote>
+<h4 id="6-完整域名解析过程"><a href="#6-完整域名解析过程" class="headerlink" title="6. 完整域名解析过程"></a>6. 完整域名解析过程</h4><blockquote>
+<p>​		1）首先搜索<strong>浏览器的 DNS 缓存</strong>，缓存中维护一张域名与 IP 地址的对应表；</p>
+<p>​		2）若没有命中，则继续搜索<strong>操作系统的 DNS 缓存</strong>；</p>
+<p>​		3）若仍然没有命中，则操作系统将域名发送至<strong>本地域名服务器</strong>，本地域名服务器查询自己的 DNS 缓存，查找成功则返回结果（注意：主机和本地域名服务器之间的查询方式是<strong>递归查询</strong>）；</p>
+<p>​		4）若本地域名服务器的 DNS 缓存没有命中，则本地域名服务器向上级域名服务器进行查询，通过以下方式进行<strong>迭代查询</strong>（注意：本地域名服务器和其他域名服务器之间的查询方式是迭代查询，防止根域名服务器压力过大）：</p>
+<ul>
+<li>首先本地域名服务器向<strong>根域名服务器</strong>发起请求，根域名服务器是最高层次的，它并不会直接指明这个域名对应的 IP 地址，而是返回顶级域名服务器的地址，也就是说给本地域名服务器指明一条道路，让他去这里寻找答案</li>
+<li>本地域名服务器拿到这个<strong>顶级域名服务器</strong>的地址后，就向其发起请求，获取<strong>权限域名服务器</strong>的地址</li>
+<li>本地域名服务器根据权限域名服务器的地址向其发起请求，最终得到该域名对应的 IP 地址</li>
+</ul>
+<p>​		5）本地域名服务器将得到的 IP 地址返回给操作系统，同时自己将 IP 地址缓存起来</p>
+<p>​		6）操作系统将 IP 地址返回给浏览器，同时自己也将 IP 地址缓存起来</p>
+<p>​		7）至此，浏览器就得到了域名对应的 IP 地址，并将 IP 地址缓存起来</p>
+<p>配合下图直观理解：</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021012012vfsgbfbdfgbdbdfbd3619.png"></p>
+</blockquote>
+<h3 id="DNS用的是TCP协议还是UDP协议"><a href="#DNS用的是TCP协议还是UDP协议" class="headerlink" title="DNS用的是TCP协议还是UDP协议"></a>DNS用的是TCP协议还是UDP协议</h3><blockquote>
+<p>DNS占用53号端口，同时使用TCP和UDP协议。</p>
+</blockquote>
+<blockquote>
+<p>DNS在区域传输的时候使用TCP协议，其他时候使用UDP协议。</p>
+</blockquote>
+<blockquote>
+<p>DNS区域传输的时候使用TCP协议：</p>
+<ul>
+<li><p>1、辅域名服务器会定时（一般3小时）向主域名服务器进行查询以便了解数据是否有变动。如有变动，会执行一次区域传送，进行数据同步。区域传送使用TCP而不是UDP，因为数据同步传送的数据量比一个请求应答的数据量要多得多。</p>
+</li>
+<li><p>2、TCP是一种可靠连接，保证了数据的准确性。</p>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>域名解析时使用UDP协议：</p>
+<ul>
+<li>客户端向DNS服务器查询域名，一般返回的内容都不超过512字节，用UDP传输即可。不用经过三次握手，这样DNS服务器负载更低，响应更快。理论上说，客户端也可以指定向DNS服务器查询时用TCP，但事实上，很多DNS服务器进行配置的时候，仅支持UDP查询包。</li>
+</ul>
+</blockquote>
+<h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><blockquote>
+<p>HTTP ： <code>超文本传输协议(Hypertext Transfer Protocol)</code>，<strong>超文本（Hypertext）、传输（Transfer）、协议（Protocol）</strong></p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/fbsfvfgbsvsfdvdszEzMy0xMzAwNDA2NjE4LnBuZw.png"></p>
+</blockquote>
+<h4 id="HTTP特点"><a href="#HTTP特点" class="headerlink" title="HTTP特点"></a>HTTP特点</h4><blockquote>
+<ul>
+<li>无状态：协议对客户端没有状态存储，对事物处理没有“记忆”能力，比如访问一个网站需要反复进行登录操作</li>
+<li>无连接：HTTP&#x2F;1.1之前，由于无状态特点，每次请求需要通过TCP三次握手四次挥手，和服务器重新建立连接。比如某个客户机在短时间多次请求同一个资源，服务器并不能区别是否已经响应过用户的请求，所以每次需要重新响应请求，需要耗费不必要的时间和流量。</li>
+<li>基于请求和响应：基本的特性，由客户端发起请求，服务端响应</li>
+<li>简单快速、灵活</li>
+<li>通信使用明文、请求和响应不会对通信方进行确认、无法保护数据的完整性</li>
+</ul>
+</blockquote>
+<h4 id="HTTP报文"><a href="#HTTP报文" class="headerlink" title="HTTP报文"></a>HTTP报文</h4><h5 id="HTTP请求报文"><a href="#HTTP请求报文" class="headerlink" title="HTTP请求报文"></a>HTTP请求报文</h5><blockquote>
+<ul>
+<li><code>起始行（start line）</code>：描述请求或响应的基本信息；</li>
+<li><code>头部字段（header）</code>：使用 key-value 形式更详细地说明报文；</li>
+<li><code>消息正文（entity）</code>：实际传输的数据，它不一定是纯文本，可以是图片、视频等二进制数据。</li>
+</ul>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210126cvbnhrjmtumyubrtercrvtbyntu145429.png"></p>
+<p>1）<strong>Referer</strong>：表示这个请求是从哪个 URI 跳过来的。比如说通过百度来搜索淘宝网，那么在进入淘宝网的请求报文中，Referer 的值就是：<a href="notion://www.notion.so/flying-veal/www.baidu.com">www.baidu.com</a>。如果是直接访问就不会有这个头。这个字段通常用于防盗链。</p>
+<p>2）<strong>Accept</strong>：告诉服务端，该请求所能支持的响应数据类型。（对应的，HTTP 响应报文中也有这样一个类似的字段 Content-Type，用于表示服务端发送的数据类型，如果 Accept 指定的类型和服务端返回的类型不一致，就会报错）</p>
+<p>3）<strong>Host</strong>：告知服务器请求的资源所处的互联网主机名和端口号。该字段是 HTTP&#x2F;1.1 规范中唯一一个必须被	包含在请求头中的字段。</p>
+<p>4）<strong>Cookie</strong>：客户端的 Cookie 就是通过这个报文头属性传给服务端的！</p>
+<p>5）<strong>Connection</strong>：表示客户端与服务连接类型；Keep-Alive 表示持久连接，close 已关闭</p>
+<p>6）<strong>Content-Length</strong>：请求体的长度</p>
+<p>7）<strong>Accept-Language</strong>：浏览器通知服务器，浏览器支持的语言</p>
+<p>8）<strong>Range</strong>：对于只需获取部分资源的范围请求，包含首部字段 Range 即可告知服务器资源的指定范围</p>
+</blockquote>
+<h5 id="HTTP响应报文"><a href="#HTTP响应报文" class="headerlink" title="HTTP响应报文"></a>HTTP响应报文</h5><blockquote>
+<ul>
+<li><code>响应行</code>（必须在 HTTP 响应报文的第一行）</li>
+<li><code>响应头</code>（从第二行开始，到第一个空行结束。响应头和响应体之间存在一个空行）</li>
+<li><code>响应体</code></li>
+</ul>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/20210126nytngbgfbfgbsfbdsbs154224.png"></p>
+</blockquote>
+<h4 id="Cookie和Session"><a href="#Cookie和Session" class="headerlink" title="Cookie和Session"></a>Cookie和Session</h4><blockquote>
+<p>Cookie实际上是一<strong>小段的文本信息</strong>。客户端请求服务器，如果服务器需要记录该用户状态，就使用response向客户端浏览器颁发一个Cookie。客户端会把Cookie保存起来。</p>
+<p>Session是另一种记<strong>录客户状态的机制</strong>，不同的是Cookie保存在客户端浏览器中，而Session保存在服务器上。客户端浏览器访问服务器的时候，服务器把客户端信息以某种形式记录在服务器上。客户端浏览器再次访问时只需要从该Session中查找该客户的状态就可以了。</p>
+<p><strong>Session和Cookie的区别？</strong></p>
+<ul>
+<li><strong>数据存储位置</strong>：cookie数据存放在客户的浏览器上，session数据放在服务器上。</li>
+<li><strong>安全性</strong>：cookie不是很安全，别人可以分析存放在本地的cookie并进行cookie欺骗，考虑到安全应当使用session。</li>
+<li><strong>服务器性能</strong>：session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能，考虑到减轻服务器性能方面，应当使用cookie。</li>
+<li><strong>数据大小</strong>：单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。</li>
+<li><strong>信息重要程度</strong>：可以考虑将登陆信息等重要信息存放为session，其他信息如果需要保留，可以放在cookie中。</li>
+</ul>
+</blockquote>
+<h4 id="HTTP-请求方法"><a href="#HTTP-请求方法" class="headerlink" title="HTTP 请求方法"></a>HTTP 请求方法</h4><blockquote>
+<p>HTTP 请求方法：<code>GET</code>、<code>POST</code>、<code>PUT</code>、<code>HEAD</code>、<code>DELETE</code>、<code>OPTIONS</code>、<code>CONNECT</code>、<code>TRACE</code></p>
+</blockquote>
+<h5 id="GET获取资源"><a href="#GET获取资源" class="headerlink" title="GET获取资源"></a>GET获取资源</h5><blockquote>
+<p>​		GET 方法用来请求访问已被 URI 识别的资源。指定的资源经服务器端解析后返回响应内容</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021012vdsgbndhyjmyjmtngbfv6153110.png"></p>
+</blockquote>
+<blockquote>
+<p>使用 GET 方法请求-响应的例子：</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/202101dvndakjvbadfjvbjdbfv26154500.png"></p>
+</blockquote>
+<h5 id="POST传输实体主体"><a href="#POST传输实体主体" class="headerlink" title="POST传输实体主体"></a>POST传输实体主体</h5><blockquote>
+<p>向指定资源提交数据进行处理请求（例如提交表单或者上传文件），数据被包含在请求体中。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021hfvhkfsvbkbvvs0126153402.png"></p>
+</blockquote>
+<blockquote>
+<p>使用 POST 方法请求-响应的例子：</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/20210126fvjbsdfjvbdkcsdvca4526.png"></p>
+</blockquote>
+<h5 id="PUT-传输文件"><a href="#PUT-传输文件" class="headerlink" title="PUT 传输文件"></a>PUT 传输文件</h5><blockquote>
+<p> PUT 方法用来传输文件，由于自身<strong>不带验证机制，任何人都可以上传文件</strong>，因此存在安全性问题，一般不使用该方法。向指定资源位置上传其最新内容</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/202101261dbajkbvjakdvj54626.png"></p>
+</blockquote>
+<blockquote>
+<p>使用 PUT 方法请求-响应的例子：</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/2021cdnvj;bvjsdjfvbs0126154655.png"></p>
+</blockquote>
+<h5 id="HEAD-获取报文首部"><a href="#HEAD-获取报文首部" class="headerlink" title="HEAD 获取报文首部"></a>HEAD 获取报文首部</h5><blockquote>
+<p>和 GET 方法类似，但是不返回报文实体主体部分。主要用于确认 URI 的有效性以及资源更新的日期时间等。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/202101cyvubhjbhugycftxcfgv26154727.png"></p>
+</blockquote>
+<blockquote>
+<p>使用 HEAD 方法请求-响应的例子：</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/202101ckdjbjdkjacdavadf26154752.png"></p>
+</blockquote>
+<h5 id="DELETE-删除文件"><a href="#DELETE-删除文件" class="headerlink" title="DELETE 删除文件"></a>DELETE 删除文件</h5><blockquote>
+<p>与 PUT 功能相反，用来删除文件，并且同样不带验证机制，按照请求 URI 删除指定的资源。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/202101261dgsfdfdbdfcdsca55025.png"></p>
+</blockquote>
+<blockquote>
+<p>使用 DEELTE 方法请求-响应的例子：</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/2021012kfdvbjkbafadvb6155100.png"></p>
+</blockquote>
+<h5 id="OPTIONS-查询支持的方法"><a href="#OPTIONS-查询支持的方法" class="headerlink" title="OPTIONS 查询支持的方法"></a>OPTIONS 查询支持的方法</h5><blockquote>
+<p>用于<strong>获取当前 URI 所支持的方法</strong>。若请求成功，会在 HTTP 响应头中包含一个名为 “<code>Allow</code>” 的字段，值是所支持的方法，如 “GET, POST”。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/20210126vuybunoinoubiyvubj155245.png"></p>
+</blockquote>
+<blockquote>
+<p>使用 OPTIONS 方法请求-响应的例子：</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/20210cjdbcjkbladjvkda126155317.png"></p>
+</blockquote>
+<h4 id="GET和POST的区别"><a href="#GET和POST的区别" class="headerlink" title="GET和POST的区别"></a>GET和POST的区别</h4><blockquote>
+<ul>
+<li>GET参数通过URL传递，POST放在Request body中。</li>
+<li>GET比POST更不安全，因为参数直接暴露在URL上，所以不能用来传递敏感信息。</li>
+<li>GET请求参数会被完整保留在浏览器历史记录里，而POST中的参数不会被保留。</li>
+<li>GET请求只能进行url编码，而POST支持多种编码方式。</li>
+<li>GET在浏览器回退时是无害的，而POST会再次提交请求。</li>
+</ul>
+<ul>
+<li><strong>GET产生一个TCP数据包，POST产生两个TCP数据包</strong>：对于GET方式的请求，浏览器会把http header和data一并发送出去，服务器响应200（返回数据）；而对于POST，浏览器先发送header，服务器响应100 continue，浏览器再发送data，服务器响应200 ok（返回数据）。</li>
+</ul>
+</blockquote>
+<h4 id="HTTP-状态码"><a href="#HTTP-状态码" class="headerlink" title="HTTP 状态码"></a>HTTP 状态码</h4><h5 id="状态码类别"><a href="#状态码类别" class="headerlink" title="状态码类别"></a>状态码类别</h5><table>
+<thead>
+<tr>
+<th></th>
+<th>类别</th>
+<th>原因短语</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1XX</td>
+<td>Informational（信息性状态码）</td>
+<td>接受的请求正在处理</td>
+</tr>
+<tr>
+<td>2XX</td>
+<td>Success（成功状态码）</td>
+<td>请求正常处理完毕</td>
+</tr>
+<tr>
+<td>3XX</td>
+<td>Redirection（重定向状态码）</td>
+<td>需要进行附加操作以完成请求</td>
+</tr>
+<tr>
+<td>4XX</td>
+<td>Client Error（客户端错误状态码）</td>
+<td>服务器无法处理请求</td>
+</tr>
+<tr>
+<td>5XX</td>
+<td>Server Error（服务器错误状态码）</td>
+<td>服务器处理请求出错</td>
+</tr>
+</tbody></table>
+<h5 id="1XX-信息性状态码"><a href="#1XX-信息性状态码" class="headerlink" title="1XX 信息性状态码"></a>1XX 信息性状态码</h5><blockquote>
+<ul>
+<li>100 （部分接受） 客户端应当继续发送请求。这个临时响应是用来通知客户端它的部分请求已经被服务器接收，且仍未被拒绝。</li>
+<li>101 （已了解） 服务器已经理解了客户端的请求，并将通过Upgrade 消息头通知客户端采用不同的协议来完成这个请求。</li>
+</ul>
+</blockquote>
+<h5 id="2XX-成功状态码"><a href="#2XX-成功状态码" class="headerlink" title="2XX 成功状态码"></a>2XX 成功状态码</h5><blockquote>
+<ul>
+<li>200  （成功） 服务器已成功处理了请求。 通常，这表示服务器提供了请求的网页。 </li>
+<li>204  （无内容） 服务器成功处理了请求，但没有返回任何内容。 </li>
+<li>205  （重置内容） 服务器成功处理了请求，但没有返回任何内容。</li>
+<li>206  （部分内容） 服务器成功处理了部分 GET 请求。</li>
+</ul>
+</blockquote>
+<h5 id="3XX-重定向状态码"><a href="#3XX-重定向状态码" class="headerlink" title="3XX 重定向状态码"></a>3XX 重定向状态码</h5><blockquote>
+<ul>
+<li>300  （多种选择） 针对请求，服务器可执行多种操作。 服务器可根据请求者 (user agent) 选择一项操作，或提供操作列表供请求者选择。 </li>
+<li>301  （永久移动） 请求的网页已永久移动到新位置。 服务器返回此响应（对 GET 或 HEAD 请求的响应）时，会自动将请求者转到新位置。</li>
+<li>302  （临时移动） 服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来进行以后的请求。</li>
+<li>304（浏览器缓存未修改）所请求的资源未修改，服务器返回此状态码时，不会返回任何资源。客户端通常会缓存访问过的资源，通过提供一个头信息指出客户端希望只返回在指定日期之后修改的资源</li>
+</ul>
+</blockquote>
+<h5 id="4XX客户端错误状态码"><a href="#4XX客户端错误状态码" class="headerlink" title="4XX客户端错误状态码"></a>4XX客户端错误状态码</h5><blockquote>
+<ul>
+<li>400  （错误请求） 服务器不理解请求的语法。 </li>
+<li>401  （未授权） 请求要求身份验证。 对于需要登录的网页，服务器可能返回此响应。 </li>
+<li>403  （禁止） 服务器拒绝请求。</li>
+<li>404  （未找到） 服务器找不到请求的网页。</li>
+<li>405  （方法禁用） 禁用请求中指定的方法。 </li>
+<li>406  （不接受） 无法使用请求的内容特性响应请求的网页。</li>
+</ul>
+</blockquote>
+<h5 id="5XX服务器错误状态码"><a href="#5XX服务器错误状态码" class="headerlink" title="5XX服务器错误状态码"></a>5XX服务器错误状态码</h5><blockquote>
+<ul>
+<li>500  （服务器内部错误） 服务器遇到错误，无法完成请求。 </li>
+<li>501  （尚未实施） 服务器不具备完成请求的功能。 例如，服务器无法识别请求方法时可能会返回此代码。 </li>
+<li>502  （错误网关） 服务器作为网关或代理，从上游服务器收到无效响应。 </li>
+<li>503  （服务不可用） 服务器目前无法使用（由于超载或停机维护）。</li>
+</ul>
+</blockquote>
+<h4 id="请求方法中幂等性"><a href="#请求方法中幂等性" class="headerlink" title="请求方法中幂等性"></a>请求方法中幂等性</h4><blockquote>
+<p>对于单个输入或者无输入的运算方法，如果每次都是同样的结果，则称其是幂等的；</p>
+<p>GET，PUT，DELETE都是<strong>幂等操作</strong>，而POST不是，以下进行分析：</p>
+<ul>
+<li>GET对资源做查询多次，此实现的结果都是一样的，是幂等操作；</li>
+<li>PUT将A修改为B，它第一次请求时值变为了B，再进行多次此操作，最终的结果还是B，与一次执行的结果是一样的，所以PUT是幂等操作；</li>
+<li>DELETE第一次将资源删除后，后面多次进行此删除请求，最终结果是一样的，将资源删除掉了；</li>
+<li>POST不是幂等操作，因为一次请求添加一份新资源，二次请求则添加了两份新资源，多次请求会产生不同的结果，因此POST不是幂等操作；</li>
+</ul>
+</blockquote>
+<h4 id="HTTP-请求的过程"><a href="#HTTP-请求的过程" class="headerlink" title="HTTP 请求的过程"></a>HTTP 请求的过程</h4><h5 id="0-前言-1"><a href="#0-前言-1" class="headerlink" title="0. 前言"></a>0. 前言</h5><blockquote>
+<p>​		在浏览中输入 URL 并且获取响应的过程，其实就是浏览器和该 URL 对应的服务器的网络通信过程。比如我们输入 <code>www.baidu.com</code>，那么会返回一个百度搜索的界面，这其实就是浏览器和百度服务器之间的网络通信过程。浏览器就是客户端，用于发出请求，而百度的服务器就是服务端，用于接收并响应请求。</p>
+</blockquote>
+<h5 id="1-解析-URL"><a href="#1-解析-URL" class="headerlink" title="1. 解析 URL"></a>1. 解析 URL</h5><blockquote>
+<p>​		不知道有没有同学会混淆域名和 URL 的概念，可以这样理解，URL 就是我们输入的网址，而网址里面含有域名。举个例子：<code>www.baidu.com/veal98</code> 是一个网址，而 <code>www.baidu.com</code> 就是服务器的域名。</p>
+<p>​		URL 各元素的组成如下（当然，下述请求文件的路径名可以省略）：</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/202102072fdjkvbsdfjvbjsdfbv10245.png"></p>
+<p>​		这个 URL 请求的目标服务器上的文件路径就是：</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/2021020721dbjkadbvjbfjlbajdf0750.png"></p>
+<p>​		那么首先，浏览器做的第一步就是解析 URL 得到里面的参数，将域名和需要请求的资源分离开来，从而了解需要请求的是哪个服务器，请求的是服务器上什么资源等等。</p>
+</blockquote>
+<h5 id="2-浏览器封装-HTTP-请求报文"><a href="#2-浏览器封装-HTTP-请求报文" class="headerlink" title="2. 浏览器封装 HTTP 请求报文"></a>2. 浏览器封装 HTTP 请求报文</h5><blockquote>
+<p>​		对 <code>URL</code> 进行解析之后，浏览器确定了目标服务器和文件名，接下来就需要根据这些消息<strong>封装</strong>成一个 HTTP 请求报文发送出去。举个 HTTP 请求报文的例子：</p>
+<blockquote>
+<p>​		关于 HTTP 协议详细可见 HTTP 协议的前世今生 这篇文章，这里不再赘述</p>
+</blockquote>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/2021020cjbfvjbfvbjvbsjvsdvfdsvds7212035.png"></p>
+<p>​		解释一下<strong>封装</strong>，这是一个贯穿整个计算机网络的概念。就是说发送端在层与层之间传输数据时，每经过一层必定会被打上一个该层所属的首部信息。反之，接收端在层与层之间传输数据时，每经过一层就会把该层对应的首部信息消去。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/202102072vnsdfjvnbvdsjkcndsfnsjkd30329.png"></p>
+</blockquote>
+<h5 id="3-DNS-域名解析获取-IP-地址"><a href="#3-DNS-域名解析获取-IP-地址" class="headerlink" title="3. DNS 域名解析获取 IP 地址"></a>3. DNS 域名解析获取 IP 地址</h5><blockquote>
+<p>​		封装好 HTTP 请求报文后，在正式还有一项准备工作没有做，那就是获取目标服务器的 IP 地址。</p>
+<p>​		虽然解析得到了域名，理论浏览器已经知道目标服务器是谁了。但是实际上，域名并不是目标服务器真正意义上的地址，互联网上每一台计算机都被全世界唯一 IP 地址标识着，但是 IP 地址并不方便记忆，所以才设计出了域名。</p>
+<p>​		那么就需要解析域名获取目标服务器的 IP 地址。不然空有一个方便记忆的域名咋知道这个请求到底发送到哪里去呢。由域名转换得到 IP 地址就是 DNS 协议做的事情，如下：</p>
+<blockquote>
+<p>​		关于 DNS 详细的内容各位可以回顾 超详细 DNS 协议解析 这篇文章，比如什么是域名，域名服务器，递归查询和迭代查询等等，写的已经足够详细，此处只列出 DNS 的解析过程。</p>
+</blockquote>
+<p>1）首先搜索<strong>浏览器的 DNS 缓存</strong>，缓存中维护着一张域名与 IP 地址的对应表；</p>
+<p>2）若没有命中，则继续搜索<strong>操作系统的 DNS 缓存</strong>；</p>
+<p>3）若仍然没有命中，则操作系统将域名发送至<strong>本地域名服务器</strong>，本地域名服务器查询自己的 DNS 缓存，查找成功则返回结果（注意：主机和本地域名服务器之间的查询方式是<strong>递归查询</strong>）；</p>
+<p>4）若本地域名服务器的 DNS 缓存没有命中，则本地域名服务器向上级域名服务器进行查询，通过以下方式进行<strong>迭代查询</strong>（注意：本地域名服务器和其他域名服务器之间的查询方式是迭代查询，防止根域名服务器压力过大）：</p>
+<ul>
+<li>首先本地域名服务器向<strong>根域名服务器</strong>发起请求，根域名服务器是最高层次的，它并不会直接指明这个域名对应的 IP 地址，而是返回顶级域名服务器的地址，也就是说给本地域名服务器指明一条道路，让他去这里寻找答案</li>
+<li>本地域名服务器拿到这个<strong>顶级域名服务器</strong>的地址后，就向其发起请求，获取<strong>权限域名服务器</strong>的地址</li>
+<li>本地域名服务器根据权限域名服务器的地址向其发起请求，最终得到该域名对应的 IP 地址</li>
+</ul>
+<p>4）本地域名服务器将得到的 IP 地址返回给操作系统，同时自己将 IP 地址缓存起来</p>
+<p>5）操作系统将 IP 地址返回给浏览器，同时自己也将 IP 地址缓存起来</p>
+<p>6）至此，浏览器就得到了域名对应的 IP 地址，并将 IP 地址缓存起来</p>
+<p>配合下图直观理解：</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/202101201ndvfjvbdsjvbdsjjdsjv23619.png"></p>
+<p>​		需要注意的是，DNS 使用的是 UDP 协议，也就是说上面各种请求的转发，都是基于 UDP 这个无连接协议的。</p>
+</blockquote>
+<h5 id="4-建立-TCP-连接"><a href="#4-建立-TCP-连接" class="headerlink" title="4. 建立 TCP 连接"></a>4. 建立 TCP 连接</h5><blockquote>
+<p>​		获取到了目标服务器的 IP 地址之后，浏览器就知道我等下请求要发给谁了，这个时候就可以开始发送封装好了的 HTTP 请求报文了，那么既然需要发送请求，必然就需要 TCP 通过三次握手为浏览器和服务器之间建立可靠的连接，<strong>保证双方都具有可靠的接收和发送能力</strong>。</p>
+<blockquote>
+<p>这里又是一道经典的面试题：TCP 三次握手和四次挥手，详细可见 关于 TCP 三次握手和四次挥手，满分回答在此 这篇文章。</p>
+</blockquote>
+<p>​		三次握手过程如下图：</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/2021011019371vfbgfnhgjmhngbf3551.png"></p>
+</blockquote>
+<h5 id="5-浏览器发送请求"><a href="#5-浏览器发送请求" class="headerlink" title="5. 浏览器发送请求"></a>5. 浏览器发送请求</h5><blockquote>
+<p>​		TCP 三次握手完成后，浏览器与目标服务器之间就建立了一个可靠的虚拟通道，于是浏览器就可以发送自己的 HTTP 请求了。</p>
+<p>​		需要注意的是，HTTP 请求报文或者响应报文在 TCP 连接通道上进行传输的时候，由于这些报文比较大，为了更容易和准确可靠的传输，<strong>TCP 会将 HTTP 报文按序号分割成若干报文段并加上 TCP 首部，分别进行传输。接收方在收到这些报文段后，按照序号以原来的顺序重组 HTTP 报文</strong>。</p>
+</blockquote>
+<h5 id="6-负责传输的-IP-协议"><a href="#6-负责传输的-IP-协议" class="headerlink" title="6. 负责传输的 IP 协议"></a>6. 负责传输的 IP 协议</h5><blockquote>
+<p>​		实际上，TCP 在三次握手建立连接、四次握手断开连接、以及连接建立过程中的收发数据（TCP 报文段）等各阶段操作时，都是通过 IP 协议进行传输的，IP 协议将这些阶段的数据添加 IP 首部封装成 IP 数据报再进行传输。</p>
+<p>​		IP 数据报的首部存有<strong>源 IP 地址</strong>和 <strong>目标 IP 地址</strong>。所谓源 IP 地址 就是发送方的 IP 地址；目标 IP 地址就是通过 DNS 域名解析得到的目标服务器的 IP 地址。</p>
+<p>​		事实上，<strong>IP 协议身处的网络层规定的是：数据报要通过怎样的路径（传输路线）才能到达对方计算机，并传送给对方</strong>。不理解这句话的详细解释马上就来，继续往下读。</p>
+</blockquote>
+<h5 id="7-使用-ARP-协议凭借-MAC-地址通信"><a href="#7-使用-ARP-协议凭借-MAC-地址通信" class="headerlink" title="7. 使用 ARP 协议凭借 MAC 地址通信"></a>7. 使用 ARP 协议凭借 MAC 地址通信</h5><blockquote>
+<p>​		上面说了，IP 协议的作用是把各种数据包传送给对方，而要保证确实传送到对方那里，则需要满足各类条件，其中必要的两个就是 IP 地址 和 MAC 地址。</p>
+<p>​		MAC 地址也是用来唯一标识一个接入互联网的设备的，可能不禁有小伙伴要问，既然网络层已经有了唯一标识的 IP 地址，为啥还需要 MAC 地址？</p>
+<p>​		看下面这幅图，在网络上，<strong>通信的双方在同一局域网内的情况是很少见的，通常是需要多台计算机和网络设备的中转才能连接到对方。而在进行中转时，就需要利用下一站中转设备的 MAC 地址来搜索下一个中转目标</strong>。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/2021011dhcdkfjbcjdfdjv4143919.png"></p>
+<ul>
+<li><p>网络层指定了从哪个主机（「源 IP 地址」）发送到哪个主机（「目的 IP 地址」）。<strong>源 IP 地址和目标 IP 地址在传输过程中是不会变化的</strong></p>
+</li>
+<li><p>而数据链路层则是根据 MAC 地址在一个接一个的区间中进行传输的，每个区间内的出发地址即「源 MAC 地址」，每个区间内的目的地址即「目的 MAC 地址」。显然，随着数据的传输，<strong>源 MAC 地址和目的 MAC 地址会不断的发生变化</strong></p>
+<p>比如上图，<strong>网络层告知了 1-2-3 路线，也就是说指明了这几个路由器的 IP 地址。那么数据链路层就会根据这几个 IP 地址对应的 MAC 地址依次找到 1、2、3，并在他们之间传输数据</strong>。</p>
+</li>
+</ul>
+<p>🍉 这么说吧，举个形象点的例子：我们把数据链路层当成乘坐高铁从苏州到南京，再在南京转乘到北京，再在北京转乘到西藏的旅客，那么网络层就相当于每个车站的工作人员，<strong>在数据链路层每次转乘时，网络层为其购买了一张标有下一个 MAC 地址的车票</strong>。因此，即使旅客（数据链路层）不知道其最终目的地也没有关系，工作人员（网络层）会给你做出指引。</p>
+<p>​		实际上，网络层做出指引的过程，我们将其称为<strong>路由控制</strong>，其中又涉及到了路由协议比如 OSPF 等</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/202101151djcbnjadfvbds51809.png"></p>
+<p>​	那么，<strong>将 IP 地址转化为 MAC 地址</strong>，从而在数据链路层精确的传输数据的协议就是 <strong>ARP 协议</strong>。</p>
+<p>​	ARP 是借助 <strong>ARP 请求与 ARP 响应</strong>两种类型的包确定 MAC 地址的。并且每个主机都有一个 <strong>ARP 高速缓存</strong>，里面有本局域网上的各主机和路由器的 <strong>IP 地址到 MAC 地址的映射表</strong>。</p>
+<p>​	如下图所示，假定主机 A 向同一链路上的主机 B 发送 IP 数据报，已知主机 A 和主机 B 的 IP 地址，它们互不知道对方的 MAC 地址：</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/202101232vbdsfsvbsdfjkvbdsjk13052.png"></p>
+<p>​		1）首先，主机 A 为了获得主机 B 的 MAC 地址，它会先去查询自己的 ARP 高速缓存中有没有主机 B 的相关记录；</p>
+<p>​		2）如果主机 A 的 ARP 高速缓存中没有主机 B 的 IP 地址到 MAC 地址的映射，主机 A 就会通过<strong>广播</strong>的方式发送 <strong>ARP 请求包</strong>（该包携带自己的 IP 地址 和 MAC 地址 以及 目标主机的 IP 地址），表明自己想要获得主机 B 的 MAC 地址；</p>
+<p>​		3） 由于广播请求可以被同一个链路上的所有主机或路由器接收，因此如果这条链路上某个主机或路由的 IP 地址与这个 ARP 请求包中包含的目标主机的 IP 地址相同，那么这个节点就将自己的 MAC 地址塞入 <strong>ARP 响应包</strong>中返回给主机 A；</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/2021012322vbjdfvbsdjvbsj0759.png"></p>
+<blockquote>
+<p>当然，ARP 响应包是以单播的形式进行发送的，毕竟 ARP 请求包中已经包含了主机 A 的 IP 地址，所以主机 B 非常清楚这个响应包应该发送给谁。</p>
+<p>大部分网络协议在设计的时候，都是保持极度克制的，不需要的交互就砍掉，能合并的信息就合并，能不用广播就用单播，以此让带宽变得更多让网络变得更快。</p>
+</blockquote>
+<p>​		4）主机 A 在收到主机 B 发过来的 ARP 响应包后，向其 ARP 高速缓存中写入主机 B 的 IP 地址到 MAC 地址的映射。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/20200427jkdbcksdfjvbjk210248.png"></p>
+<p>​		当然，缓存是有一定期限的，超过这个期限，缓存的内容将被清空。这也使得即使 MAC 地址和 IP 地址的映射关系发生了变化，也依然能够正确的将数据包发送给目标地址。</p>
+</blockquote>
+<h5 id="8-服务器响应请求"><a href="#8-服务器响应请求" class="headerlink" title="8. 服务器响应请求"></a>8. 服务器响应请求</h5><blockquote>
+<p>​		浏览器的 HTTP 请求报文通过 TCP 三次握手建立的连接通道被切分成若干报文段分别发送给服务器，服务器在收到这些报文段后，按照序号以原来的顺序重组 HTTP 请求报文。然后处理并返回一个 HTTP 响应。当然，HTTP 响应报文也要经过和 HTTP 请求报文一样的过程。</p>
+<p>​		看下方这个图回顾一下（图片来源《图解 HTTP》）：</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/2021020cdbvbdgfbsdfvbdsvb7224444.png"></p>
+</blockquote>
+<h5 id="9-断开-TCP-连接"><a href="#9-断开-TCP-连接" class="headerlink" title="9. 断开 TCP 连接"></a>9. 断开 TCP 连接</h5><blockquote>
+<p>​		浏览器和服务器都不再需要发送数据后，四次挥手断开 TCP 连接。</p>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img14/sdafgsthvcdsvdbsgndtsbgfvbgsvfbsg.png"></p>
+</blockquote>
+<h5 id="10-浏览器显示界面"><a href="#10-浏览器显示界面" class="headerlink" title="10. 浏览器显示界面"></a>10. 浏览器显示界面</h5><blockquote>
+<p>​		浏览器接收到服务器返回的数据包，根据浏览器的渲染机制对相应的数据进行渲染</p>
+</blockquote>
+<h4 id="HTTP1-0、HTTP1-1、HTTP2-0"><a href="#HTTP1-0、HTTP1-1、HTTP2-0" class="headerlink" title="HTTP1.0、HTTP1.1、HTTP2.0"></a>HTTP1.0、HTTP1.1、HTTP2.0</h4><h5 id="HTTP1-0和HTTP1-1的区别"><a href="#HTTP1-0和HTTP1-1的区别" class="headerlink" title="HTTP1.0和HTTP1.1的区别"></a>HTTP1.0和HTTP1.1的区别</h5><h6 id="长连接-Persistent-Connection"><a href="#长连接-Persistent-Connection" class="headerlink" title="长连接(Persistent Connection)"></a>长连接(Persistent Connection)</h6><blockquote>
+<p>​		长连接在无数据传输后不会立即断开，而是会等待一定的时间再断开。</p>
+<p>​		HTTP1.1支持长连接和请求的流水线处理，在一个TCP连接上可以传送多个HTTP请求和响应，减少了建立和关闭连接的消耗和延迟，在HTTP1.1中默认开启长连接keep-alive，一定程度上弥补了HTTP1.0每次请求都要创建连接的缺点。HTTP1.0需要使用keep-alive参数来告知服务器端要建立一个长连接。</p>
+<p>​		<strong>注意：但是这种方式是阻塞式的，即多个请求是顺序执行的。</strong></p>
+</blockquote>
+<h6 id="节约带宽"><a href="#节约带宽" class="headerlink" title="节约带宽"></a>节约带宽</h6><blockquote>
+<p>​		HTTP1.0中存在一些浪费带宽的现象，例如客户端只是需要某个对象的一部分，而服务器却将整个对象送过来了，并且不支持断点续传功能。HTTP1.1支持只发送header信息（不带任何body信息），如果服务器认为客户端有权限请求服务器，则返回100，客户端接收到100才开始把请求body发送到服务器；如果返回401，客户端就可以不用发送请求body了节约了带宽。</p>
+</blockquote>
+<h6 id="HOST域"><a href="#HOST域" class="headerlink" title="HOST域"></a>HOST域</h6><blockquote>
+<p>​		在HTTP1.0中认为每台服务器都绑定一个唯一的IP地址，因此，请求消息中的URL并没有传递主机名（hostname），HTTP1.0没有host域。随着虚拟主机技术的发展，在一台物理服务器上可以存在多个虚拟主机（Multi-homed Web Servers），并且它们共享一个IP地址。HTTP1.1的请求消息和响应消息都支持host域，且请求消息中如果没有host域会报告一个错误（400 Bad Request）。</p>
+</blockquote>
+<h6 id="缓存处理"><a href="#缓存处理" class="headerlink" title="缓存处理"></a>缓存处理</h6><blockquote>
+<p>​		在HTTP1.0中主要使用header里的If-Modified-Since,Expires来做为缓存判断的标准，HTTP1.1则引入了更多的缓存控制策略例如Entity tag，If-Unmodified-Since, If-Match, If-None-Match等更多可供选择的缓存头来控制缓存策略。</p>
+</blockquote>
+<h6 id="错误通知的管理"><a href="#错误通知的管理" class="headerlink" title="错误通知的管理"></a>错误通知的管理</h6><blockquote>
+<p>​		在HTTP1.1中新增了24个错误状态响应码，如409（Conflict）表示请求的资源与资源的当前状态发生冲突；410（Gone）表示服务器上的某个资源被永久性的删除。</p>
+</blockquote>
+<h5 id="HTTP1-x和HTTP2-0的区别"><a href="#HTTP1-x和HTTP2-0的区别" class="headerlink" title="HTTP1.x和HTTP2.0的区别"></a>HTTP1.x和HTTP2.0的区别</h5><blockquote>
+<ul>
+<li>HTTP&#x2F;2采用二进制格式而非文本格式</li>
+<li>HTTP&#x2F;2是完全多路复用的，而非有序并阻塞的——只需一个连接即可实现并行</li>
+<li>使用报头压缩，HTTP&#x2F;2降低了开销</li>
+<li>HTTP&#x2F;2让服务器可以将响应主动“推送”到客户端缓存中</li>
+</ul>
+</blockquote>
+<h6 id="二进制解析"><a href="#二进制解析" class="headerlink" title="二进制解析"></a>二进制解析</h6><blockquote>
+<p>​		HTTP1.x的解析是基于文本。基于文本协议的格式解析存在天然缺陷，文本的表现形式有多样性，要做到健壮性考虑的场景必然很多，二进制则不同，只认0和1的组合。基于这种考虑HTTP2.0的协议解析决定采用二进制格式，实现方便且健壮。</p>
+</blockquote>
+<h6 id="header压缩"><a href="#header压缩" class="headerlink" title="header压缩"></a>header压缩</h6><blockquote>
+<p>​		在HTTP1.1中，HTTP请求和响应都是由状态行、请求&#x2F;响应头部、消息主体三部分组成。一般而言，消息主体都会经过gzip压缩，或者本身传输的就是压缩过后的二进制文件，但状态行和头部却没有经过任何压缩，直接以纯文本传输。随着Web功能越来越复杂，每个页面产生的请求数也越来越多，导致消耗在头部的流量越来越多，尤其是每次都要传输UserAgent、Cookie这类不会频繁变动的内容，完全是一种浪费。</p>
+</blockquote>
+<blockquote>
+<p>​		HTTP1.1不支持header数据的压缩，HTTP2.0使用HPACK算法对header的数据进行压缩，这样数据体积小了，在网络上传输就会更快。</p>
+</blockquote>
+<h6 id="多路复用"><a href="#多路复用" class="headerlink" title="多路复用"></a>多路复用</h6><blockquote>
+<ul>
+<li>HTTP&#x2F;1.x 有个问题叫线端阻塞(head-of-line blocking), 它是指一个连接(connection)一次只提交一个请求的效率比较高, 多了就会变慢。</li>
+<li>HTTP&#x2F;1.1 试过用流水线(pipelining)来解决这个问题, 但是效果并不理想(数据量较大或者速度较慢的响应, 会阻碍排在他后面的请求). 此外, 由于网络媒介(intermediary )和服务器不能很好的支持流水线, 导致部署起来困难重重。</li>
+<li>多路传输(Multiplexing)能很好的解决这些问题, 因为它能同时处理多个消息的请求和响应; 甚至可以在传输过程中将一个消息跟另外一个掺杂在一起。所以客户端只需要一个连接就能加载一个页面。</li>
+</ul>
+</blockquote>
+<h6 id="服务器推送"><a href="#服务器推送" class="headerlink" title="服务器推送"></a>服务器推送</h6><blockquote>
+<p>​		服务端推送是一种在客户端请求之前发送数据的机制。网页使用了许多资源：HTML、样式表、脚本、图片等等。在HTTP1.1中这些资源每一个都必须明确地请求。这是一个很慢的过程。浏览器从获取HTML开始，然后在它解析和评估页面的时候，增量地获取更多的资源。因为服务器必须等待浏览器做每一个请求，网络经常是空闲的和未充分使用的。</p>
+</blockquote>
+<blockquote>
+<p>​		为了改善延迟，HTTP2.0引入了server push，它允许服务端推送资源给浏览器，在浏览器明确地请求之前，免得客户端再次创建连接发送请求到服务器端获取。这样客户端可以直接从本地加载这些资源，不用再通过网络。</p>
+</blockquote>
+<h3 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h3><blockquote>
+<p>HTTPS &#x3D; HTTP + 加密 + 认证 + 完整性保护</p>
+</blockquote>
+<h4 id="HTTPS和HTTP的区别"><a href="#HTTPS和HTTP的区别" class="headerlink" title="HTTPS和HTTP的区别"></a>HTTPS和HTTP的区别</h4><blockquote>
+<ul>
+<li>https协议需要到CA申请证书，一般免费证书较少，因而需要一定费用。</li>
+<li>http是超文本传输协议，信息是明文传输，https则是具有安全性的ssl&#x2F;tls加密传输协议。</li>
+<li>http和https使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443。</li>
+<li>http的连接很简单，是无状态的；</li>
+<li>HTTPS协议是由SSL&#x2F;TLS+HTTP协议构建的可进行加密传输、身份认证的网络协议，比http协议安全。</li>
+</ul>
+</blockquote>
+<h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><blockquote>
+<p><img src="https://wyy-blog-picture.oss-cn-beijing.aliyuncs.com/img15/tgsfbsfbdgbdgbdfca0860d344f94dfvdsv.jpg"></p>
+<p><strong>步骤一</strong>：客户端通过发送Client Hello报文开始SSL通信。报文中包含客户端支持的SSL的指定版本、加密组件（Cipher Suite）列表（所使用的加密算法及密钥长度等）。<strong>注意</strong>：客户端还会附加一个随机数，这里记为A。</p>
+<p><strong>步骤二</strong>：服务器可进行SSL通信时，会以Server Hello报文作为应答。和客户端一样，在报文中包含SSL版本以及加密组件。服务器的加密组件内容是从接收到的客户端加密组件内筛选出来的。<strong>注意</strong>：这里服务器同样会附加一个随机数，发给客户端，这里记为B。</p>
+<p><strong>步骤三</strong>：之后服务器发送Certificate报文。报文中包含公开密钥证书。（具体的数字签名请看证书一节）</p>
+<p><strong>步骤四</strong>：最后服务器发送Server Hello Done报文通知客户端，最初阶段的SSL握手协商部分结束。</p>
+<p><strong>步骤五</strong>：SSL第一次握手结束后，客户端会对服务器发过来的证书进行验证，如果验证成功，解密取出证书中的公钥。（具体查看证书一节）<br>接着，客户端以Client Key Exchange报文作为回应。报文中包含通信加密中使用的一种被称为<strong>Pre-master secret</strong>的随机密码串。该报文使用从证书中解密获得的公钥进行加密（其实就是服务器的公钥）。</p>
+<p><strong>步骤六</strong>：客户端继续发送Change Cipher Spec报文。用于告知服务端，客户端已经切换到之前协商好的加密套件（Cipher Suite）的状态，准备使用之前协商好的加密套件加密数据并传输了。</p>
+<p><strong>步骤七</strong>：客户端发送Finished报文。该报文包含连接至今全部报文的整体校验值（也就是HASH值），用来供服务器校验。</p>
+<p><strong>步骤八</strong>：服务器接收到客户端的请求之后，使用私钥解密报文，把Pre-master secret取出来。接着，服务器同样发送Change Cipher Spec报文。</p>
+<p><strong>步骤九</strong>：服务器同样发送Finished报文，用来供客户端校验。</p>
+<p><strong>步骤十</strong>：服务器和客户端的Finished报文交换完毕之后，SSL连接就算建立完成。当然，通信会受到SSL的保护。从此处开始进行应用层协议的通信，即发送HTTP请求。</p>
+<p><strong>步骤十一</strong>：应用层协议通信，即发送HTTP响应。</p>
+<p><strong>步骤十二</strong>：最后由客户端断开连接。断开连接时，发送close_notify报文。上图做了一些省略，这步之后再发送TCP FIN报文来关闭与TCP的通信。</p>
+<p><strong><code>通俗理解：</code></strong></p>
+<p><strong>步骤一</strong>：客户端发起一个HTTPS请求，请求服务器公钥，连接服务器443端口，还包含此时客户端生成的随机数（Client Random）。</p>
+<p><strong>步骤二</strong>：服务端接到请求后生成一个公私钥和一个随机数（Server Random），把公钥以数字证书的形式加上刚才生成的随机数（Server Random）返回给客户端。证书中有一个公钥（此公钥是机构的公钥）来加密信息，私钥由服务器持有（数字证书除了服务器的公钥外，还有网站地址，证书颁发机构，失效日期等）。</p>
+<p><strong>步骤三</strong>：客户端收到服务器的数字证书后，先验证证书的合法性（是否被篡改，是否过期）。</p>
+<p><strong>步骤四</strong>：如果验证通过，客户端则生成一个随机数 (pre-master)，并用刚拿到的服务器公钥加密，发给服务器。</p>
+<p><strong>步骤五</strong>：服务器收到这个随机数后，使用私钥进行解密，此时双方就都拥有3个随机数，分别是Client Random、Server Random、pre-master，通过这三个随机数生成会话秘钥（对称秘钥）。以后双方就使用这个对称秘钥进行传输数据，提高效率。</p>
+<p><strong>步骤六</strong>：最后，客户端和服务端相互发送一个摘要信息，包含之前发送的所有数据的摘要，叫做「Encrypted Handshake Message（Finishd） 」，用会话加密加密后发送，以验证之前交互的消息是否被篡改过。服务器做个验证，验证加密通信是否可⽤和之前握⼿信息是否有被中途篡改过。</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/12/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" data-id="clpsh979m002txgvs1jvb3yj0" data-title="计算机网络" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/12/22/%E6%99%BA%E5%8A%9B%E9%A2%98/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          智力题
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/12/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">操作系统</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JVM/">JVM</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JWT/">JWT</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java%E5%9F%BA%E7%A1%80/">Java基础</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MyBatis/">MyBatis</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SQL/">SQL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Spring-Framework/">Spring Framework</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringBoot/">SpringBoot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringCloud/">SpringCloud</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%99%BA%E5%8A%9B%E9%A2%98/">智力题</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/">消息队列</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/">面试题</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JVM/" rel="tag">JVM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JWT/" rel="tag">JWT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MyBatis/" rel="tag">MyBatis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redis/" rel="tag">Redis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL/" rel="tag">SQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring-Framework/" rel="tag">Spring Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringBoot/" rel="tag">SpringBoot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringCloud/" rel="tag">SpringCloud</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="tag">多线程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%99%BA%E5%8A%9B%E9%A2%98/" rel="tag">智力题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" rel="tag">消息队列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/" rel="tag">面试题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/" rel="tag">项目部署</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/JVM/" style="font-size: 15px;">JVM</a> <a href="/tags/JWT/" style="font-size: 10px;">JWT</a> <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 20px;">Java基础</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MyBatis/" style="font-size: 10px;">MyBatis</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/SQL/" style="font-size: 15px;">SQL</a> <a href="/tags/Spring-Framework/" style="font-size: 10px;">Spring Framework</a> <a href="/tags/SpringBoot/" style="font-size: 10px;">SpringBoot</a> <a href="/tags/SpringCloud/" style="font-size: 10px;">SpringCloud</a> <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" style="font-size: 10px;">多线程</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%99%BA%E5%8A%9B%E9%A2%98/" style="font-size: 10px;">智力题</a> <a href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" style="font-size: 10px;">消息队列</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">计算机网络</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">设计模式</a> <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/" style="font-size: 10px;">面试题</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/" style="font-size: 10px;">项目部署</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/03/22/Spring-Framework/">Spring Framework</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/13/SpringBoot/">SpringBoot</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/13/MyBatis/">MyBatis</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/04/Java%E5%8F%8D%E5%B0%84/">Java反射</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/02/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
